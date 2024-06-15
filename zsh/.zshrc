@@ -2,6 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git azure macos nvm systemd thefuck tmux urltools)
 source $ZSH/oh-my-zsh.sh
+source .config/zsh_scripts/.tmux
 
 # Clear screen
 alias c="clear;clear;"
@@ -12,8 +13,8 @@ alias nv="nvim"
 alias nvzsh="nvim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
 alias zshv="nvim ~/.zshrc"
-alias obv="cd ~/personal/DeeezNotes/DeeezNotes; nvim ."
-alias obvn="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
+alias obs="cd ~/personal/DeeezNotes/DeeezNotes; nvim ."
+alias obsin="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
 
 # Change direcory
 alias cconf="cd ~/.config"
@@ -30,25 +31,6 @@ alias personal="cd ~/personal; lsa"
 alias dot="cd ~/dotfiles/"
 alias conf="cd ~/.config/"
 
-# Tmux
-tx() {
-	tmux
-}
-txn() {
-	tmux new -s $1
-}
-txa() {
-	tmux attach -t $1
-} 
-txk() {
-	tmux kill-session -t $1
-} 
-alias txls="tmux ls"
-
-# Tmuxifier
-tmf() {
-	tmuxifier $1 $2
-}
 
 cht() {
 	~/.config/scripts/./tmux-cht.sh
