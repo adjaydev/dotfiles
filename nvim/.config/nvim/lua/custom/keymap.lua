@@ -29,6 +29,8 @@ vim.keymap.set('n', '<leader>on', ':ObsidianTemplate note template<cr> :lua vim.
 vim.keymap.set('n', '<leader>om', ':ObsidianTemplate meeting template<cr> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<cr>')
 vim.keymap.set('n', '<leader>op', ':ObsidianTemplate project template<cr> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<cr>')
 
+-- vim.keymap.set('n', '<leader>ob', ':ObsidianTemplate bvtodo template<cr> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<cr>')
+vim.keymap.set('n', '<leader>ob', ':ObsidianTemplate bvtodo template<cr>:lua vim.cmd([[1,/^\\S/s/^\\n\\{2,}/\\r/]])<cr>')
 -- Obsidian format remove date from title and replace
 -- dashes with spaces
 -- vim.keymap.set('n', '<leader>of', ':s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<cr>')

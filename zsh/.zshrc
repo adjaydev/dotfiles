@@ -2,10 +2,13 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git azure macos nvm systemd thefuck tmux urltools)
 source $ZSH/oh-my-zsh.sh
-source .config/zsh_scripts/.tmux
+source ~/.config/zsh_scripts/.tmux
+source ~/.config/azurecli/.env
+source ~/.config/devscripts/devscripts.zsh
 
 # Clear screen
-alias c="clear;clear;"
+alias c="clear;"
+alias cc="clear;clear;"
 
 # Neovim
 alias v.="nvim ."
@@ -37,10 +40,17 @@ cht() {
 }
 
 # BVCM
-alias bvcm="cd ~/Documents/werk/BVCM; lsa"
 alias bvdata="cd ~/Documents/werk/BVCM/data; lsa"
+alias bvdocs="cd ~/Documents/werk/BVCM/docs; lsa"
+function bvcm() {
+	echo "\n[LIST DIRECTORY -a]"
+	cd "/Users/adjaythakoerdien/Documents/werk/BVCM/$1"
+	ls -la $2
+	echo "\n[DIRECTORY]"
+	pwd
+}
 
-function bvdocs() {
+function bvd() {
 	
 	# SFTP
 	if [[ "$1" == "sftp" ]]; 
@@ -114,10 +124,15 @@ alias fzfv="cd ~;fzf --print0 | xargs -0 -o nvim"
 alias fzfo="cd ~;fzf --print0 | xargs -0 -o open"
 alias dzdv="fzf --print0 | xargs -0 -o nvim"
 alias dzdo="fzf --print0 | xargs -0 -o open"
+alias srch='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # macOS
 alias lsaa="ls -a;"
 alias cl="clear"
+alias sftp-start="/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli/target/release/./bvcm-inquire"
+
+
+alias hackerscript="docker run --rm -it bcbcarl/hollywood"
 
 # Collect Online Proxy
 alias run-coproxy="~/Documents/werk/BVCM/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-mysql \
@@ -180,6 +195,9 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export NVM_DIR="/opt/homebrew/opt/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Zoxide
+eval "$(zoxide init zsh)"
 
 # Set default $EDITOR
 export EDITOR=nvim
