@@ -12,3 +12,17 @@ fi
 
 	python -c "import pandas as pd; pd.read_excel('$excel_file').to_json('$output_file', orient='records')"
 }
+
+function fancy() {
+	cfonts $1 -f "huge" -a center -f shade  -g red,blue
+	# cfonts $1 -f "huge" -a center -f shade -c "#ff5500",cyan -g red,blue
+}
+
+function docker-show-id() {
+	docker ps -aqf "name=${1}"
+}
+
+function docker-copy-id() {
+	docker ps -aqf "name=${1}" | pbcopy
+}
+

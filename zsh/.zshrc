@@ -1,6 +1,8 @@
+nerdfetch
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git azure macos nvm systemd thefuck tmux urltools)
+# plugins=(git azure macos nvm systemd thefuck tmux urltools)
+plugins=(macos systemd thefuck tmux urltools)
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh_scripts/.tmux
 source ~/.config/azurecli/.env
@@ -20,19 +22,16 @@ alias obs="cd ~/personal/DeeezNotes/DeeezNotes; nvim ."
 alias obsin="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
 
 # Change direcory
-alias cconf="cd ~/.config"
-alias cdconf="cd ~/.config/nvim"
-alias nvconf="cd ~/.config/nvim; nvim ."
 alias confv="cd ~/.config/nvim; nvim ."
 alias confa="nvim ~/.config/alacritty/alacritty.toml"
+alias confk="nvim ~/.config/kitty/kitty.conf"
 alias home="cd ~; lsa"
-alias downloads="cd ~/Downloads; ls -ltr"
 alias downl="cd ~/Downloads; ls -ltr"
-alias desk="cd ~/Desktop; lsa"
 alias docs="cd ~/Documents; lsa"
 alias personal="cd ~/personal; lsa"
 alias dot="cd ~/dotfiles/"
 alias conf="cd ~/.config/"
+alias pwdcopy="pwd | pbcopy"
 
 
 cht() {
@@ -99,8 +98,6 @@ alias bvgwk="nvim ~/Documents/werk/BVCM/git/bvcm-wiki/wiki"
 alias bvgff="cd ~/Documents/werk/BVCM/git/bvcm-findflow; lsa;"
 alias bvgdw="cd ~/Documents/werk/BVCM/git/bvcm-daywize; lsa;"
 
-alias run-bvbo="source venv24/bin/activate;cd BVCM_BO_TEST;python manage.py runserver;"
-
 # adjay.dev
 alias werk="cd ~/Documents/werk; lsa"
 alias werkgit="cd ~/Documents/werk/git; lsa"
@@ -119,11 +116,6 @@ alias pi="pip install"
 alias activate-venv="source venv/bin/activate"
 alias venv="source venv/bin/activate"
 
-# fzf
-alias fzfv="cd ~;fzf --print0 | xargs -0 -o nvim"
-alias fzfo="cd ~;fzf --print0 | xargs -0 -o open"
-alias dzdv="fzf --print0 | xargs -0 -o nvim"
-alias dzdo="fzf --print0 | xargs -0 -o open"
 alias srch='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # macOS
@@ -131,6 +123,10 @@ alias lsaa="ls -a;"
 alias cl="clear"
 alias sftp-start="/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli/target/release/./bvcm-inquire"
 
+# Typos
+alias dicker="docker"
+alias doicker="docker"
+alias dpcker="docker"
 
 alias hackerscript="docker run --rm -it bcbcarl/hollywood"
 
@@ -199,6 +195,9 @@ export NVM_DIR="/opt/homebrew/opt/nvm"
 # Zoxide
 eval "$(zoxide init zsh)"
 
+# GO
+
 # Set default $EDITOR
 export EDITOR=nvim
 export VISUAL="$EDITOR"
+export PATH=$PATH:$HOME/go/bin

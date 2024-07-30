@@ -6,6 +6,14 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
+-- local map = vim.keymap.set
+-- map('n', '<C-S-I>', ':bp<CR>', { noremap = true })
+-- map('n', '<C-S-O>', ':bn<CR>', { noremap = true })
+
+-- alternate file
+vim.keymap.set('n', '<leader>U', ':e#<CR>')
+vim.keymap.set('n', '<C-S-Y>', ':e#<CR>')
+
 -- Undotree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 
