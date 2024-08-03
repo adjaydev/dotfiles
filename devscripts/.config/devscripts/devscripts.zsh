@@ -26,3 +26,10 @@ function docker-copy-id() {
 	docker ps -aqf "name=${1}" | pbcopy
 }
 
+function bvpr() {
+	az repos pr create $1 $2 $3 $4 --open
+}
+
+function bvpl() {
+	m365 planner task list --bucketName $1 --planId mhHSYwr7UkeFShfIxVgBkJcADxTj | jq '.[] | select(.createdBy.user.id == "ede39ca3-4889-44fb-af6b-48fee958e781").title'
+}
