@@ -2,6 +2,7 @@
 
 ## Brew Cask
 
+echo "Installing all brew install --cask"
 brew install --cask amethyst
 brew install --cask kitty
 brew install --cask raycast
@@ -26,6 +27,7 @@ brew install --cask affinity-designer
 
 ## Brew
 
+echo "Installing all brew intall"
 brew install azure-cli
 brew install bat
 brew install btop
