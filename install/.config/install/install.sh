@@ -63,5 +63,4 @@ brew install tmux
 brew install tree-sitter
 brew install zoxide
 brew install amethyst
-brew install devtoys
 brew install docker
