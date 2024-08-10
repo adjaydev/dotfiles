@@ -1,5 +1,8 @@
 # Brew
 
+echo "Installing ohmyzsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 ## Brew Cask
 
 echo "Installing all brew install --cask"
@@ -24,6 +27,8 @@ brew install --cask teamviewer
 brew install --cask visual-studio-code
 brew install --cask affinity-designer
 brew install --cask google-cloud-sdk
+brew install --cask google-chrome
+
 
 
 ## Brew
