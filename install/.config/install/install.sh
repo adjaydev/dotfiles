@@ -23,6 +23,7 @@ brew install --cask tigervnc-viewer
 brew install --cask teamviewer
 brew install --cask visual-studio-code
 brew install --cask affinity-designer
+brew install --cask google-cloud-sdk
 
 
 ## Brew
@@ -52,7 +53,6 @@ brew install poetry
 brew install pyenv
 brew install ripgrep
 brew install ruff
-brew install rust
 brew install sesh
 brew install sqlite
 brew install starship
@@ -64,3 +64,7 @@ brew install tree-sitter
 brew install zoxide
 brew install amethyst
 brew install docker
+brew install bruno
+
+echo "Installing rustup"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
