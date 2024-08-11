@@ -1,3 +1,4 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
 nerdfetch
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -107,6 +108,7 @@ alias werkavx="cd ~/Documents/werk/advintex\ inspectie/git/advintex-inspectie;"
 alias homebase="cd ~/Projects/homebase/homebase-svelte;tmux new -s base;"
 alias avx="cd ~/Documents/werk/advintex\ inspectie/git/advintex-inspectie;"
 alias avxher="cd ~/Documents/werk/advintex\ inspectie/git/advintex-herinspectie;"
+alias proj="cd ~/projects"
 
 # PIP
 alias pir="pip install -r requirements.txt"
@@ -175,7 +177,7 @@ function on() {
 eval "$(starship init zsh)"
 
 # Tmuxifier
-export PATH="$HOME/.config/.tmuxifier/bin:$PATH"
+export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
 # Created by `pipx` on 2024-04-05 14:42:57

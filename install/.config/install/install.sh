@@ -30,7 +30,6 @@ brew install --cask google-cloud-sdk
 brew install --cask google-chrome
 
 
-
 ## Brew
 
 echo "Installing all brew intall"
@@ -73,3 +72,9 @@ brew install bruno
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+echo "Installing Tmuxifier"
+git clone https://github.com/jimeh/tmuxifier.git ~/.config/tmuxifier
+
+echo "Angular CLI"
+npm install -g @angular/cli

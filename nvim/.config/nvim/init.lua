@@ -469,13 +469,14 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
-  require('lspconfig').ruff_lsp.setup {
-    init_options = {
-      settings = {
-        args = {},
-      },
-    },
-  },
+	-- TODO: re-activate
+  -- require('lspconfig').ruff_lsp.setup {
+  --   init_options = {
+  --     settings = {
+  --       args = {},
+  --     },
+  --   },
+  -- },
 })
 
 require 'custom.keymap'
