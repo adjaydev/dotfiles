@@ -6,7 +6,6 @@ ZSH_THEME="robbyrussell"
 plugins=(macos systemd thefuck tmux urltools)
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh_scripts/.tmux
-source ~/.config/azurecli/.env
 source ~/.config/devscripts/devscripts.zsh
 
 # Clear screen
@@ -24,6 +23,7 @@ alias obsin="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
 
 # Change direcory
 alias confv="cd ~/.config/nvim; nvim ."
+alias confw="nvim ~/.config/wezterm/wezterm.lua"
 alias confa="nvim ~/.config/alacritty/alacritty.toml"
 alias confk="nvim ~/.config/kitty/kitty.conf"
 alias home="cd ~; lsa"
@@ -33,6 +33,9 @@ alias personal="cd ~/personal; lsa"
 alias dot="cd ~/dotfiles/"
 alias conf="cd ~/.config/"
 alias pwdcopy="pwd | pbcopy"
+
+
+alias play-doom="cd /Users/adjaythakoerdien/projects/terminal-doom && zig-out/bin/terminal-doom"
 
 
 cht() {
@@ -106,8 +109,8 @@ alias werkg="cd ~/Documents/werk/git; lsa"
 alias werkheiloo="cd ~/Documents/werk/git/heiloo-vitaal; lsa"
 alias werkavx="cd ~/Documents/werk/advintex\ inspectie/git/advintex-inspectie;"
 alias homebase="cd ~/Projects/homebase/homebase-svelte;tmux new -s base;"
-alias avx="cd ~/Documents/werk/advintex\ inspectie/git/advintex-inspectie;"
-alias avxher="cd ~/Documents/werk/advintex\ inspectie/git/advintex-herinspectie;"
+alias avx="cd ~/projects/avx/avx-inspection;"
+alias avxher="cd ~/projects/avx/avx-herinspectie;"
 alias proj="cd ~/projects"
 
 # PIP
@@ -123,7 +126,6 @@ alias srch='nvim $(fzf -m --preview="bat --color=always {}")'
 # macOS
 alias lsaa="ls -a;"
 alias cl="clear"
-alias sftp-start="/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli/target/release/./bvcm-inquire"
 
 # Typos
 alias dicker="docker"
@@ -193,6 +195,9 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export NVM_DIR="/opt/homebrew/opt/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# op 1password
+eval "$(op completion zsh)"; compdef _op op
 
 # Zoxide
 eval "$(zoxide init zsh)"

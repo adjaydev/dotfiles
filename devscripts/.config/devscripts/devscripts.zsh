@@ -33,3 +33,7 @@ function bvpr() {
 function bvpl() {
 	m365 planner task list --bucketName $1 --planId mhHSYwr7UkeFShfIxVgBkJcADxTj | jq '.[] | select(.createdBy.user.id == "ede39ca3-4889-44fb-af6b-48fee958e781").title'
 }
+function sftp-start() {
+	source ~/.config/azurecli/.env
+	/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli/target/release/./bvcm_inquire
+}
