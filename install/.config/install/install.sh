@@ -35,6 +35,7 @@ brew install --cask google-chrome
 echo "Installing all brew intall"
 brew install azure-cli
 brew install bat
+brew install biome
 brew install btop
 brew install cbonsai
 brew install cfonts
@@ -44,6 +45,7 @@ brew install ffmpeg
 brew install fzf
 brew install gh
 brew install git
+brew install go
 brew install jq
 brew install lazygit
 brew install lua

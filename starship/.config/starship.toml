@@ -2,14 +2,42 @@
 # Config
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$python\
+$rust\
+$golang\
+$nodejs\
+$lua\
+$docker_context\
+$deno\
+$conda\
+$ocaml\
+$php\
+$zig\
+$sudo\
+$cmd_duration\
+$line_break\
+$character
+"""
 
-# format = '$all'
+[character]
+success_symbol = '[➜](bold green)'
+
+[fill]
+symbol = ' '
 
 [aws]
 symbol = "  "
+
+[azure]
+disabled = false
+format = 'on [$symbol($subscription)]($style) '
+symbol = '?? '
+style = 'blue bold'
 
 [buf]
 symbol = " "
@@ -28,6 +56,8 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+truncation_length = 20
+truncation_symbol = '../'
 
 [docker_context]
 symbol = " "
@@ -47,8 +77,29 @@ symbol = " "
 [git_branch]
 symbol = " "
 
+[git_status]
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
+
+
 [golang]
-symbol = " "
+symbol = "🏎💨"
+
+[gcloud]
+disabled = true
+format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
+
+[gcloud.project_aliases]
+very-long-project-name = 'vlpn'
 
 [guix_shell]
 symbol = " "
@@ -94,6 +145,9 @@ symbol = " "
 
 [ocaml]
 symbol = " "
+
+[os]
+disabled = false
 
 [os.symbols]
 Alpaquita = " "
@@ -150,6 +204,7 @@ symbol = " "
 
 [python]
 symbol = " "
+pyenv_version_name = false
 
 [rlang]
 symbol = "󰟔 "
@@ -162,6 +217,11 @@ symbol = " "
 
 [scala]
 symbol = " "
+
+[sudo]
+style = 'bold green'
+symbol = 'sudo '
+disabled = false
 
 [swift]
 symbol = " "
