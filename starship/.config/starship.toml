@@ -18,6 +18,8 @@ $conda\
 $ocaml\
 $php\
 $zig\
+$azure\
+$time\
 $sudo\
 $cmd_duration\
 $line_break\
@@ -35,40 +37,48 @@ symbol = "  "
 
 [azure]
 disabled = false
-format = 'on [$symbol($subscription)]($style) '
-symbol = '?? '
+format = "[$symbol($username)]($style) "
+symbol = '󰠅 '
 style = 'blue bold'
 
 [buf]
 symbol = " "
 
 [c]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [conda]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [crystal]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [dart]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [directory]
 read_only = " 󰌾"
-truncation_length = 20
+truncation_length = 5
+truncate_to_repo = true
 truncation_symbol = '../'
 
 [docker_context]
 symbol = " "
 
 [elixir]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [elm]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [fennel]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [fossil_branch]
@@ -92,19 +102,23 @@ deleted = '🗑'
 
 
 [golang]
+format = '[$symbol($version )]($style)'
 symbol = "🏎💨"
 
 [gcloud]
-disabled = true
-format = 'on [$symbol$account(@$domain)(\($project\))]($style) '
+symbol = '🇬️ '
+disabled = false
+format = '[$symbol$active]($style) '
 
 [gcloud.project_aliases]
 very-long-project-name = 'vlpn'
 
 [guix_shell]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [haskell]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [haxe]
@@ -114,36 +128,48 @@ symbol = " "
 symbol = " "
 
 [hostname]
+ssh_only = true
 ssh_symbol = " "
+format = '[$ssh_symbol](bold blue) [$hostname](bold green) '
+disabled = false
 
 [java]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [julia]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [kotlin]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [lua]
-symbol = " "
+format = '[$symbol($version )]($style)'
+symbol = "🌙 "
 
 [memory_usage]
 symbol = "󰍛 "
 
 [meson]
+format = '[$symbol($version )]($style)'
 symbol = "󰔷 "
 
 [nim]
+format = '[$symbol($version )]($style)'
 symbol = "󰆥 "
 
 [nix_shell]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [nodejs]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [ocaml]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [os]
@@ -194,28 +220,35 @@ Windows = "󰍲 "
 symbol = "󰏗 "
 
 [perl]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [php]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [pijul_channel]
 symbol = " "
 
 [python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 symbol = " "
 pyenv_version_name = false
 
 [rlang]
+format = '[$symbol($version )]($style)'
 symbol = "󰟔 "
 
 [ruby]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [rust]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [scala]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
 [sudo]
@@ -224,7 +257,14 @@ symbol = 'sudo '
 disabled = false
 
 [swift]
+format = '[$symbol($version )]($style)'
 symbol = " "
 
+[time]
+disabled = false
+format = '$time '
+time_format = '📅 wk %U %d-%m 🕘 %Ru.'
+
 [zig]
+format = '[$symbol($version )]($style)'
 symbol = " "
