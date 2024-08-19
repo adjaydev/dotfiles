@@ -263,7 +263,7 @@ symbol = " "
 [time]
 disabled = false
 format = '$time '
-time_format = '📅 wk %U %d-%m 🕘 %R'
+time_format = '📅 wk %W %d-%m 🕘 %R'
 
 [zig]
 format = '[$symbol($version )]($style)'
