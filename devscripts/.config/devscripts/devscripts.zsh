@@ -27,7 +27,7 @@ function docker-copy-id() {
 }
 
 function bvpr() {
-	az repos pr create $1 $2 $3 $4 --auto-complete true --open
+	az repos pr create $1 $2 $3 $4 --open
 }
 
 function bvpl() {

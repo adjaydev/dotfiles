@@ -1,20 +1,32 @@
 # Tmux
-tx() {
+t() {
 	tmux
 }
-txn() {
+tn() {
 	tmux new -s $1
 }
-txa() {
+ta() {
 	tmux attach -t $1
 } 
-txk() {
+tk() {
 	tmux kill-session -t $1
 } 
-alias txls="tmux ls"
+alias tls="tmux ls"
 
 # Tmuxifier
-tmf() {
+tf() {
 	tmuxifier $1 $2
+}
+
+ts() {
+	tmuxifier s $1
+}
+
+tes{
+	tmuxifier es $1
+}
+
+tns{
+	tmuxifier ns $1
 }
 

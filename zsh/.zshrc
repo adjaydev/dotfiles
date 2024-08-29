@@ -33,6 +33,7 @@ alias personal="cd ~/personal; lsa"
 alias dot="cd ~/dotfiles/"
 alias conf="cd ~/.config/"
 alias pwdcopy="pwd | pbcopy"
+alias e="exit"
 
 
 alias play-doom="cd /Users/adjaythakoerdien/projects/terminal-doom && zig-out/bin/terminal-doom"
