@@ -1,20 +1,27 @@
 # Tmux
+
 t() {
 	tmux
 }
+
 tn() {
 	tmux new -s $1
 }
+
 ta() {
 	tmux attach -t $1
 } 
+
 tk() {
 	tmux kill-session -t $1
 } 
-alias tls="tmux ls"
+
+tls() {
+	tmux ls
+}
 
 # Tmuxifier
-tf() {
+t() {
 	tmuxifier $1 $2
 }
 
@@ -28,5 +35,9 @@ tes(){
 
 tns(){
 	tmuxifier ns $1
+}
+
+tfls() {
+	tmuxifier ls
 }
 
