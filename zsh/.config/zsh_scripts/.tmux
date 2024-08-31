@@ -22,11 +22,11 @@ ts() {
 	tmuxifier s $1
 }
 
-tes{
+tes(){
 	tmuxifier es $1
 }
 
-tns{
+tns(){
 	tmuxifier ns $1
 }
 
