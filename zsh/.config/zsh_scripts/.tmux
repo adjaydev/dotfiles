@@ -1,5 +1,7 @@
 # Tmux
 
+alias tls="tmux ls"
+
 t() {
 	tmux
 }
@@ -16,9 +18,6 @@ tk() {
 	tmux kill-session -t $1
 } 
 
-tls() {
-	tmux ls
-}
 
 # Tmuxifier
 t() {
