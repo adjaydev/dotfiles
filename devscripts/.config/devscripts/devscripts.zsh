@@ -40,5 +40,11 @@ function sftp-start() {
 }
 
 function opig() {
-	op item get $1 --reveal | grep wachtwoord | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
+	# NOTE:
+	# cut -d             => split on ':'
+	# -f2                => grab second value
+	# awk '{$1=$1};1'    => remove leading and trailing spaces
+	# tr -d              => translate and delete '\n'
+
+	op item get $1 --reveal | grep -E '(wachtwoord|password):' | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
