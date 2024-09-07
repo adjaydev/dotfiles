@@ -32,7 +32,7 @@ alias docs="cd ~/Documents; lsa"
 alias personal="cd ~/personal; lsa"
 alias dot="cd ~/dotfiles/"
 alias conf="cd ~/.config/"
-alias pwdcopy="pwd | pbcopy"
+alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
 
 
