@@ -20,7 +20,7 @@ tk() {
 
 
 # Tmuxifier
-t() {
+tf() {
 	tmuxifier $1 $2
 }
 

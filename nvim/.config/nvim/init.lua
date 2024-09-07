@@ -451,6 +451,7 @@ require('lazy').setup({
   },
 
   { import = 'custom.plugins' },
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
@@ -469,7 +470,7 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
-	-- TODO: re-activate
+  -- TODO: re-activate
   -- require('lspconfig').ruff_lsp.setup {
   --   init_options = {
   --     settings = {
@@ -496,3 +497,4 @@ function ColorMyPencils()
 end
 
 ColorMyPencils()
+-- vim.cmd.colorscheme 'catppuccin'
