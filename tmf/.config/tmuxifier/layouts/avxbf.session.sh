@@ -1,4 +1,4 @@
-session_root "/Users/adjaythakoerdien/Documents/werk/advintex inspectie/git/advintex-backend-functions"
+session_root "/Users/adjaythakoerdien/projects/avx/avx-backend-functions"
 if initialize_session "avxbf"; then
   new_window "editor"
   select_window 1
