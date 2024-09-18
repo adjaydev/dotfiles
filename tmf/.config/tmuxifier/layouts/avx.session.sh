@@ -3,6 +3,7 @@ session_root "~/projects/avx/avx-inspection"
 if initialize_session "avx"; then
   new_window "editor"
   new_window "server"
+  new_windows "zsh"
 
   select_window 2
   run_cmd "ng serve --port 4201"

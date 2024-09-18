@@ -1,5 +1,5 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
-nerdfetch
+# nerdfetch
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 # plugins=(git azure macos nvm systemd thefuck tmux urltools)
@@ -31,6 +31,7 @@ alias downl="cd ~/Downloads; ls -ltr"
 alias docs="cd ~/Documents; lsa"
 alias personal="cd ~/personal; lsa"
 alias dot="cd ~/dotfiles/"
+alias dotv="nvim ~/dotfiles/"
 alias conf="cd ~/.config/"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"

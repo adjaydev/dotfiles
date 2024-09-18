@@ -1,4 +1,4 @@
-session_root "~/Documents/werk/advintex inspectie/git/advintex-inspection-backend"
+session_root "~/projects/avx/avx-inspection-backend"
 if initialize_session "avxb"; then
   new_window "editor"
   new_window "server"

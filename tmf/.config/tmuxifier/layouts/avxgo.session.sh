@@ -1,4 +1,4 @@
-session_root "~/projects/avx/avx-go-backend"
+session_root "~/projects/avx/avx-backend-go"
 if initialize_session "avxgo"; then
   new_window "nvim"
   run_cmd "v."
