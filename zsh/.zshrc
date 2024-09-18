@@ -33,12 +33,10 @@ alias downl="cd ~/Downloads; ls -ltr"
 alias docs="cd ~/Documents; lsa"
 alias personal="cd ~/personal; lsa"
 alias dot="cd ~/dotfiles/"
+alias dotv="nvim ~/dotfiles/"
 alias pwdcopy="pwd | pbcopy"
 alias e="exit"
-<<<<<<< HEAD
 alias config="cd ~/.config"
-=======
->>>>>>> 6c12f72 (Updated tmuxifier)
 
 
 alias play-doom="cd /Users/adjaythakoerdien/projects/terminal-doom && zig-out/bin/terminal-doom"

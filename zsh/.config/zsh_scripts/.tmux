@@ -26,11 +26,6 @@ ta() {
 	tmux attach -t $1
 } 
 
-tk() {
-	tmux kill-session -t $1
-} 
-
-
 # Tmuxifier
 tf() {
 	tmuxifier $1 $2
