@@ -51,3 +51,11 @@ function opig() {
 function opil() {
 	op item list
 }
+
+function count() {
+	find . -name '*.$1' | xargs wc -l
+}
+
+function count-lines() {
+    find . -name "*.$1" -exec wc -l {} +
+}

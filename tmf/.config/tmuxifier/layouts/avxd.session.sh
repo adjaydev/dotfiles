@@ -1,6 +1,7 @@
-session_root "/Users/adjaythakoerdien/Documents/werk/advintex inspectie/git/advintex-docx-functions/advintex-docx-functions"
+session_root "~/projects/avx/avx-docx-functions"
 if initialize_session "avxd"; then
   new_window "editor"
+  new_window "server"
   select_window 1
   run_cmd "v."
 fi
