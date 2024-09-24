@@ -36,6 +36,7 @@ alias conf="cd ~/.config/"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
 
+alias ae="aerospace"
 
 alias play-doom="cd /Users/adjaythakoerdien/projects/terminal-doom && zig-out/bin/terminal-doom"
 
