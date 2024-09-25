@@ -24,7 +24,7 @@ alias obsin="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
 # Change direcory
 alias confv="cd ~/.config/nvim; nvim ."
 alias confw="nvim ~/.config/wezterm/wezterm.lua"
-alias confa="nvim ~/.config/alacritty/alacritty.toml"
+alias confa="nvim ~/.config/aerospace/aerospace.toml"
 alias confk="nvim ~/.config/kitty/kitty.conf"
 alias home="cd ~; lsa"
 alias downl="cd ~/Downloads; ls -ltr"
@@ -145,9 +145,6 @@ alias run-coproxy-build="~/Documents/werk/BVCM/docs/proxy/./cloud-sql-proxy coll
 --port=3308 \
 --credentials-file=/Users/adjaythakoerdien/Documents/werk/BVCM/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # The fuck
 eval $(thefuck --alias)
 
@@ -211,6 +208,10 @@ eval "$(zoxide init zsh)"
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 export PATH=$PATH:$HOME/go/bin
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

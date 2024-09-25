@@ -1,5 +1,5 @@
 session_root "~/projects/avx/avx-backend-python"
-if initialize_session "avxbp"; then
+if initialize_session "avxpy"; then
   new_window "nvim"
   new_window "server"
   select_window 1

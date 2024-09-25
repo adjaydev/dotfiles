@@ -1,5 +1,5 @@
-session_root "~/projects/avx/avx-inspection-backend"
-if initialize_session "avxb"; then
+session_root "~/projects/avx/avx-backend-js"
+if initialize_session "avxjs"; then
   new_window "editor"
   new_window "server"
   select_window 1

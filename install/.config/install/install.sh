@@ -6,7 +6,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## Brew Cask
 
 echo "Installing all brew install --cask"
-brew install --cask amethyst
+brew install --cask nikitabobko/tap/aerospace
 brew install --cask kitty
 brew install --cask raycast
 brew install --cask jetbrains-toolbox
