@@ -31,6 +31,7 @@
 --     end,
 --   },
 -- }
+
 return {
   'kristijanhusak/vim-dadbod-ui',
   dependencies = {
@@ -46,5 +47,15 @@ return {
   init = function()
     -- Your DBUI configuration
     vim.g.db_ui_use_nerd_fonts = 1
+    vim.g.dbs = {
+      {
+        name = 'DEVDB',
+        url = 'postgres://postgres:79WAG5FWF5ITwmSb35FxBtrazqAG05mPgd0eYYOIAs9hBfOOLPdcFfws4WCT9pkD@cloud.adjay.dev:3344',
+      },
+      {
+        name = 'DEVDBIP',
+        url = 'postgres://postgres:79WAG5FWF5ITwmSb35FxBtrazqAG05mPgd0eYYOIAs9hBfOOLPdcFfws4WCT9pkD@162.55.223.205:3344',
+      },
+    }
   end,
 }

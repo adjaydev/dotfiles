@@ -1,3 +1,22 @@
+function devscripts() {
+	nvim ~/.config/devscripts/devscripts.zsh
+}
+
+function devhelp() {
+	echo "uuid4"
+	echo "xlsx2json"
+	echo "fancy"
+	echo "docker-show-id"
+	echo "docker-copy-id"
+	echo "bvpr"
+	echo "bvpl"
+	echo "sftp-start"
+	echo "opig"
+	echo "opil"
+	echo "count"
+	echo "count-lines"
+}
+
 function uuid4() {
 	python -c "import uuid; print(uuid.uuid4())"
 }
@@ -11,6 +30,17 @@ fi
 	output_file="${2:-${excel_file%.xlsx}.json}"
 
 	python -c "import pandas as pd; pd.read_excel('$excel_file').to_json('$output_file', orient='records')"
+}
+
+function json2xlsx() {
+if [ $# -eq 0 ]; then
+    echo "Usage: json2xlsx <json_file> [output_excel_file]"
+    exit 1
+fi
+	json_file="$1"
+	output_file="${2:-${json_file%.json}.xlsx}"
+
+	python -c "import pandas as pd; pd.read_json('$json_file').to_excel('$output_file')"
 }
 
 function fancy() {
@@ -33,6 +63,7 @@ function bvpr() {
 function bvpl() {
 	m365 planner task list --bucketName $1 --planId mhHSYwr7UkeFShfIxVgBkJcADxTj | jq '.[] | select(.createdBy.user.id == "ede39ca3-4889-44fb-af6b-48fee958e781").title'
 }
+
 function sftp-start() {
 	source ~/.config/azurecli/.env
 	/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli/target/release/./bvcm_inquire
@@ -52,10 +83,7 @@ function opil() {
 	op item list
 }
 
-function count() {
-	find . -name '*.$1' | xargs wc -l
-}
-
 function count-lines() {
-    find . -name "*.$1" -exec wc -l {} +
+	echo "find . -name *.$1 -exec wc -l {} +"
+	find . -name "*.$1" -exec wc -l {} +
 }

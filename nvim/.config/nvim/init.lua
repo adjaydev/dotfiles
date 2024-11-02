@@ -6,9 +6,9 @@ vim.cmd 'language en_US'
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.api.nvim_set_hl(0, 'LineNr', { fg = '#00ff00' })
-vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ff0000' })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ff0000' })
+-- vim.api.nvim_set_hl(0, 'LineNr', { fg = '#00ff00' })
+-- vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ff0000' })
+-- vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ff0000' })
 vim.wo.number = true
 vim.opt.mouse = 'a'
 
@@ -454,6 +454,8 @@ require('lazy').setup({
   },
 
   { import = 'custom.plugins' },
+
+  -- { 'rose-pine/neovim', name = 'rose-pine' },
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 }, {
   ui = {
@@ -488,7 +490,7 @@ require 'custom.lsp'
 require 'custom.devicons'
 require 'custom.lsp'
 require 'custom.tabnine'
--- require 'custom.markdown-oxide'
+require 'custom.markdown-oxide'
 require 'kickstart.plugins.indent_line'
 require 'kickstart.plugins.debug'
 
@@ -499,5 +501,18 @@ function ColorMyPencils()
   vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 end
 
-ColorMyPencils()
+-- ColorMyPencils()
+
+-- NOTE: Colorschemes
+
+-- vim.cmd 'colorscheme rose-pine'
+-- vim.cmd("colorscheme rose-pine-main")
+-- vim.cmd 'colorscheme rose-pine-moon'
+-- vim.cmd("colorscheme rose-pine-dawn")
+
 -- vim.cmd.colorscheme 'catppuccin'
+
+vim.cmd.colorscheme 'tokyonight-night'
+-- vim.cmd.colorscheme 'tokyonight-moon'
+-- vim.cmd.colorscheme 'tokyonight-storm'
+-- vim.cmd.colorscheme 'tokyonight-day'
