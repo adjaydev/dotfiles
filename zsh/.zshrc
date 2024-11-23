@@ -215,3 +215,15 @@ source <(ng completion script)
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+PATH="/Users/adjaythakoerdien/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/adjaythakoerdien/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/adjaythakoerdien/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/adjaythakoerdien/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/adjaythakoerdien/perl5"; export PERL_MM_OPT;
+
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk" 
+export ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/28.0.12433566" 
