@@ -16,8 +16,6 @@ exec-on-workspace-change = ['/bin/bash', '-c',
   'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
 ]
 
-
-
 # # Notify Sketchybar about workspace change
 # exec-on-workspace-change = ['/bin/bash', '-c',
 #     'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
@@ -38,7 +36,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 300
+accordion-padding = 100
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'

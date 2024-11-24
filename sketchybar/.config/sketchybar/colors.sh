@@ -4,7 +4,9 @@
 BLACK=0xff181926
 WHITE=0xffcad3f5
 RED=0xffed8796
-GREEN=0xffa6da95
+# GREEN=0xffa6da95
+GREEN=0xff9ECE6A
+#9ECE6A
 BLUE=0xff8aadf4
 YELLOW=0xffeed49f
 ORANGE=0xfff5a97f

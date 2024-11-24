@@ -47,6 +47,7 @@ sketchybar --bar     height=25                                         \
                      popup.background.color=$POPUP_BACKGROUND_COLOR    \
                      popup.background.shadow.drawing=$SHADOW
 
+
 # Left
 source "$ITEM_DIR/apple.sh"
 source "$ITEM_DIR/spaces.sh"
@@ -55,8 +56,11 @@ source "$ITEM_DIR/spaces.sh"
 # source "$ITEM_DIR/spotify.sh"
 
 # Right
-source "$ITEM_DIR/calendar.sh"
+# source "$ITEM_DIR/calendar.sh"
+
+source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/date.sh"
+
 
 ############## FINALIZING THE SETUP ##############
 sketchybar --update

@@ -227,3 +227,6 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk" 
 export ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/28.0.12433566" 
+
+# Skethcybar reload
+sketchybar --reload

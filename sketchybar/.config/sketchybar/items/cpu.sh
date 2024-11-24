@@ -12,7 +12,7 @@ sketchybar --add item        cpu.top right                  \
            --set cpu.percent label.font="$FONT:Heavy:12"    \
                              label=CPU                      \
                              icon.drawing=off               \
-                             update_freq=2                  \
+                             update_freq=10                  \
                              mach_helper="$HELPER"          \
                              background.padding_right=20    \
                                                             \
