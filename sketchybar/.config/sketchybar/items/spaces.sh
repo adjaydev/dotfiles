@@ -9,9 +9,9 @@ for sid in $(aerospace list-workspaces --all); do
         --subscribe "space.$sid" aerospace_workspace_change \
         --set "space.$sid" \
           icon="$sid"\
-          icon.padding_left=11                          \
-          icon.padding_right=11                         \
-          label.padding_right=11                        \
+          icon.padding_left=8                          \
+          icon.padding_right=8                         \
+          label.padding_right=0                        \
           icon.highlight_color=$RED                     \
           background.color=0x44ffffff \
           background.corner_radius=0 \

@@ -68,5 +68,5 @@ fi
 
 sketchybar --set $NAME \
     icon=$ICON \
-    label=" ${PERCENTAGE}% " \
+    label=" ${PERCENTAGE}% -" \
     icon.color=${ICON_COLOR}
