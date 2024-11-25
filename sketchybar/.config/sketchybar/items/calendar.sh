@@ -1,15 +1,14 @@
 #!/usr/bin/env sh
 
-sketchybar --add item     calendar right               \
-           --set calendar icon=cal                     \
-                          icon.color=$BLACK            \
-                          icon.font="$FONT:Black:12.0" \
-                          icon.padding_left=5          \
-                          icon.padding_right=5         \
-                          icon.drawing=off             \
-                          label.color=$BLACK           \
-                          label.padding_left=5         \
-                          label.padding_right=5        \
-                          background.color=0xffb8c0e0  \
-                          background.height=26         \
-                          background.corner_radius=11
+
+sketchybar --add item calendarEvent right \
+    --set calendarEvent update_freq=60 \
+    label="$(icalbuddy -n -nc -b "" -iep "title" -po "title" -tf "%H:%M" -df "%Y-%m-%d" eventsToday | head -n 1)" \
+    padding_right=20
+
+
+sketchybar --add item calendarTime right \
+    --set calendarTime update_freq=60 \
+    label="$(icalbuddy -n -nc -b "" -iep "datetime" -po "datetime" -tf "%H:%M" -df "%Y-%m-%d" eventsToday | head -n 1)" \
+    label.color=$GREEN \
+    padding_right=20
