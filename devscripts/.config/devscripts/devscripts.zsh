@@ -32,20 +32,8 @@ fi
 	python -c "import pandas as pd; pd.read_excel('$excel_file').to_json('$output_file', orient='records')"
 }
 
-<<<<<<< HEAD
-function json2xlsx() {
-if [ $# -eq 0 ]; then
-    echo "Usage: json2xlsx <json_file> [output_excel_file]"
-    exit 1
-fi
-	json_file="$1"
-	output_file="${2:-${json_file%.json}.xlsx}"
-
-	python -c "import pandas as pd; pd.read_json('$json_file').to_excel('$output_file')"
-=======
 function timestamp() {
 	python -c "import time; print(int(time.time()*1_000_000_000))"
->>>>>>> main2
 }
 
 function fancy() {

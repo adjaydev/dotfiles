@@ -39,7 +39,7 @@ alias devscripts="nvim ~/.config/devscripts/devscripts.zsh"
 
 alias ae="aerospace"
 
-alias play-doom="cd /Users/adjaythakoerdien/projects/terminal-doom && zig-out/bin/terminal-doom"
+alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
 
 
 cht() {
@@ -51,7 +51,7 @@ alias bvdata="cd ~/Documents/werk/BVCM/data; lsa"
 alias bvdocs="cd ~/Documents/werk/BVCM/docs; lsa"
 function bvcm() {
 	echo "\n[LIST DIRECTORY -a]"
-	cd "/Users/adjaythakoerdien/Documents/werk/BVCM/$1"
+	cd "~/Documents/werk/BVCM/$1"
 	ls -la $2
 	echo "\n[DIRECTORY]"
 	pwd
@@ -62,33 +62,33 @@ function bvd() {
 	# SFTP
 	if [[ "$1" == "sftp" ]]; 
 	then
-		cd "/Users/adjaythakoerdien/Documents/werk/BVCM/docs/scripts_sftp_useit"
+		cd "~/Documents/werk/BVCM/docs/scripts_sftp_useit"
 		"ls -ltr"
-		echo "Now @ /Users/adjaythakoerdien/Documents/werk/BVCM/docs/scripts_sftp_useit"
+		echo "Now @ ~/Documents/werk/BVCM/docs/scripts_sftp_useit"
 	fi
 
 	# billing
 	if [[ "$1" == "billing" ]]; 
 	then
-		cd "/Users/adjaythakoerdien/Documents/werk/BVCM/docs/$1"
+		cd "~/Documents/werk/BVCM/docs/$1"
 		"ls -ltr"
-		echo "Now @ /Users/adjaythakoerdien/Documents/werk/BVCM/docs/$1"
+		echo "Now @ ~/Documents/werk/BVCM/docs/$1"
 	fi
 
 	# aanlaveringen
 	if [[ "$1" == "aanleveringen" ]]; 
 	then
-		cd "/Users/adjaythakoerdien/Documents/werk/BVCM/docs/aanleveringen"
+		cd "~/Documents/werk/BVCM/docs/aanleveringen"
 		"ls -ltr"
-		echo "Now @ /Users/adjaythakoerdien/Documents/werk/BVCM/docs/$1"
+		echo "Now @ ~/Documents/werk/BVCM/docs/$1"
 	fi
 	
 	# empty
 	if [[ "$1" == "" ]]; 
 	then
-		cd "/Users/adjaythakoerdien/Documents/werk/BVCM/docs"
+		cd "~/Documents/werk/BVCM/docs"
 		"lsa"
-		echo "Now @ /Users/adjaythakoerdien/Documents/werk/BVCM/docs"
+		echo "Now @ ~/Documents/werk/BVCM/docs"
 	fi
 }
 
@@ -170,7 +170,7 @@ function on() {
 
 	file_name=$(echo "$1" | tr ' ' '-')
 	formatted_file_name=${file_name}_$(date "+%Y-%m-%d").md
-	cd "/Users/adjaythakoerdien/personal/DeeezNotes/DeeezNotes" || exit
+	cd "~/personal/DeeezNotes/DeeezNotes" || exit
 	touch "0-inbox/${formatted_file_name}"
 	nvim "0-inbox/${formatted_file_name}"
 }
@@ -184,13 +184,13 @@ export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
 # Created by `pipx` on 2024-04-05 14:42:57
-export PATH="$PATH:/Users/adjaythakoerdien/.local/bin"
+export PATH="$PATH:~/.local/bin"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '~/Projects/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '~/Projects/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 export NVM_DIR="/opt/homebrew/opt/nvm"
@@ -217,25 +217,17 @@ source <(ng completion script)
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-<<<<<<< HEAD
-PATH="/Users/adjaythakoerdien/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/adjaythakoerdien/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/adjaythakoerdien/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/adjaythakoerdien/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/adjaythakoerdien/perl5"; export PERL_MM_OPT;
+PATH="~/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="~/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="~/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"~/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 
-export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
-export ANDROID_HOME="$HOME/Library/Android/sdk"
-export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
-export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk" 
-export ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/28.0.12433566" 
+# export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
+# export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 $ANDROID_HOME/ndk)"
+# export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk" 
+# export ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/28.0.12433566" 
 
 # Skethcybar reload
 sketchybar --reload
-=======
-PATH="/Users/Adjay/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/Adjay/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/Adjay/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/Adjay/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/Adjay/perl5"; export PERL_MM_OPT;
->>>>>>> main2
