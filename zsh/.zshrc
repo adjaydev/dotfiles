@@ -35,6 +35,7 @@ alias dotv="nvim ~/dotfiles/"
 alias conf="cd ~/.config/"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
+alias devscripts="nvim ~/.config/devscripts/devscripts.zsh"
 
 alias ae="aerospace"
 
@@ -138,12 +139,12 @@ alias dpcker="docker"
 alias hackerscript="docker run --rm -it bcbcarl/hollywood"
 
 # Collect Online Proxy
-alias run-coproxy="~/Documents/werk/BVCM/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-mysql \
+alias run-coproxy="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-mysql \
 --port=3308 \
---credentials-file=/Users/adjaythakoerdien/Documents/werk/BVCM/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
-alias run-coproxy-build="~/Documents/werk/BVCM/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-build \
+--credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
+alias run-coproxy-build="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-build \
 --port=3308 \
---credentials-file=/Users/adjaythakoerdien/Documents/werk/BVCM/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
+--credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
 
 # The fuck
 eval $(thefuck --alias)
@@ -215,3 +216,9 @@ source <(ng completion script)
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+PATH="/Users/Adjay/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/Users/Adjay/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/Adjay/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/Adjay/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/Adjay/perl5"; export PERL_MM_OPT;

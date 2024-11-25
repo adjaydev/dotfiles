@@ -1,4 +1,4 @@
-session_root "/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli"
+session_root "~/projects/bvcm-azure-cli"
 if initialize_session "bvcli"; then
   new_window "editor"
   new_window "server"

@@ -13,6 +13,10 @@ fi
 	python -c "import pandas as pd; pd.read_excel('$excel_file').to_json('$output_file', orient='records')"
 }
 
+function timestamp() {
+	python -c "import time; print(int(time.time()*1_000_000_000))"
+}
+
 function fancy() {
 	cfonts $1 -f "huge" -a center -f shade  -g red,blue
 	# cfonts $1 -f "huge" -a center -f shade -c "#ff5500",cyan -g red,blue
@@ -35,7 +39,7 @@ function bvpl() {
 }
 function sftp-start() {
 	source ~/.config/azurecli/.env
-	/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli/target/release/./bvcm_inquire
+	~/projects/bvcm-azure-cli/target/release/./bvcm_inquire
 }
 
 function opig() {
@@ -45,11 +49,11 @@ function opig() {
 	# awk '{$1=$1};1'    => remove leading and trailing spaces
 	# tr -d              => translate and delete '\n'
 
-	op item get $1 --reveal | grep -E '(wachtwoord|password):' | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
+	op item --vault Private get $1 --reveal | grep -E '(wachtwoord|password):' | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 
 function opil() {
-	op item list
+	op item list --vault Private
 }
 
 function count() {
@@ -59,3 +63,8 @@ function count() {
 function count-lines() {
     find . -name "*.$1" -exec wc -l {} +
 }
+
+alias dcd="docker-compose down"
+alias dcu="docker-compose up -d"
+
+alias clock="tock -c -W 6 -H 3 -m"

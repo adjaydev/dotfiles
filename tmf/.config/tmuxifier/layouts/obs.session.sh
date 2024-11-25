@@ -1,4 +1,4 @@
-session_root "~/Documents/DeeezNotes"
+session_root "~/personal/DeeezNotes/DeeezNotes"
 if initialize_session "obs"; then
   new_window "editor"
   select_window 1

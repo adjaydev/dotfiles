@@ -1,4 +1,4 @@
-session_root "/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-qdesk"
+session_root "~/projects/bvcm-qdesk"
 if initialize_session "bvqdesk"; then
   new_window "editor"
   new_window "server"

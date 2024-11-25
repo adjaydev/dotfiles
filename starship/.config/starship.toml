@@ -2,11 +2,31 @@
 # Config
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# format = """
+# $directory\
+# $git_branch\
+# $git_status\
+# $fill\
+# $python\
+# $rust\
+# $golang\
+# $nodejs\
+# $lua\
+# $docker_context\
+# $deno\
+# $conda\
+# $ocaml\
+# $php\
+# $zig\
+# $azure\
+# $time\
+# $sudo\
+# $cmd_duration\
+# $line_break\
+# $character
+# """
+
 format = """
-$directory\
-$git_branch\
-$git_status\
-$fill\
 $python\
 $rust\
 $golang\
@@ -18,13 +38,10 @@ $conda\
 $ocaml\
 $php\
 $zig\
-$azure\
-$time\
-$sudo\
-$cmd_duration\
 $line_break\
 $character
 """
+
 
 [character]
 success_symbol = '[ζ](bold green)'
