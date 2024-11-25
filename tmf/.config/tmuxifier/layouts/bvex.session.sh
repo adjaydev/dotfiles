@@ -1,6 +1,6 @@
-session_root "~/projects/bvcm-wiki/wiki"
-if initialize_session "bvwiki"; then
-  new_window "editor"
+session_root "~/projects/bvcm-exact-api"
+if initialize_session "bvex"; then
+  new_window "nvim"
   new_window "server"
   new_window "zsh"
   select_window 1

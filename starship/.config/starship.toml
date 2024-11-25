@@ -27,7 +27,10 @@
 # """
 
 format = """
+<<<<<<< HEAD
 $fill\
+=======
+>>>>>>> main2
 $python\
 $rust\
 $golang\
@@ -42,6 +45,7 @@ $zig\
 $line_break\
 $character
 """
+
 
 [character]
 success_symbol = '[ζ](bold green)'

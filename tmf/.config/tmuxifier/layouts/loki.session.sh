@@ -1,6 +1,6 @@
-session_root "~/projects/bvcm-wiki/wiki"
-if initialize_session "bvwiki"; then
-  new_window "editor"
+session_root "~/projects/test/loki"
+if initialize_session "loki"; then
+  new_window "loki"
   new_window "server"
   new_window "zsh"
   select_window 1

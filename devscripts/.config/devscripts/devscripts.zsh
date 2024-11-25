@@ -32,6 +32,7 @@ fi
 	python -c "import pandas as pd; pd.read_excel('$excel_file').to_json('$output_file', orient='records')"
 }
 
+<<<<<<< HEAD
 function json2xlsx() {
 if [ $# -eq 0 ]; then
     echo "Usage: json2xlsx <json_file> [output_excel_file]"
@@ -41,6 +42,10 @@ fi
 	output_file="${2:-${json_file%.json}.xlsx}"
 
 	python -c "import pandas as pd; pd.read_json('$json_file').to_excel('$output_file')"
+=======
+function timestamp() {
+	python -c "import time; print(int(time.time()*1_000_000_000))"
+>>>>>>> main2
 }
 
 function fancy() {
@@ -66,7 +71,7 @@ function bvpl() {
 
 function sftp-start() {
 	source ~/.config/azurecli/.env
-	/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-azure-cli/target/release/./bvcm_inquire
+	~/projects/bvcm-azure-cli/target/release/./bvcm_inquire
 }
 
 function opig() {
@@ -76,14 +81,19 @@ function opig() {
 	# awk '{$1=$1};1'    => remove leading and trailing spaces
 	# tr -d              => translate and delete '\n'
 
-	op item get $1 --reveal | grep -E '(wachtwoord|password):' | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
+	op item --vault Private get $1 --reveal | grep -E '(wachtwoord|password):' | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 
 function opil() {
-	op item list
+	op item list --vault Private
 }
 
 function count-lines() {
 	echo "find . -name *.$1 -exec wc -l {} +"
 	find . -name "*.$1" -exec wc -l {} +
 }
+
+alias dcd="docker-compose down"
+alias dcu="docker-compose up -d"
+
+alias clock="tock -c -W 6 -H 3 -m"
