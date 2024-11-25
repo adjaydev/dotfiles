@@ -12,7 +12,7 @@ sketchybar --add item timeIcon right \
   label.color=$GREEN
 
 sketchybar --add item date right \
-  --set date update_freq=20 label="$(date '+%a %-d %b')" \
+  --set date update_freq=20 label="$(LC_TIME=nl_NL.UTF-8 date '+%A %-d %b')" \
   padding_right=10 \
   label.color=$BLUE
 
