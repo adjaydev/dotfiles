@@ -12,7 +12,7 @@ for sid in $(aerospace list-workspaces --all); do
           icon.padding_left=8                          \
           icon.padding_right=8                         \
           label.padding_right=0                        \
-          icon.highlight_color=$RED                     \
+          icon.highlight_color=$GREEN                     \
           background.color=0x44ffffff \
           background.corner_radius=0 \
           background.height=30 \

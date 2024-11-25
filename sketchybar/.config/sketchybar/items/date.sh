@@ -2,7 +2,7 @@
 
 
 sketchybar --add item time right \
-  --set time update_freq=0 script='sketchybar --set $NAME label="󱑎 $(date "+%H:%M")u."'\
+  --set time update_freq=20 script='sketchybar --set $NAME label="󱑎 $(date "+%H:%M")u."'\
   padding_right=20    \
   label.color=$GREEN
 

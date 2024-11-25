@@ -1,9 +1,9 @@
-# Brew
+# NOTE: Brew
 
 echo "Installing ohmyzsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-## Brew Cask
+## NOTE: Brew Cask
 
 echo "Installing all brew install --cask"
 brew install --cask nikitabobko/tap/aerospace
@@ -13,7 +13,6 @@ brew install --cask jetbrains-toolbox
 brew install --cask obsidian
 brew install --cask obs
 brew install --cask superhuman
-brew install --cask rapidapi
 brew install --cask elgato-camera-hub
 brew install --cask elgato-stream-deck
 brew install --cask elgato-control-center
@@ -28,9 +27,11 @@ brew install --cask visual-studio-code
 brew install --cask affinity-designer
 brew install --cask google-cloud-sdk
 brew install --cask google-chrome
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask font-hack-nerd-font
 
 
-## Brew
+## NOTE: Brew
 
 echo "Installing all brew intall"
 brew install azure-cli
@@ -59,7 +60,6 @@ brew install poetry
 brew install pyenv
 brew install ripgrep
 brew install ruff
-brew install sesh
 brew install sqlite
 brew install starship
 brew install stow
@@ -68,9 +68,10 @@ brew install thefuck
 brew install tmux
 brew install tree-sitter
 brew install zoxide
-brew install amethyst
 brew install docker
 brew install bruno
+brew tap FelixKratz/formulae
+brew install sketchybar
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
