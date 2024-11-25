@@ -62,11 +62,13 @@ case ${PERCENTAGE} in
 esac
 
 if [[ $CHARGING != "" ]]; then
-    ICON=""
+    ICON="󱀤 "
     ICON_COLOR=0xffeed49f
 fi
 
 sketchybar --set $NAME \
     icon=$ICON \
     label=" ${PERCENTAGE}% -" \
+    label.color=0xff939ab7 \
+    icon.font.size=18 \
     icon.color=${ICON_COLOR}
