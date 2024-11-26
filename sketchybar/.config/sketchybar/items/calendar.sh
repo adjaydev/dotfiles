@@ -15,6 +15,7 @@ sketchybar --add item calendarTime right \
     icon="󰃭 " \
     icon.color=$GREY \
     icon.padding_right=10 \
+    icon.size=22 \
     label="$(icalbuddy -n -nc -b "" -iep "datetime" -po "datetime" -tf "%H:%M" -df "%Y-%m-%d" eventsToday | head -n 1):" \
     padding_right=10 \
     label.color=$GREY

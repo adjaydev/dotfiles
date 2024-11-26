@@ -6,6 +6,7 @@ sketchybar --add item time right \
   icon=" " \
   icon.padding_right=10 \
   icon.color=$GREEN \
+  icon.size=18 \
   label="$(date '+%-H:%M')u." \
   script="$PLUGIN_DIR/date.sh" \
   padding_right=20 \
@@ -25,6 +26,7 @@ sketchybar --add item wkdateicon right \
   icon="󰃮 " \
   icon.padding_right=10 \
   icon.color=$BLUE \
+  icon.size=18 \
   label="wk $(date "+%W")" \
   padding_right=5 \
   label.color=$BLUE \

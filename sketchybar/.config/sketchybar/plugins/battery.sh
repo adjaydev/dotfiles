@@ -33,6 +33,7 @@
 
 PERCENTAGE=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
 CHARGING=$(pmset -g batt | grep 'AC Power')
+ICON_SIZE=18
 
 if [ $PERCENTAGE = "" ]; then
     exit 0
@@ -62,13 +63,14 @@ case ${PERCENTAGE} in
 esac
 
 if [[ $CHARGING != "" ]]; then
-    ICON="󱀤 "
-    ICON_COLOR=0xffeed49f
+    ICON="󰘧 "
+    ICON_COLOR=0xffa6da95
+    ICON_SIZE=22
 fi
 
 sketchybar --set $NAME \
     icon=$ICON \
     label.color=0xff939ab7 \
-    icon.font.size=18 \
+    icon.font.size=$ICON_SIZE \
     icon.color=${ICON_COLOR}
     # label=" ${PERCENTAGE}% -" \
