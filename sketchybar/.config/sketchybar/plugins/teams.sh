@@ -15,6 +15,7 @@ else
 fi
 
 if [[ $LABEL == "" ]]; then
+    ICON="󰍡 "
     ICON_COLOR="0xffa6da95"
 elif [[ $LABEL == "•" ]]; then
     ICON_COLOR="0xffeed49f"

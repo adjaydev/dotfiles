@@ -14,7 +14,7 @@ sketchybar --add item time right \
 sketchybar --add item date right \
   --set date \
   label="$(LC_TIME=nl_NL.UTF-8 date '+%A %-d %b')" \
-  padding_right=10 \
+  padding_right=30 \
   label.color=$BLUE
 
 sketchybar --add item wkdateicon right \
