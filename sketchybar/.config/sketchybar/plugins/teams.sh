@@ -1,21 +1,48 @@
 #!/usr/bin/env sh
 
-STATUS_LABEL=$(lsappinfo info -only StatusLabel "Superhuman")
+STATUS_LABEL=$(lsappinfo info -only StatusLabel "Microsoft Teams")
 ICON="󱥁 "
+echo "HELOO"
+
+# Extract the label, handling kCFNULL
 if [[ $STATUS_LABEL =~ \"label\"=\"([^\"]*)\" ]]; then
     LABEL="${BASH_REMATCH[1]}"
-
-    if [[ $LABEL == "" ]]; then
-        ICON_COLOR="0xffa6da95"
-    elif [[ $LABEL == "•" ]]; then
-        ICON_COLOR="0xffeed49f"
-    elif [[ $LABEL =~ ^[0-9]+$ ]]; then
-        ICON_COLOR="0xffed8796"
-    else
-        exit 0
-    fi
+elif [[ $STATUS_LABEL =~ \"label\"=kCFNULL ]]; then
+    LABEL=""
 else
-  exit 0
+    echo "Unexpected output from lsappinfo: $STATUS_LABEL" >&2
+    exit 1
+fi
+
+if [[ $LABEL == "" ]]; then
+    ICON_COLOR="0xffa6da95"
+elif [[ $LABEL == "•" ]]; then
+    ICON_COLOR="0xffeed49f"
+elif [[ $LABEL =~ ^[0-9]+$ ]]; then
+    ICON_COLOR="0xffed8796"
+else
+    exit 0
+    # ICON_COLOR="0xffa6da95" # Default to green
 fi
 
 sketchybar --set $NAME icon=$ICON label="${LABEL}" icon.color=${ICON_COLOR} icon.padding_right=10
+
+# if [[ $STATUS_LABEL =~ \"label\"=\"([^\"]*)\" ]]; then
+#     LABEL="${BASH_REMATCH[1]}"
+#     echo $LABEL
+#
+#     if [[ $LABEL == "" ]]; then
+#         ICON_COLOR="0xffa6da95"
+#     elif [[ $LABEL == "•" ]]; then
+#         ICON_COLOR="0xffeed49f"
+#     elif [[ $LABEL =~ ^[0-9]+$ ]]; then
+#         ICON_COLOR="0xffed8796"
+#     else
+#         ICON_COLOR="0xffa6da95"
+#         exit 0
+#     fi
+# else
+#   exit 0
+# fi
+#
+# sketchybar --set $NAME icon=$ICON label="${LABEL}" icon.color=${ICON_COLOR} icon.padding_right=10

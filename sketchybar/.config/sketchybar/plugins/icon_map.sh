@@ -17,7 +17,7 @@ case "$1" in
 "Affinity Publisher")
   icon_result=":affinity_publisher:"
   ;;
-"Messages" | "Nachrichten")
+"Messages" | "Nachrichten" | "Microsoft Teams")
   icon_result=":messages:"
   ;;
 "Tweetbot" | "Twitter")
@@ -86,7 +86,7 @@ case "$1" in
 "WebStorm")
   icon_result=":web_storm:"
   ;;
-"Neovide" | "MacVim" | "Vim" | "VimR")
+"Neovide" | "MacVim" | "Vim" | "VimR" | "Neovim")
   icon_result=":vim:"
   ;;
 "Sublime Text")
@@ -212,7 +212,7 @@ case "$1" in
 "Blender")
   icon_result=":blender:"
   ;;
-"Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件")
+"Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "Superhuman")
   icon_result=":mail:"
   ;;
 "Safari" | "Safari Technology Preview")
