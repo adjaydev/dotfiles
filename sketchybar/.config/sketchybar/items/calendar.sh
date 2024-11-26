@@ -4,7 +4,7 @@
 sketchybar --add item calendarEvent right \
     --set calendarEvent \
     label="$(icalbuddy -n -nc -b "" -iep "title" -po "title" -tf "%H:%M" -df "%Y-%m-%d" eventsToday | head -n 1)" \
-    padding_right=35 \
+    padding_right=30 \
     label.color=$GREY
 
 

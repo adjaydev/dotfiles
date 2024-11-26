@@ -18,4 +18,4 @@ else
   exit 0
 fi
 
-sketchybar --set $NAME icon=$ICON label="${LABEL}" icon.color=${ICON_COLOR} icon.padding_right=10
+sketchybar --set $NAME icon=$ICON label="${LABEL}" icon.color=${ICON_COLOR} icon.padding_right=7

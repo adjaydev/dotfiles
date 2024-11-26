@@ -2,6 +2,7 @@
 
 STATUS_LABEL=$(lsappinfo info -only StatusLabel "Microsoft Teams")
 ICON="󱥁 "
+PADD=30
 echo "HELOO"
 
 # Extract the label, handling kCFNULL
@@ -16,6 +17,7 @@ fi
 
 if [[ $LABEL == "" ]]; then
     ICON="󰍡 "
+    PADD=20
     ICON_COLOR="0xffa6da95"
 elif [[ $LABEL == "•" ]]; then
     ICON_COLOR="0xffeed49f"
@@ -25,4 +27,4 @@ else
     exit 0
 fi
 
-sketchybar --set $NAME icon=$ICON label="${LABEL}" icon.color=${ICON_COLOR} icon.padding_right=10
+sketchybar --set $NAME icon=$ICON label="${LABEL}" icon.color=${ICON_COLOR} icon.padding_right=7 padding_right=$PADD
