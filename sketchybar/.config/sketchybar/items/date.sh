@@ -9,13 +9,16 @@ sketchybar --add item time right \
   label="$(date '+%-H:%M')u." \
   script="$PLUGIN_DIR/date.sh" \
   padding_right=20 \
-  label.color=$GREEN
+  label.color=$GREEN \
+  --subscribe time system_woke
+
 
 sketchybar --add item date right \
   --set date \
   label="$(LC_TIME=nl_NL.UTF-8 date '+%A %-d %b')" \
   padding_right=30 \
-  label.color=$BLUE
+  label.color=$BLUE 
+
 
 sketchybar --add item wkdateicon right \
   --set wkdateicon \
@@ -24,4 +27,4 @@ sketchybar --add item wkdateicon right \
   icon.color=$BLUE \
   label="wk $(date "+%W")" \
   padding_right=5 \
-  label.color=$BLUE
+  label.color=$BLUE \
