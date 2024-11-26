@@ -3,7 +3,7 @@
 STATUS_LABEL=$(lsappinfo info -only StatusLabel "Microsoft Teams")
 ICON="󱥁 "
 PADD=30
-echo "HELOO"
+
 
 # Extract the label, handling kCFNULL
 if [[ $STATUS_LABEL =~ \"label\"=\"([^\"]*)\" ]]; then
@@ -11,8 +11,7 @@ if [[ $STATUS_LABEL =~ \"label\"=\"([^\"]*)\" ]]; then
 elif [[ $STATUS_LABEL =~ \"label\"=kCFNULL ]]; then
     LABEL=""
 else
-    echo "Unexpected output from lsappinfo: $STATUS_LABEL" >&2
-    exit 1
+    exit 0
 fi
 
 if [[ $LABEL == "" ]]; then
