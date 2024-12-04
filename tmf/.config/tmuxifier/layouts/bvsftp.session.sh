@@ -1,4 +1,4 @@
-session_root "/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-backoffice-sftp"
+session_root "~/projects/bvcm-backoffice-sftp"
 if initialize_session "bvsftp"; then
   new_window "editor"
   new_window "server"
