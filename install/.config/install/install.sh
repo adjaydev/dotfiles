@@ -36,6 +36,7 @@ brew install --cask font-hack-nerd-font
 echo "Installing all brew intall"
 brew install azure-cli
 brew install bat
+brew install bat-extras
 brew install biome
 brew install btop
 brew install cbonsai
@@ -72,6 +73,7 @@ brew install docker
 brew install bruno
 brew tap FelixKratz/formulae
 brew install sketchybar
+brew install borders
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
