@@ -6,6 +6,8 @@ vim.cmd 'language en_US'
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.colorcolumn = { 120 }
+
 -- vim.api.nvim_set_hl(0, 'LineNr', { fg = '#00ff00' })
 -- vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ff0000' })
 -- vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ff0000' })

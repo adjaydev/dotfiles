@@ -81,5 +81,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "Installing Tmuxifier"
 git clone https://github.com/jimeh/tmuxifier.git ~/.config/tmuxifier
 
-echo "Angular CLI"
+echo "Installing Angular CLI"
 npm install -g @angular/cli
+
+echo "Installing Graph Easy"
+cpan install Graph::Easy
