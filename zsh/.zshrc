@@ -92,6 +92,26 @@ function bvd() {
 	fi
 }
 
+# git
+alias gp="git push"
+function gpu() {
+	git push -u $1 $2
+}
+function gs() {
+	git switch $1
+}
+function gsc() {
+	git switch -c $1
+}
+function gd() {
+	git branch -d $1
+}
+function gD() {
+	git branch -D $1
+}
+function gl() {
+	git branch -A
+}
 
 
 # BVCM Git
