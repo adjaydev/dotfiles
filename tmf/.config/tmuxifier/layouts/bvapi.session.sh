@@ -1,4 +1,4 @@
-session_root "/Users/adjaythakoerdien/Documents/werk/BVCM/git/bvcm-api-connector"
+session_root "~/projects/bvcm-collectonline-api"
 if initialize_session "bvapi"; then
   new_window "editor"
   new_window "server"
