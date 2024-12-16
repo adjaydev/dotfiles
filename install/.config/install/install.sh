@@ -75,6 +75,7 @@ brew tap FelixKratz/formulae
 brew install sketchybar
 brew install borders
 brew install svim
+brew install onefetch
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
