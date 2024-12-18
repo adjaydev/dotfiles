@@ -1,9 +1,21 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # nerdfetch
 export ZSH="$HOME/.oh-my-zsh"
+export AIRFLOW_HOME="~/projects/airflow"
+#
+# Set default $EDITOR
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+export PATH=$PATH:$HOME/go/bin
+
+export PATH="$HOME/.config/tmuxifier/bin:$PATH"
+export PATH="$PATH:~/.local/bin"
+
+
+
 ZSH_THEME="robbyrussell"
-# plugins=(git azure macos nvm systemd thefuck tmux urltools)
 plugins=(macos systemd thefuck tmux urltools)
+
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh_scripts/.tmux
 source ~/.config/devscripts/devscripts.zsh
@@ -19,10 +31,10 @@ alias run-coproxy-build="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-
 # The fuck
 eval $(thefuck --alias)
 
-
 # MODULAR & MOJO
 export MODULAR_HOME="$HOME/.modular"
 export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"export PYENV_ROOT="$HOME/.pyenv"
+
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
@@ -50,11 +62,7 @@ function on() {
 eval "$(starship init zsh)"
 
 # Tmuxifier
-export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
-
-# Created by `pipx` on 2024-04-05 14:42:57
-export PATH="$PATH:~/.local/bin"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/Projects/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/path.zsh.inc'; fi
@@ -73,16 +81,8 @@ eval "$(op completion zsh)"; compdef _op op
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# GO
-
-# Set default $EDITOR
-export EDITOR=nvim
-export VISUAL="$EDITOR"
-export PATH=$PATH:$HOME/go/bin
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
-
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -101,3 +101,5 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 
 # Skethcybar reload
 sketchybar --reload
+
+
