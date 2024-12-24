@@ -6,7 +6,6 @@ export AIRFLOW_HOME="~/projects/airflow"
 # Set default $EDITOR
 export EDITOR=nvim
 export VISUAL="$EDITOR"
-export PATH=$PATH:$HOME/go/bin
 
 export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 export PATH="$PATH:~/.local/bin"
@@ -62,7 +61,6 @@ function on() {
 eval "$(starship init zsh)"
 
 # Tmuxifier
-export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -109,5 +107,5 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 
 # Skethcybar reload
 sketchybar --reload
-
-
+export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH=$PATH:$HOME/go/bin
