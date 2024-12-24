@@ -226,6 +226,10 @@ function opig() {
 	op item --vault Private get $1 --reveal | grep -E '(wachtwoord|password):' | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 
+function opiga() {
+	op item --vault Private get $1 --reveal
+}
+
 function opil() {
 	op item list --vault Private
 }

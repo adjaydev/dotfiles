@@ -66,7 +66,7 @@ return {
     workspaces = {
       {
         name = 'personal',
-        path = '~/Documents/DeeezNotes',
+        path = '~/personal/DeeezNotes',
       },
     },
     completion = {

@@ -1,4 +1,3 @@
-**/*.DS_Store
 .env
-
-**/tmux/plugins/tmux
+**/*.DS_Store
+**/tmux/plugins/*

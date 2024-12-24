@@ -101,3 +101,4 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 
 # Skethcybar reload
 sketchybar --reload
+export PATH=$PATH:$HOME/.local/opt/go/bin
