@@ -62,6 +62,7 @@ function on() {
 eval "$(starship init zsh)"
 
 # Tmuxifier
+export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -80,6 +81,13 @@ eval "$(op completion zsh)"; compdef _op op
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# GO
+
+# Set default $EDITOR
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+export PATH=$PATH:$HOME/go/bin
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)

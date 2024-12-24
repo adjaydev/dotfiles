@@ -1,8 +1,4 @@
-**/*.DS_Store
 .env
-<<<<<<< HEAD
+**/*.DS_Store
+**/tmux/plugins/*
 logs
-=======
-
-**/tmux/plugins/tmux
->>>>>>> 1a8077b (Restored order in the universe)
