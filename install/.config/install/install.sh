@@ -75,7 +75,11 @@ brew tap FelixKratz/formulae
 brew install sketchybar
 brew install borders
 brew install svim
+<<<<<<< HEAD
 brew install borders
+=======
+brew install onefetch
+>>>>>>> 1a8077b (Restored order in the universe)
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
