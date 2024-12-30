@@ -1,6 +1,7 @@
 # Clear screen
 alias c="clear;"
-alias cc="clear;clear;"
+alias cv="clear; python ~/projects/test/ascii.py;"
+alias cc="clear; clear;"
 
 # Neovim
 alias v.="nvim ."
@@ -8,14 +9,15 @@ alias nv="nvim"
 alias nvzsh="nvim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
 alias zshv="nvim ~/.zshrc"
-alias obs="cd ~/personal/DeeezNotes/DeeezNotes; nvim ."
+alias obs="cd ~/personal/DeeezNotes; nvim ."
 alias obsin="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
 
 # Change direcory
-alias confv="cd ~/.config/nvim; nvim ."
-alias confw="nvim ~/.config/wezterm/wezterm.lua"
-alias confa="nvim ~/.config/aerospace/aerospace.toml"
-alias confk="nvim ~/.config/kitty/kitty.conf"
+alias cv="cd ~/.config/nvim; nvim ."
+alias cw="nvim ~/.config/wezterm/wezterm.lua"
+alias ca="nvim ~/.config/aerospace/aerospace.toml"
+alias ck="nvim ~/.config/kitty/kitty.conf"
+alias cg="nvim ~/.config/ghostty/config"
 alias home="cd ~; lsa"
 alias downl="cd ~/Downloads; ls -ltr"
 alias docs="cd ~/Documents; lsa"
@@ -26,6 +28,8 @@ alias conf="cd ~/.config/"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
 alias devscripts="nvim ~/.config/devscripts/devscripts.zsh"
+
+alias of="onefetch"
 
 alias ae="aerospace"
 
@@ -233,6 +237,10 @@ function opil() {
 function count-lines() {
 	echo "find . -name *.$1 -exec wc -l {} +"
 	find . -name "*.$1" -exec wc -l {} +
+}
+
+function ad() {
+	python ~/projects/test/ascii.py;
 }
 
 alias dcd="docker-compose down"

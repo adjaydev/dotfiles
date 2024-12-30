@@ -44,3 +44,5 @@ end)
 -- search for files in full vault
 vim.keymap.set('n', '<leader>os', ':Telescope find_files search_dirs={"/Users/adjaythakoerdien/personal/DeeezNotes/DeeezNotes"}<cr>')
 vim.keymap.set('n', '<leader>oz', ':Telescope live_grep search_dirs={"/Users/adjaythakoerdien/personal/DeeezNotes/DeeezNotes"}<cr>')
+
+vim.keymap.set('n', '<leader>md', ':PresentStart<CR>')
