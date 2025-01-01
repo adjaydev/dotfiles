@@ -105,7 +105,5 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 # export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk" 
 # export ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/28.0.12433566" 
 
-# Skethcybar reload
-sketchybar --reload
 export PATH=$PATH:$HOME/.local/opt/go/bin
 export PATH=$PATH:$HOME/go/bin
