@@ -26,7 +26,7 @@ case ${PERCENTAGE} in
     ;;
 [1-3][0-9])
     ICON=""
-    ICON_COLOR=$ORANJE
+    ICON_COLOR=$ORANGE
     ;;
 [0-9])
     ICON=""
