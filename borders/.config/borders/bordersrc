@@ -3,10 +3,10 @@
 options=(
 	style=square
 	hidpi=true
-	width=3.0
-	hidpi=off
-	active_color=0xffFABD2E
-	inactive_color=0xff000000
+	width=2.0
+	hidpi=on
+	active_color=0xfffabd2e
+	inactive_color=0xff282828
 )
 
 borders "${options[@]}"
