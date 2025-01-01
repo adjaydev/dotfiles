@@ -1,14 +1,17 @@
-background = 1E1F2E
+# background = 1E1F2E
+theme = GruvboxDarkHard
+
 
 font-family = JetBrainsMono Nerd Font
 font-size = 13
+
 cursor-style = underline
 cursor-color = B5BD67
 
 mouse-hide-while-typing
 
 window-decoration = false
-window-padding-x = 20
+# window-padding-x = 20
 
 confirm-close-surface = true
 

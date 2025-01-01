@@ -20,3 +20,4 @@ sketchybar --add item calendarTime right \
     padding_right=10 \
     label.color=$GREY \
     --subscribe calendarTime system_woke
+

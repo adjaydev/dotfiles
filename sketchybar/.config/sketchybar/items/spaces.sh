@@ -1,7 +1,8 @@
 #!/usr/bin/env sh
 
+source "$HOME/.config/sketchybar/colors.sh"
+
 sketchybar --add event aerospace_workspace_change
-RED=0xffed8796
 
 for sid in $(aerospace list-workspaces --all); do
 # for sid in $(aerospace list-workspaces --monitor 1 --visible); do
@@ -12,7 +13,7 @@ for sid in $(aerospace list-workspaces --all); do
           icon.padding_left=8                          \
           icon.padding_right=8                         \
           label.padding_right=0                        \
-          icon.highlight_color=$GREEN                     \
+          icon.color=$BLACK                     \
           background.color=0x44ffffff \
           background.corner_radius=0 \
           background.height=30 \

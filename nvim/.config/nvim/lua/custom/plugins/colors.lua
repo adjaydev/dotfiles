@@ -52,6 +52,7 @@ return {
       vim.cmd.hi 'Comment gui=none'
     end,
   },
+  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
   -- {
   --   'rose-pine/neovim',
   --   name = 'rose-pine-moon',
