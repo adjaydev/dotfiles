@@ -498,13 +498,6 @@ require 'kickstart.plugins.debug'
 
 -- require 'custom.oil'
 
-function ColorMyPencils()
-  vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-  vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-end
-
--- ColorMyPencils()
-
 -- NOTE: Colorschemes
 
 -- vim.cmd 'colorscheme rose-pine'
@@ -519,9 +512,9 @@ end
 -- vim.cmd.colorscheme 'tokyonight-storm'
 -- vim.cmd.colorscheme 'tokyonight-day'
 
-vim.o.background = 'dark'
-vim.cmd [[colorscheme gruvbox]]
-
 require('gruvbox').setup {
-  contrast = 'hard',
+  palette_overrides = {
+    dark0 = '#1B1B1B',
+  },
 }
+vim.cmd [[colorscheme gruvbox]]
