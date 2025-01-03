@@ -516,5 +516,22 @@ require('gruvbox').setup {
   palette_overrides = {
     dark0 = '#1B1B1B',
   },
+  overrides = {
+    Function = { fg = '#fe8019', bg = 'NONE', bold = false },
+  },
+  italic = {
+    strings = false,
+    comments = f,
+  },
+  bold = true,
 }
-vim.cmd [[colorscheme gruvbox]]
+
+-- require('lualine').setup {
+--   options = {
+--     -- ... your lualine config
+--     theme = 'nord'
+--     -- ... your lualine config
+--   }
+-- }
+
+vim.cmd.colorscheme 'gruvbox'
