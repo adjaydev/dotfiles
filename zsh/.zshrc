@@ -9,6 +9,7 @@ export VISUAL="$EDITOR"
 
 export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 export PATH="$PATH:~/.local/bin"
+export PATH="/Applications/Google\ Chrome.app/Contents/MacOS:$PATH"
 
 
 

@@ -525,13 +525,4 @@ require('gruvbox').setup {
   },
   bold = true,
 }
-
--- require('lualine').setup {
---   options = {
---     -- ... your lualine config
---     theme = 'nord'
---     -- ... your lualine config
---   }
--- }
-
 vim.cmd.colorscheme 'gruvbox'

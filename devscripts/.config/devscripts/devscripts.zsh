@@ -3,8 +3,12 @@ alias c="clear;"
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
 
+# Personal
+alias adjay="cd ~/work/adjay.dev; c;"
+
 # Neovim
 alias v.="nvim ."
+alias v="nvim"
 alias nv="nvim"
 alias nvzsh="nvim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
@@ -34,6 +38,7 @@ alias of="onefetch"
 alias ae="aerospace"
 
 alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
+alias chrome="cd /Applications/Google\ Chrome.app/Contents/MacOS/ && ./Google\ Chrome"
 
 
 cht() {
