@@ -14,7 +14,12 @@ alias nvzsh="nvim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
 alias zshv="nvim ~/.zshrc"
 alias obs="cd ~/personal/DeeezNotes; nvim ."
-alias obsin="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
+# alias obsin="cd ~/personal/DeeezNotes/DeeezNotes/in; nvim .; %"
+function obn() {
+	cd ~/personal/DeeezNotes/0-inbox/
+	nvim $(echo "$1" | tr ' ' '-')".md"
+	%
+}
 
 # Change direcory
 alias cv="cd ~/.config/nvim; nvim ."

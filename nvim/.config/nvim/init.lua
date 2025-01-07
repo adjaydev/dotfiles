@@ -516,13 +516,20 @@ require('gruvbox').setup {
   palette_overrides = {
     dark0 = '#1B1B1B',
   },
-  overrides = {
-    Function = { fg = '#fe8019', bg = 'NONE', bold = false },
-  },
   italic = {
     strings = false,
-    comments = f,
+    comments = false,
   },
   bold = true,
+  overrides = {
+    Function = { fg = '#fe8019', bg = 'NONE', bold = false },
+    markdownH1 = { link = 'GruvboxRedBold', fg = '#b8bb26', bg = 'NONE' },
+    -- markdownH1 = { fg = '#cc241d' }, -- Red: Strong and attention-grabbing for the main heading
+    -- markdownH2 = { fg = '#d79921' }, -- Yellow: A bit softer, but still stands out
+    -- markdownH3 = { fg = '#98971a' }, -- Green:  Provides a nice contrast while maintaining readability
+    -- markdownH4 = { fg = '#458588' }, -- Blue:  A cooler color for deeper levels
+    -- markdownH5 = { fg = '#b16286' }, -- Purple:  Adds some variety and visual interest
+    -- markdownH6 = { fg = '#689d6a' }, -- Aqua:  Subtle, for the least important headings
+  },
 }
 vim.cmd.colorscheme 'gruvbox'
