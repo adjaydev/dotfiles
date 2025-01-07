@@ -1,3 +1,5 @@
+#! /usr/bin/env sh
+
 selected=`tmuxifier ls | sort -r | fzf`
 if [[ -n $selected ]]; then
 	echo "[starting session $selected]"

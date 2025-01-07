@@ -1,7 +1,7 @@
 #! /usr/bin/env sh
 # Tmux
 
-alias tls="tmux ls"
+alias tl="tmux ls"
 
 t() {
 	tmux
@@ -41,4 +41,5 @@ tfls() {
 	tmuxifier ls
 }
 
-alias tsls="~/.config/zsh_scripts/tsls.zsh"
+alias tsls="~/.config/zsh_scripts/tsls.sh"
+alias tls="~/.config/zsh_scripts/tls.sh"
