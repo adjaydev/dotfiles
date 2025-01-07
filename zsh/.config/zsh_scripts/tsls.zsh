@@ -1,8 +1,8 @@
-selected=`tmuxifier ls | fzf`
+selected=`tmuxifier ls | sort -r | fzf`
 if [[ -n $selected ]]; then
-	echo "[Starting session $selected]"
+	echo "[starting session $selected]"
 	tmuxifier s $selected
 else
-	echo "[No session selected]"
+	echo "[no session selected]"
 	exit 0
 fi
