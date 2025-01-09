@@ -1,4 +1,4 @@
-session_root "~/Documents/werk/BVCM/git/bvcm-intranet"
+session_root "~/projects/bvcm-intranet"
 if initialize_session "bvin"; then
   new_window "frontend"
   new_window "backend"

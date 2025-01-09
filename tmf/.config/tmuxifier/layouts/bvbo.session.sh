@@ -5,7 +5,7 @@ if initialize_session "bvbo"; then
   new_window "server"
   new_window "zsh"
   select_window 2
-  run_cmd "source venv24/bin/activate"
+  run_cmd "source venv/bin/activate"
   run_cmd "cd BVCM_BO_TEST"
   run_cmd "python manage.py runserver"
   select_window 1
