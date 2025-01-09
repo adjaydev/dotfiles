@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-
 sketchybar --add item calendarEvent right \
     --set calendarEvent \
     label="$(icalbuddy -n -nc -b "" -iep "title" -po "title" -tf "%H:%M" -df "%Y-%m-%d" eventsToday | head -n 1)" \
@@ -11,7 +10,7 @@ sketchybar --add item calendarEvent right \
 sketchybar --add item calendarTime right \
     --set calendarTime \
     update_freq=60 \
-    script="$PLUGIN_DIR/calerdar.sh" \
+    script="$PLUGIN_DIR/calendar.sh" \
     icon="󰃭 " \
     icon.color=$GREY \
     icon.padding_right=10 \
