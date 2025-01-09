@@ -210,3 +210,29 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.StorageExplorer'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'org.filezilla-project.filezilla'
+run = 'move-node-to-workspace V'
+
+[[on-window-detected]]
+if.app-id = 'com.devtoys'
+run = 'move-node-to-workspace V'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.pycharm'
+run = 'move-node-to-workspace X'
+
