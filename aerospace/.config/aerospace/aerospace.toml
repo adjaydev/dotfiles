@@ -244,3 +244,16 @@ run = 'move-node-to-workspace V'
 if.app-id = 'com.jetbrains.pycharm'
 run = 'move-node-to-workspace X'
 
+[[on-window-detected]]
+if.app-id = 'org.jkiss.dbeaver.core.product'
+run = 'move-node-to-workspace X'
+
+[[on-window-detected]]
+if.app-id = 'com.obsproject.obs-studio'
+run = 'move-node-to-workspace Z'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Excel'
+run = 'move-node-to-workspace 5'
+
+

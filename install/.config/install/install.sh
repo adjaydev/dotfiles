@@ -29,7 +29,8 @@ brew install --cask google-cloud-sdk
 brew install --cask google-chrome
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-hack-nerd-font
-
+brew install --cask dbeaver-community
+brew install --cask docker
 
 ## NOTE: Brew
 
@@ -69,7 +70,6 @@ brew install thefuck
 brew install tmux
 brew install tree-sitter
 brew install zoxide
-brew install docker
 brew install bruno
 brew tap FelixKratz/formulae
 brew install sketchybar
