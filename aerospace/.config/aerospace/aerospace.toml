@@ -245,6 +245,10 @@ if.app-id = 'com.jetbrains.pycharm'
 run = 'move-node-to-workspace X'
 
 [[on-window-detected]]
+if.app-id = 'com.jetbrains.datagrip'
+run = 'move-node-to-workspace X'
+
+[[on-window-detected]]
 if.app-id = 'org.jkiss.dbeaver.core.product'
 run = 'move-node-to-workspace X'
 
@@ -260,4 +264,7 @@ run = 'move-node-to-workspace Z'
 if.app-id = 'com.microsoft.Excel'
 run = 'move-node-to-workspace 5'
 
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Word'
+run = 'move-node-to-workspace 5'
 
