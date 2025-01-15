@@ -18,7 +18,7 @@ plugins=(macos systemd thefuck tmux urltools)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh_scripts/.tmux
-source ~/.config/devscripts/devscripts.zsh
+source ~/.config/scripts/devscripts.sh
 
 # Collect Online Proxy
 alias run-coproxy="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-mysql \

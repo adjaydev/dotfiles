@@ -35,7 +35,8 @@ alias dotv="nvim ~/dotfiles/"
 alias conf="cd ~/.config/"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
-alias devscripts="nvim ~/.config/devscripts/devscripts.zsh"
+alias devscripts="nvim ~/.config/scripts/devscripts.sh"
+alias temp="cd ~/projects/temp"
 
 alias of="onefetch"
 
@@ -243,7 +244,7 @@ function copy() {
 	awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 
-function fzf-copy() {
+function fzfcopy() {
 	sort -r | fzf | awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 

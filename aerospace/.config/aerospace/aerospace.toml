@@ -211,6 +211,10 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# Move apps to spaces on app startup
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Excel'
+run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
@@ -261,10 +265,5 @@ if.app-id = 'com.obsproject.obs-studio'
 run = 'move-node-to-workspace Z'
 
 [[on-window-detected]]
-if.app-id = 'com.microsoft.Excel'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
 if.app-id = 'com.microsoft.Word'
 run = 'move-node-to-workspace 5'
-
