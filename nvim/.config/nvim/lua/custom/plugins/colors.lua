@@ -52,7 +52,7 @@ return {
   --     vim.cmd.hi 'Comment gui=none'
   --   end,
   -- },
-  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
+  { 'ellisonleao/gruvbox.nvim', priority = 900, config = true, opts = ... },
   -- { 'shaunsingh/nord.nvim' },
   -- {
   --   'rose-pine/neovim',
