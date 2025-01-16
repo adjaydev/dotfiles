@@ -533,7 +533,6 @@ vim.api.nvim_set_hl(0, '@markdown.orange', { fg = '#fe8019', bold = false })
 vim.api.nvim_set_hl(0, '@markdown.green', { fg = '#98971a', bold = true })
 vim.api.nvim_set_hl(0, '@markdown.blue', { fg = '#458588', bold = true })
 vim.api.nvim_set_hl(0, '@markdown.purple', { fg = '#b16286', bold = true })
-vim.api.nvim_set_hl(0, '@markdown.bleen', { fg = '#689d6a', bold = true })
 vim.api.nvim_set_hl(0, '@markdown.yellow', { fg = '#d79921', bold = true })
 vim.api.nvim_set_hl(0, '@markdown.aqua', { fg = '#689d6a', bold = true })
 
