@@ -108,3 +108,5 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 
 export PATH=$PATH:$HOME/.local/opt/go/bin
 export PATH=$PATH:$HOME/go/bin
+
+source ~/perl5/perlbrew/etc/bashrc
