@@ -485,7 +485,6 @@ require('lazy').setup({
 require 'custom.keymap'
 require 'custom.lsp'
 require 'custom.devicons'
-require 'custom.lsp'
 require 'custom.tabnine'
 require 'custom.markdown-oxide'
 require 'kickstart.plugins.indent_line'
