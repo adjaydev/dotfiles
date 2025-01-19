@@ -8,6 +8,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = { 120 }
 
+-- vim.api.nvim_set_hl(0, 'LineNr', { fg = '#00ff00' })
+-- vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ff0000' })
+-- vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ff0000' })
 vim.wo.number = true
 vim.opt.mouse = 'a'
 
@@ -433,6 +436,8 @@ require('lazy').setup({
     end,
   },
 
+  -- { 'codota/tabnine-nvim', build = './dl_binaries.sh' },
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -452,7 +457,7 @@ require('lazy').setup({
 
   { import = 'custom.plugins' },
 
-  { 'rose-pine/neovim', name = 'rose-pine' },
+  -- { 'rose-pine/neovim', name = 'rose-pine' },
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 }, {
   ui = {
@@ -472,7 +477,7 @@ require('lazy').setup({
       lazy = '💤 ',
     },
   },
-  --  TODO: re-activate
+  -- TODO: re-activate
   -- require('lspconfig').ruff_lsp.setup {
   --   init_options = {
   --     settings = {
@@ -485,6 +490,7 @@ require('lazy').setup({
 require 'custom.keymap'
 require 'custom.lsp'
 require 'custom.devicons'
+require 'custom.lsp'
 require 'custom.tabnine'
 require 'custom.markdown-oxide'
 require 'kickstart.plugins.indent_line'
@@ -494,20 +500,33 @@ require 'kickstart.plugins.debug'
 
 -- NOTE: Colorschemes
 
+-- vim.cmd 'colorscheme rose-pine'
+-- vim.cmd("colorscheme rose-pine-main")
+-- vim.cmd 'colorscheme rose-pine-moon'
+-- vim.cmd("colorscheme rose-pine-dawn")
+
+-- vim.cmd.colorscheme 'catppuccin'
+
+-- vim.cmd.colorscheme 'tokyonight-night'
+-- vim.cmd.colorscheme 'tokyonight-moon'
+-- vim.cmd.colorscheme 'tokyonight-storm'
+-- vim.cmd.colorscheme 'tokyonight-day'
+
 require('gruvbox').setup {
   palette_overrides = {
     dark0 = '#1B1B1B',
+  },
+  overrides = {
+    Function = { fg = '#fe8019', bg = 'NONE', bold = false },
+    LspReferenceWrite = { fg = '#1d2021', bg = '#fe8019', bold = false },
+    LspReferenceRead = { fg = '#1d2021', bg = '#d79921', bold = false },
   },
   italic = {
     strings = false,
     comments = false,
   },
   bold = true,
-  overrides = {
-    Function = { fg = '#fe8019', bg = 'NONE', bold = false },
-  },
 }
-
 vim.cmd.colorscheme 'gruvbox'
 
 require 'custom.markdown-colors'

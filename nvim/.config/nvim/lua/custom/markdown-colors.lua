@@ -14,3 +14,7 @@ vim.api.nvim_set_hl(0, '@markup.heading.3.markdown', { link = '@markdown.aqua' }
 vim.api.nvim_set_hl(0, '@markup.heading.4.markdown', { link = '@markdown.purple' })
 vim.api.nvim_set_hl(0, '@markup.heading.5.markdown', { link = '@markdown.green' })
 vim.api.nvim_set_hl(0, '@markup.heading.6.markdown', { link = '@markdown.blue' })
+
+-- variable occurences
+-- vim.api.nvim_set_hl(0, 'LspReferenceWrite', { fg = '#1d2021', bg = '#fe8019', bold = false })
+-- vim.api.nvim_set_hl(0, 'LspReferenceRead', { fg = '#1d2021', bg = '#d79921', bold = false })
