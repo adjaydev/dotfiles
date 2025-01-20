@@ -261,6 +261,10 @@ if.app-id = 'com.tinyapp.TablePlus'
 run = 'move-node-to-workspace X'
 
 [[on-window-detected]]
+if.app-id = 'com.jetbrains.writerside-EAP'
+run = 'move-node-to-workspace X'
+
+[[on-window-detected]]
 if.app-id = 'com.obsproject.obs-studio'
 run = 'move-node-to-workspace Z'
 
