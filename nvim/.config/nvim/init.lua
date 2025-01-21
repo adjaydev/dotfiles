@@ -8,9 +8,10 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.colorcolumn = { 120 }
 
--- vim.api.nvim_set_hl(0, 'LineNr', { fg = '#00ff00' })
--- vim.api.nvim_set_hl(0, 'LineNrBelow', { fg = '#ff0000' })
--- vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ff0000' })
+-- Navigate through wrapped lines
+vim.keymap.set('n', 'j', 'gj', { noremap = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true })
+
 vim.wo.number = true
 vim.opt.mouse = 'a'
 
