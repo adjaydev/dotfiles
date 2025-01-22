@@ -520,7 +520,7 @@ require('gruvbox').setup {
   overrides = {
     Function = { fg = '#fe8019', bg = 'NONE', bold = false },
     LspReferenceWrite = { fg = '#1d2021', bg = '#fe8019', bold = false },
-    LspReferenceRead = { fg = '#1d2021', bg = '#d79921', bold = false },
+    LspReferenceRead = { fg = '#1d2021', bg = '#98971a', bold = false },
   },
   italic = {
     strings = false,
