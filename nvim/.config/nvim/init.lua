@@ -528,6 +528,7 @@ require('gruvbox').setup {
   },
   bold = true,
 }
+
 vim.cmd.colorscheme 'gruvbox'
 
 require 'custom.markdown-colors'
