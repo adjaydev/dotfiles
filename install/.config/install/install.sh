@@ -89,3 +89,7 @@ npm install -g @angular/cli
 
 echo "Installing Graph Easy"
 cpan install Graph::Easy
+
+echo "Installing unimatrix"
+sudo curl -L https://raw.githubusercontent.com/will8211/unimatrix/master/unimatrix.py -o /usr/local/bin/unimatrix
+sudo chmod a+rx /usr/local/bin/unimatrix

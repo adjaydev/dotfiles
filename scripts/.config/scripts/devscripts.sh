@@ -41,6 +41,7 @@ alias temp="cd ~/projects/temp"
 alias of="onefetch"
 
 alias ae="aerospace"
+alias mtx="unimatrix -af -s 95"
 
 alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
 alias chrome="cd /Applications/Google\ Chrome.app/Contents/MacOS/ && ./Google\ Chrome"
