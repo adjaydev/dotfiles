@@ -48,7 +48,6 @@ brew install ffmpeg
 brew install fzf
 brew install gh
 brew install git
-brew install go
 brew install jq
 brew install lazygit
 brew install lua
@@ -90,6 +89,5 @@ npm install -g @angular/cli
 echo "Installing Graph Easy"
 cpan install Graph::Easy
 
-echo "Installing unimatrix"
-sudo curl -L https://raw.githubusercontent.com/will8211/unimatrix/master/unimatrix.py -o /usr/local/bin/unimatrix
-sudo chmod a+rx /usr/local/bin/unimatrix
+echo "Installing Gomatrix"
+go install github.com/GeertJohan/gomatrix@latest
