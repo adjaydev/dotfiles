@@ -110,3 +110,6 @@ export PATH=$PATH:$HOME/.local/opt/go/bin
 export PATH=$PATH:$HOME/go/bin
 
 source ~/perl5/perlbrew/etc/bashrc
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/adjaythakoerdien/.lmstudio/bin"

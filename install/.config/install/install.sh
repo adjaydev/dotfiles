@@ -31,6 +31,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-hack-nerd-font
 brew install --cask dbeaver-community
 brew install --cask docker
+brew install lazydocker
 
 ## NOTE: Brew
 

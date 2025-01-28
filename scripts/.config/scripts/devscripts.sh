@@ -39,6 +39,7 @@ alias devscripts="nvim ~/.config/scripts/devscripts.sh"
 alias temp="cd ~/projects/temp"
 
 alias of="onefetch"
+alias ff="fastfetch"
 
 alias ae="aerospace"
 alias mtx="gomatrix -k --fps=60"

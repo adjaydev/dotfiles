@@ -17,3 +17,4 @@ window-decoration = false
 confirm-close-surface = true
 
 keybind = cmd+shift+g=toggle_quick_terminal
+keybind = global:alt+shift+t=toggle_quick_terminal
