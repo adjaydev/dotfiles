@@ -44,6 +44,9 @@ alias ff="fastfetch"
 alias ae="aerospace"
 alias mtx="gomatrix -k --fps=60"
 
+alias lzg="lazygit"
+alias lzd="lazydocker"
+
 alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
 alias chrome="cd /Applications/Google\ Chrome.app/Contents/MacOS/ && ./Google\ Chrome"
 
