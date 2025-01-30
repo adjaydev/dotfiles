@@ -37,6 +37,8 @@ alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
 alias devscripts="nvim ~/.config/scripts/devscripts.sh"
 alias temp="cd ~/projects/temp"
+alias p="pwd"
+alias pc="pwd | tr -d '\n' | pbcopy"
 
 alias of="onefetch"
 alias ff="fastfetch"
