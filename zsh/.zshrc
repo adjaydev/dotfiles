@@ -113,3 +113,5 @@ source ~/perl5/perlbrew/etc/bashrc
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/adjaythakoerdien/.lmstudio/bin"
+
+autoload -Uz compinit; compinit

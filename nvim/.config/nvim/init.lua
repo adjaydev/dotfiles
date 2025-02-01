@@ -93,6 +93,10 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  {
+    'mistweaverco/kulala.nvim',
+    opts = {},
+  },
   'tpope/vim-sleuth',
   { 'tpope/vim-eunuch' },
   { 'numToStr/Comment.nvim', opts = {} },
@@ -529,6 +533,11 @@ require('gruvbox').setup {
   bold = true,
 }
 
+vim.filetype.add {
+  extension = {
+    ['http'] = 'http',
+  },
+}
 vim.cmd.colorscheme 'gruvbox'
 
 require 'custom.markdown-colors'

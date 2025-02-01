@@ -52,6 +52,8 @@ alias lzd="lazydocker"
 alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
 alias chrome="cd /Applications/Google\ Chrome.app/Contents/MacOS/ && ./Google\ Chrome"
 
+alias neko="mvn exec:java -Dexec.mainClass="Neko" &"
+
 
 cht() {
 	~/.config/scripts/./tmux-cht.sh
