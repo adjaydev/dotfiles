@@ -33,3 +33,12 @@ vim.api.nvim_buf_set_keymap(
   "<cmd>lua require('kulala').from_curl()<cr>",
   { noremap = true, silent = true, desc = 'Paste curl from clipboard as http request' }
 )
+
+-- Toggle body and headers
+vim.api.nvim_buf_set_keymap(
+  0,
+  'n',
+  '<leader>t',
+  "<cmd>lua require('kulala').toggle_view()<cr>",
+  { noremap = true, silent = true, desc = 'Toggle between body and headers' }
+)
