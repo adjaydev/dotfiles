@@ -216,9 +216,9 @@ alt-shift-l = ['join-with right', 'mode main']
 if.app-id = 'com.microsoft.Excel'
 run = 'move-node-to-workspace 5'
 
-[[on-window-detectes]]
-if.app-d = 'com.apple.iWork.Numbers'
-run = 'move-node-to-workspace-5'
+[[on-window-detected]]
+if.app-id = 'com.apple.iWork.Numbers'
+run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Powerpoint'

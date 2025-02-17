@@ -115,3 +115,5 @@ source ~/perl5/perlbrew/etc/bashrc
 export PATH="$PATH:/Users/adjaythakoerdien/.lmstudio/bin"
 
 autoload -Uz compinit; compinit
+
+[[ -s "/Users/adjaythakoerdien/.gvm/scripts/gvm" ]] && source "/Users/adjaythakoerdien/.gvm/scripts/gvm"
