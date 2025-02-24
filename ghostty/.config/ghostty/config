@@ -4,7 +4,7 @@ theme = GruvboxDarkHard
 
 
 font-family = JetBrainsMono Nerd Font
-font-size = 16
+font-size = 13
 
 cursor-style = underline
 cursor-color = B5BD67

@@ -68,6 +68,11 @@ return {
         name = 'personal',
         path = '~/personal/DeeezNotes',
       },
+
+      {
+        name = 'work',
+        path = '~/projects/bvcm-wiki/wiki',
+      },
     },
     completion = {
       nvim_cmp = true,

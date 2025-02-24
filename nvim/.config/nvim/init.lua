@@ -6,7 +6,7 @@ vim.cmd 'language en_US'
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = { 120 }
+-- vim.opt.colorcolumn = { 120 }
 
 -- Navigate through wrapped lines
 vim.keymap.set('n', 'j', 'gj', { noremap = true })

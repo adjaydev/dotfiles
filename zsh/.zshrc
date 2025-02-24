@@ -25,7 +25,7 @@ alias run-coproxy="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfon
 --port=3308 \
 --credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
 alias run-coproxy-build="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-build \
---port=3308 \
+--port=3309 \
 --credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
 
 # The fuck
