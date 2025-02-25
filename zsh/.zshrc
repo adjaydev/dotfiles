@@ -116,4 +116,5 @@ export PATH="$PATH:/Users/adjaythakoerdien/.lmstudio/bin"
 
 autoload -Uz compinit; compinit
 
-[[ -s "/Users/adjaythakoerdien/.gvm/scripts/gvm" ]] && source "/Users/adjaythakoerdien/.gvm/scripts/gvm"
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
+
