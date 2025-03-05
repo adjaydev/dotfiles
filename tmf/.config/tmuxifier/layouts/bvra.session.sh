@@ -1,4 +1,4 @@
-session_root "/Users/adjaythakoerdien/personal/rust-azure"
+session_root "~/projects/test/rust-azure"
 if initialize_session "bvra"; then
   new_window "editor"
   select_window 1

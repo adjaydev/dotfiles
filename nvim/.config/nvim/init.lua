@@ -655,3 +655,6 @@ require 'custom.markdown-colors'
 -- vim.keymap.set('n', '<C-S-N>', function()
 --   harpoon:list():next()
 -- end)
+require('notify').setup {
+  background_colour = '#000000',
+}
