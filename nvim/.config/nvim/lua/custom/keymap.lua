@@ -50,3 +50,5 @@ vim.keymap.set('n', '<leader>md', ':PresentStart<CR>')
 vim.keymap.set('n', '<leader>cp', function()
   vim.fn.setreg('+', vim.fn.expand '%:p')
 end, { desc = 'Copy full file path' })
+
+vim.keymap.set('n', '<leader>ts', ':Telescope lsp_document_symbols<CR>')
