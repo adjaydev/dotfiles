@@ -237,7 +237,7 @@ function bvpl() {
 
 function sftp-start() {
 	source ~/.config/azurecli/.env
-	~/projects/bvcm-azure-cli/target/release/./bvcm_inquire
+	~/projects/bvcm-azure-cli/target/release/./bvcm-sftp-cli
 }
 
 function opig() {

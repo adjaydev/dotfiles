@@ -4,6 +4,7 @@ return {
     config = function()
       vim.keymap.set('n', '<leader>gg', ':G<CR>', {})
       vim.keymap.set('n', '<leader>gb', ':G blame<CR>', {})
+      vim.keymap.set('n', '<leader>gp', ':G push<CR>', {})
     end,
   },
   {
