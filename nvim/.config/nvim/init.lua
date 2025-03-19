@@ -130,24 +130,6 @@ require('lazy').setup({
       { '<leader>lg', '<cmd>LazyGit<cr>', desc = 'LazyGit' },
     },
   },
-
-  -- Show keybindings
-  -- {
-  --   'folke/which-key.nvim',
-  --   event = 'VimEnter', -- Sets the loading event to 'VimEnter'
-  --   config = function() -- This is the function that runs, AFTER loading
-  --     require('which-key').setup()
-  --
-  --     -- Document existing key chains
-  --     require('which-key').register {
-  --       ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-  --       ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-  --       ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-  --       ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-  --       ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
-  --     }
-  --   end,
-  -- },
   {
     'folke/which-key.nvim',
     event = 'VeryLazy',
@@ -387,7 +369,6 @@ require('lazy').setup({
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
-
       cmp.setup {
         snippet = {
           expand = function(args)
@@ -441,8 +422,6 @@ require('lazy').setup({
     end,
   },
 
-  -- { 'codota/tabnine-nvim', build = './dl_binaries.sh' },
-
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -461,8 +440,6 @@ require('lazy').setup({
   },
 
   { import = 'custom.plugins' },
-
-  -- { 'rose-pine/neovim', name = 'rose-pine' },
   {
     'catppuccin/nvim',
     name = 'catppuccin',
@@ -505,26 +482,11 @@ require 'custom.keymap'
 require 'custom.lsp'
 require 'custom.devicons'
 require 'custom.lsp'
-require 'custom.tabnine'
 require 'custom.markdown-oxide'
 require 'kickstart.plugins.indent_line'
 require 'kickstart.plugins.debug'
 
--- require 'custom.oil'
-
 -- NOTE: Colorschemes
-
--- vim.cmd 'colorscheme rose-pine'
--- vim.cmd("colorscheme rose-pine-main")
--- vim.cmd 'colorscheme rose-pine-moon'
--- vim.cmd("colorscheme rose-pine-dawn")
-
--- vim.cmd.colorscheme 'catppuccin'
-
--- vim.cmd.colorscheme 'tokyonight-night'
--- vim.cmd.colorscheme 'tokyonight-moon'
--- vim.cmd.colorscheme 'tokyonight-storm'
--- vim.cmd.colorscheme 'tokyonight-day'
 
 require('gruvbox').setup {
   palette_overrides = {
@@ -552,109 +514,6 @@ vim.cmd.colorscheme 'gruvbox'
 
 require 'custom.markdown-colors'
 
--- local harproon = require 'harpoon'
--- harpoon:setup {}
-
---
--- -- basic telescope configuration
--- local conf = require('telescope.config').values
--- local function toggle_telescope(harpoon_files)
---   local file_paths = {}
---   for _, item in ipairs(harpoon_files.items) do
---     table.insert(file_paths, item.value)
---   end
---
---   require('telescope.pickers')
---     .new({}, {
---       prompt_title = 'Harpoon',
---       finder = require('telescope.finders').new_table {
---         results = file_paths,
---       },
---       previewer = conf.file_previewer {},
---       sorter = conf.generic_sorter {},
---     })
---     :find()
--- end
---
--- vim.keymap.set('n', '<leader>hm', function()
---   harpoon:list():add()
--- end)
--- vim.keymap.set('n', '<C-e>', function()
---   harpoon.ui:toggle_quick_menu(harpoon:list())
--- end)
--- vim.keymap.set('n', '<leader>he', function()
---   harpoon.ui:toggle_quick_menu(harpoon:list())
--- end)
---
--- vim.keymap.set('n', '<leader>h1', function()
---   harpoon:list():select(1)
--- end)
--- vim.keymap.set('n', '<leader>h2', function()
---   harpoon:list():select(2)
--- end)
--- vim.keymap.set('n', '<leader>h3', function()
---   harpoon:list():select(3)
--- end)
--- vim.keymap.set('n', '<leader>h4', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<leader>h5', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<leader>h6', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<leader>h7', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<leader>h8', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<leader>h9', function()
---   harpoon:list():select(4)
--- end)
---
--- vim.keymap.set('n', '<C-1>', function()
---   harpoon:list():select(1)
--- end)
--- vim.keymap.set('n', '<C-2>', function()
---   harpoon:list():select(2)
--- end)
--- vim.keymap.set('n', '<C-3>', function()
---   harpoon:list():select(3)
--- end)
--- vim.keymap.set('n', '<C-4>', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<C-5>', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<C-6>', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<C-7>', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<C-8>', function()
---   harpoon:list():select(4)
--- end)
--- vim.keymap.set('n', '<C-9>', function()
---   harpoon:list():select(4)
--- end)
---
--- -- Toggle previous & next buffers stored within Harpoon list
--- vim.keymap.set('n', '<leader>hp', function()
---   harpoon:list():prev()
--- end)
--- vim.keymap.set('n', '<leader>hn', function()
---   harpoon:list():next()
--- end)
--- vim.keymap.set('n', '<C-S-P>', function()
---   harpoon:list():prev()
--- end)
--- vim.keymap.set('n', '<C-S-N>', function()
---   harpoon:list():next()
--- end)
 require('notify').setup {
   background_colour = '#000000',
 }

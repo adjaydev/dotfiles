@@ -3,7 +3,11 @@ session_root "~/projects/avx/avx-inspection"
 if initialize_session "avx"; then
   new_window "editor"
   new_window "server"
+  new_window "lazygit"
   new_window "zsh"
+
+  select_window 3
+  run_cmd "lzg"
 
   select_window 2
   run_cmd "ng serve --port 4201"

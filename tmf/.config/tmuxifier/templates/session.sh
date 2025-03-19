@@ -2,7 +2,10 @@ session_root "~/projects/"
 if initialize_session "{{SESSION_NAME}}"; then
   new_window "nvim"
   new_window "server"
+  new_window "lzg"
   new_window "zsh"
+  select_window 3
+  run_cmd "lzg"
   select_window 1
   run_cmd "v."
 fi
