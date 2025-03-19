@@ -118,3 +118,11 @@ autoload -Uz compinit; compinit
 
 # [[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+# pnpm
+export PNPM_HOME="/Users/Adjay/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
