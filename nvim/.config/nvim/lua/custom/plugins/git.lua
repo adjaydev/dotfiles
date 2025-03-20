@@ -5,6 +5,7 @@ return {
       vim.keymap.set('n', '<leader>gg', ':G<CR>', {})
       vim.keymap.set('n', '<leader>gb', ':G blame<CR>', {})
       vim.keymap.set('n', '<leader>gp', ':G push<CR>', {})
+      vim.keymap.set('n', '<leader>gb', ':Telescope git_bcommits', {})
     end,
   },
   {
