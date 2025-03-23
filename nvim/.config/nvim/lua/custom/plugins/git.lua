@@ -7,7 +7,7 @@ return {
       vim.keymap.set('n', '<leader>gp', ':G push<CR>', {})
       vim.keymap.set('n', '<leader>gw', ':G switch ', {})
       vim.keymap.set('n', '<leader>gs', ':G switch -c ', {})
-      vim.keymap.set('n', '<leader>gs', ':G rebase ', {})
+      vim.keymap.set('n', '<leader>gr', ':G rebase ', {})
       vim.keymap.set('n', '<leader>gc', ':Telescope git_bcommits<CR>', {})
     end,
   },
