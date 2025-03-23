@@ -438,6 +438,7 @@ require('lazy').setup({
       }
     end,
   },
+  { 'wellle/context.vim' },
 
   { import = 'custom.plugins' },
   {
