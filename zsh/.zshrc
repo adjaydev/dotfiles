@@ -1,3 +1,7 @@
+# Welcome message
+clear;
+echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # nerdfetch
 export ZSH="$HOME/.oh-my-zsh"

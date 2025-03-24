@@ -2,6 +2,9 @@
 alias c="clear;"
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
+alias blank='PS1=""; clear;'
+alias enter='PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"'
+alias out='echo -e "\033[38;2;152;151;26mExiting the matrix...\033[0m";sozsh;clear;'
 
 # Personal
 alias adjay="cd ~/work/adjay.dev; c;"
@@ -41,7 +44,7 @@ alias temp="cd ~/projects/temp"
 alias p="pwd"
 alias pc="pwd | tr -d '\n' | pbcopy"
 
-alias of="onefetch"
+alias of="c;onefetch"
 alias ff="fastfetch"
 
 alias ae="aerospace"

@@ -8,6 +8,7 @@ font-size = 15
 
 cursor-style = underline
 cursor-color = B5BD67
+shell-integration-features = cursor
 
 mouse-hide-while-typing
 

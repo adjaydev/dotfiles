@@ -26,26 +26,32 @@
 # $character
 # """
 
+# format = """
+# $fill\
+# $python\
+# $rust\
+# $golang\
+# $nodejs\
+# $lua\
+# $docker_context\
+# $deno\
+# $conda\
+# $ocaml\
+# $php\
+# $zig\
+# $line_break\
+# $character
+# """
+
 format = """
-$fill\
-$python\
-$rust\
-$golang\
-$nodejs\
-$lua\
-$docker_context\
-$deno\
-$conda\
-$ocaml\
-$php\
-$zig\
 $line_break\
 $character
 """
 
 
 [character]
-success_symbol = '[ζ](bold green)'
+success_symbol = ''
+# success_symbol = '[ζ](bold green)'
 
 [fill]
 symbol = ' '
