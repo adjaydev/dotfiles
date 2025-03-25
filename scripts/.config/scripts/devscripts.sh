@@ -1,5 +1,5 @@
 # Clear screen
-alias c="clear;"
+alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
 alias blank='PS1=""; clear;'
