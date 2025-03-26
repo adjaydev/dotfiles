@@ -1,6 +1,6 @@
 # Welcome message
-clear;
-echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
+# PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
+# echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # nerdfetch
@@ -130,3 +130,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+enter;
