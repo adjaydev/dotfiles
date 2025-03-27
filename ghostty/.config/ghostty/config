@@ -1,11 +1,9 @@
 font-size = 17
 
-font-size = 32
-window-padding-x = 600
+# font-size = 32
+# window-padding-x = 600
 
-# background = 1E1F2E
 theme = GruvboxDarkHard
-# theme = nord
 
 font-family = JetBrainsMono Nerd Font
 
@@ -15,7 +13,6 @@ shell-integration-features = cursor
 
 mouse-hide-while-typing
 
-# window-decoration = none
 
 macos-window-shadow = false
 macos-non-native-fullscreen = false
