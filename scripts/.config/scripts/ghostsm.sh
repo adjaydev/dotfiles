@@ -14,9 +14,6 @@ if [ ! -f "$CONFIG_FILE" ]; then
     exit 1
 fi
 
-echo "Attempting to comment out lines ${LINE_NUM_1} and ${LINE_NUM_2} in $CONFIG_FILE..."
-echo "WARNING: This script modifies the file directly WITHOUT creating a backup."
-
 # Use sed (macOS compatible -i '') to add '# ' to the beginning of the specified lines
 # -i '' modifies the file in-place WITHOUT a backup extension on macOS/BSD
 # Note: This script assumes the lines do not already start with '# '
@@ -27,9 +24,9 @@ sed -i '' \
 
 # Check if sed command was successful
 if [ $? -eq 0 ]; then
-    echo "Successfully commented out lines ${LINE_NUM_1} and ${LINE_NUM_2} in $CONFIG_FILE."
+    echo "Config updated. Press SHIFT+CMD+, and open new window."
 else
-    echo "Error: Failed to modify the file $CONFIG_FILE."
+    echo "Error: Failed to modify $CONFIG_FILE."
     exit 1
 fi
 

@@ -7,8 +7,8 @@ alias enter='PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
 
-alias glg="cd ~/dotfiles/scripts/.config/scripts; ./ghostlg.sh"
-alias gsm="cd ~/dotfiles/scripts/.config/scripts; ./ghostsm.sh"
+alias gobig="cd ~/dotfiles/scripts/.config/scripts; ./ghostlg.sh"
+alias gosmall="cd ~/dotfiles/scripts/.config/scripts; ./ghostsm.sh"
 
 # Personal
 alias adjay="cd ~/work/adjay.dev; c;"

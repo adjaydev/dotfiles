@@ -14,9 +14,6 @@ if [ ! -f "$CONFIG_FILE" ]; then
     exit 1
 fi
 
-echo "Attempting to uncomment lines ${LINE_NUM_1} and ${LINE_NUM_2} in $CONFIG_FILE..."
-echo "WARNING: This script modifies the file directly WITHOUT creating a backup."
-
 # Use sed (macOS compatible -i '') to remove '# ' from the beginning of the specified lines
 # -i '' modifies the file in-place WITHOUT a backup extension on macOS/BSD
 sed -i '' \
@@ -26,7 +23,7 @@ sed -i '' \
 
 # Check if sed command was successful
 if [ $? -eq 0 ]; then
-    echo "Successfully uncommented lines ${LINE_NUM_1} and ${LINE_NUM_2} in $CONFIG_FILE."
+    echo "Config updated. Press SHIFT+CMD+, and open new window."
 else
     echo "Error: Failed to modify the file $CONFIG_FILE."
     exit 1
