@@ -1,4 +1,5 @@
 # Clear screen
+source ~/dotfiles/scripts/.config/scripts/ghostyy_zsh.sh
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
@@ -7,8 +8,8 @@ alias enter='PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
 
-alias gobig="cd ~/dotfiles/scripts/.config/scripts; ./ghostlg.sh"
-alias gosmall="cd ~/dotfiles/scripts/.config/scripts; ./ghostsm.sh"
+# alias gobig="cd ~/dotfiles/scripts/.config/scripts; ./ghostlg.sh"
+# alias gosmall="cd ~/dotfiles/scripts/.config/scripts; ./ghostsm.sh"
 
 # Personal
 alias adjay="cd ~/work/adjay.dev; c;"
@@ -44,6 +45,7 @@ alias conf="cd ~/.config/"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
 alias devscripts="nvim ~/.config/scripts/devscripts.sh"
+alias devs="nvim ~/.config/scripts/devscripts.sh"
 alias temp="cd ~/projects/temp"
 alias p="pwd"
 alias pc="pwd | tr -d '\n' | pbcopy"

@@ -1,4 +1,5 @@
-font-size = 17
+font-size = 32
+window-padding-x = 600
 
 theme = GruvboxDarkHard
 
@@ -19,3 +20,4 @@ confirm-close-surface = true
 
 keybind = cmd+shift+g=toggle_quick_terminal
 keybind = global:alt+shift+t=toggle_quick_terminal
+

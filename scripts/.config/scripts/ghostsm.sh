@@ -24,7 +24,7 @@ sed -i '' \
 
 # Check if sed command was successful
 if [ $? -eq 0 ]; then
-    echo "Config updated. Press SHIFT+CMD+, and open new window."
+    echo "Config updated."
 else
     echo "Error: Failed to modify $CONFIG_FILE."
     exit 1
