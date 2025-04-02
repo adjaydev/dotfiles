@@ -1,0 +1,23 @@
+font-size = 32
+
+theme = GruvboxDarkHard
+
+font-family = JetBrainsMono Nerd Font
+
+cursor-style = underline
+cursor-color = B5BD67
+shell-integration-features = cursor
+
+mouse-hide-while-typing
+
+
+macos-window-shadow = false
+macos-non-native-fullscreen = false
+macos-titlebar-style = hidden
+
+confirm-close-surface = true
+
+keybind = cmd+shift+g=toggle_quick_terminal
+keybind = global:alt+shift+t=toggle_quick_terminal
+
+

@@ -8,3 +8,7 @@ function gobig() {
 	echo "config transferred"
 }
 
+function gobigger() {
+	cp ~/dotfiles/ghostty/.config/ghostty/config_bigger ~/dotfiles/ghostty/.config/ghostty/config
+	echo "config transferred"
+}

@@ -185,7 +185,20 @@ return {
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'python', 'sql', 'bash', 'javascript', 'markdown', 'typescript', 'rust', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
+        ensure_installed = {
+          'python',
+          'sql',
+          'bash',
+          'javascript',
+          'markdown',
+          'typescript',
+          'rust',
+          'html',
+          'lua',
+          'markdown',
+          'vim',
+          'vimdoc',
+        },
         -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = { enable = true },
@@ -193,7 +206,7 @@ return {
       }
     end,
   },
-  {
+  { -- undotree
     'mbbill/undotree',
   },
 }

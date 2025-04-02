@@ -12,6 +12,7 @@ if initialize_session "gymdev"; then
   select_window 3
   run_cmd "cd backend; v."
   select_window 1
+  run_cmd "open -na 'Google Chrome' --args --new-window --display=2 'http://localhost:4300'"
   run_cmd "cd frontend; v."
 fi
 finalize_and_go_to_session
