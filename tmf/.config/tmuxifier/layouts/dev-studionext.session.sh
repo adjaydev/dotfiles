@@ -6,6 +6,8 @@ if initialize_session "dev-studionext"; then
   new_window "zsh"
   select_window 3
   run_cmd "lzg"
+	select_window 2
+	run_cmd "poetry run uvicorn main:app --reload --port 6161"
   select_window 1
   run_cmd "v."
 fi
