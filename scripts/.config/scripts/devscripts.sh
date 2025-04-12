@@ -50,6 +50,7 @@ alias temp="cd ~/projects/temp"
 alias p="pwd"
 alias pc="pwd | tr -d '\n' | pbcopy"
 alias screens="cd ~/Pictures/screenshots"
+alias hl="rg --passthrough $1"
 
 alias of="c;onefetch"
 alias ff="fastfetch"
