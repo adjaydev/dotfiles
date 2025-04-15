@@ -34,11 +34,11 @@ alias cw="nvim ~/.config/wezterm/wezterm.lua"
 alias ca="nvim ~/.config/aerospace/aerospace.toml"
 alias ck="nvim ~/.config/kitty/kitty.conf"
 alias cg="nvim ~/.config/ghostty/config"
-alias home="cd ~; lsa"
+alias home="cd ~"
 alias work="cd ~/Work"
 alias downl="cd ~/Downloads; ls -ltr"
-alias docs="cd ~/Documents; lsa"
-alias personal="cd ~/personal; lsa"
+alias docs="cd ~/Documents;"
+alias personal="cd ~/personal;"
 alias dot="cd ~/dotfiles/"
 alias dotv="nvim ~/dotfiles/"
 alias conf="cd ~/.config/"
@@ -72,8 +72,8 @@ cht() {
 }
 
 # BVCM
-alias bvdata="cd ~/Documents/werk/BVCM/data; lsa"
-alias bvdocs="cd ~/Documents/werk/BVCM/docs; lsa"
+alias bvdata="cd ~/Documents/data; lsa"
+alias bvdocs="cd ~/Documents/docs; lsa"
 function bvcm() {
 	echo "\n[LIST DIRECTORY -a]"
 	cd "~/Documents/werk/BVCM/$1"
