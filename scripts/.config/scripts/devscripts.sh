@@ -1,5 +1,7 @@
-# Clear screen
+source ~/.config/zsh_scripts/.tmux
 source ~/dotfiles/scripts/.config/scripts/ghostyy_zsh.sh
+
+# Clear screen
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
@@ -8,9 +10,6 @@ alias enter='PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
 
-# alias gobig="cd ~/dotfiles/scripts/.config/scripts; ./ghostlg.sh"
-# alias gosmall="cd ~/dotfiles/scripts/.config/scripts; ./ghostsm.sh"
-
 # Personal
 alias adjay="cd ~/work/adjay.dev; c;"
 
@@ -18,6 +17,7 @@ alias adjay="cd ~/work/adjay.dev; c;"
 alias v.="nvim ."
 alias v="nvim"
 alias nv="nvim"
+alias vzsh="nvim ~/.zshrc"
 alias nvzsh="nvim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
 alias zshv="nvim ~/.zshrc"

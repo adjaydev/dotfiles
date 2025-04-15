@@ -21,7 +21,6 @@ ZSH_THEME="robbyrussell"
 plugins=(macos systemd thefuck tmux urltools)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.config/zsh_scripts/.tmux
 source ~/.config/scripts/devscripts.sh
 
 # Collect Online Proxy
