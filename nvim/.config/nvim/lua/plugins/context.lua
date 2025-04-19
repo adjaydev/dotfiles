@@ -1,1 +1,2 @@
-return { 'wellle/context.vim' }
+return {}
+-- return { 'wellle/context.vim' }

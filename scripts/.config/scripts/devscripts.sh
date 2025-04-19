@@ -52,6 +52,19 @@ alias pc="pwd | tr -d '\n' | pbcopy"
 alias screens="cd ~/Pictures/screenshots"
 alias hl="rg --passthrough $1"
 
+function dtts() {
+	if [[ "$1" == "-s" ]]; 
+	then
+		date -j -f "%Y-%m-%d %H:%M:%S" "$2 $3" +%s
+	else
+		date -j -f "%Y-%m-%d" $1 +%s
+	fi
+
+}
+function tsdt() {
+	date -r $1 "+%Y-%m-%d %H:%M:%S"
+}
+
 alias of="c;onefetch"
 alias ff="fastfetch"
 
