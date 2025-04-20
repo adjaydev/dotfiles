@@ -4,7 +4,7 @@
 alias tl="tmux ls"
 
 t() {
-	tmux
+	tmux attach
 }
 
 tn() {

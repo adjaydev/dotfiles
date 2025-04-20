@@ -20,6 +20,8 @@ alias nv="nvim"
 alias vzsh="nvim ~/.zshrc"
 alias nvzsh="nvim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
+alias nvb="nvim ~/.bashrc"
+alias sob="source ~/.bashrc"
 alias zshv="nvim ~/.zshrc"
 alias obs="cd ~/personal/DeeezNotes; nvim ."
 function obn() {
