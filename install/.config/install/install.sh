@@ -1,8 +1,5 @@
 # NOTE: Brew
 
-# echo "Installing ohmyzsh"
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 ## NOTE: Brew
 
 echo "Installing all brew intall"
@@ -14,7 +11,6 @@ brew install biome
 brew install btop
 brew install cbonsai
 brew install cfonts
-brew install cmatrix
 brew install cowsay
 brew install ffmpeg
 brew install fzf
@@ -24,7 +20,6 @@ brew install jq
 brew install lazygit
 brew install lua
 brew install luajit
-brew install modular
 brew install neovim
 brew install nerdfetch
 brew install nvm
@@ -34,7 +29,6 @@ brew install pyenv
 brew install ripgrep
 brew install ruff
 brew install sqlite
-brew install starship
 brew install stow
 brew install telnet
 brew install thefuck
@@ -45,7 +39,6 @@ brew install bruno
 brew tap FelixKratz/formulae
 brew install sketchybar
 brew install borders
-brew install svim
 brew install onefetch
 brew install borders
 
@@ -54,7 +47,6 @@ brew install borders
 
 echo "Installing all brew install --cask"
 brew install --cask nikitabobko/tap/aerospace
-brew install --cask kitty
 brew install --cask raycast
 brew install --cask jetbrains-toolbox
 brew install --cask obsidian
@@ -64,13 +56,10 @@ brew install --cask elgato-camera-hub
 brew install --cask elgato-stream-deck
 brew install --cask elgato-control-center
 brew install --cask sublime-text
-brew install --cask alacritty
 brew install --cask tg-pro
 brew install --cask devtoys
 brew install --cask logi-options-plus
 brew install --cask tigervnc-viewer
-brew install --cask teamviewer
-brew install --cask visual-studio-code
 brew install --cask affinity-designer
 brew install --cask google-cloud-sdk
 brew install --cask google-chrome
