@@ -4,6 +4,7 @@
 
 echo "Installing all brew intall"
 brew install bash
+brew install coreutils
 brew install azure-cli
 brew install bat
 brew install bat-extras

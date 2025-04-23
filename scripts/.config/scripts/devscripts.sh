@@ -5,8 +5,8 @@ source ~/dotfiles/scripts/.config/scripts/ghostyy_zsh.sh
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
-alias blank='PS1="\n"; clear;'
-alias enter='PS1="\n"; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"'
+alias blank='PS1=""; clear;'
+alias enter='PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"'
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
 alias ll="ls -lh"
@@ -61,16 +61,27 @@ function print120() {
 }
 
 function dtts() {
-	if [[ "$1" == "-s" ]]; 
-	then
+	if [[ "$1" == "-s" ]]; then
 		date -j -f "%Y-%m-%d %H:%M:%S" "$2 $3" +%s
+	elif [[ "$1" == "-m" ]]; then
+		date -j -f "%Y-%m-%d %H:%M:%S" "$2 00:00:00" +%s
 	else
 		date -j -f "%Y-%m-%d" $1 +%s
 	fi
-
 }
+
 function tsdt() {
-	date -r $1 "+%Y-%m-%d %H:%M:%S"
+
+	read -r -d '' INTRO <<-EOF
+	-=[[ HELP ]]=-
+	usage: tsdt 177778318 for       timestamp to date
+	EOF
+
+	if [[ "$1" == "-h" ]]; then
+		echo "$INTRO"
+	else
+		date -r $1 "+%Y-%m-%d %H:%M:%S"
+	fi
 }
 
 alias of="c;onefetch"
