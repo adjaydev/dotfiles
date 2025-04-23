@@ -127,5 +127,8 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+if [ -f ~/.dircolors ]; then
+    eval "$(gdircolors -b ~/.dircolors)"
+fi
+
 enter;
-LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS

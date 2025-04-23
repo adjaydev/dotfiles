@@ -9,8 +9,9 @@ alias blank='PS1=""; clear;'
 alias enter='PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"'
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
-alias ll="ls -lh"
-alias la="ls -lah"
+alias ls="ls --color=auto"
+alias ll="ls -lh --color=auto"
+alias la="ls -lah --color=auto"
 
 # Personal
 alias adjay="cd ~/work/adjay.dev; c;"
