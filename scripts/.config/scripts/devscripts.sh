@@ -62,7 +62,19 @@ function print120() {
 }
 
 function dtts() {
-	if [[ "$1" == "-s" ]]; then
+	if [[ "$1" == "-h" ]]; then
+		echo "dtts help"
+		echo ""
+
+		echo "Get the timestamp for a given date and the current local time"
+		echo "Usage: dtts 2025-01-01"
+
+		echo "Available args:"
+		echo "-s : seconds, get timestamp for given date and time. Usage: dtts 2025-02-02 01:02:03"
+		echo "-m : midnight, get timestamp for given date and time at midnight. Usage: dtts -m 2025-03-03"
+		echo ""
+
+	elif [[ "$1" == "-s" ]]; then
 		date -j -f "%Y-%m-%d %H:%M:%S" "$2 $3" +%s
 	elif [[ "$1" == "-m" ]]; then
 		date -j -f "%Y-%m-%d %H:%M:%S" "$2 00:00:00" +%s
@@ -176,16 +188,16 @@ function gstat() {
 
 
 # BVCM Git
-alias bvg="cd ~/Documents/werk/BVCM/git; lsa"
-alias bvgai="cd ~/Documents/werk/BVCM/git/bvcm-ai; lsa"
-alias bvgbo="cd ~/Documents/werk/BVCM/git/bvcm-backoffice-app; lsa"
-alias bvghs="nvim ~/Documents/werk/BVCM/git/bvcm-hubspot-webhook;"
-alias bvgaif="nvim ~/Documents/werk/BVCM/git/bvcm-ai/frontend;"
-alias bvgaib="nvim ~/Documents/werk/BVCM/git/bvcm-ai/backend;"
-alias bvgsn="nvim ~/Documents/werk/BVCM/git/bvcm-synapse-backend;"
-alias bvgwk="nvim ~/Documents/werk/BVCM/git/bvcm-wiki/wiki"
-alias bvgff="cd ~/Documents/werk/BVCM/git/bvcm-findflow; lsa;"
-alias bvgdw="cd ~/Documents/werk/BVCM/git/bvcm-daywize; lsa;"
+alias bvg="cd ~/projects; lsa"
+alias bvgai="cd ~/projects/bvcm-ai; lsa"
+alias bvgbo="cd ~/projects/bvcm-backoffice-app; lsa"
+alias bvghs="nvim ~/projects/bvcm-hubspot-webhook;"
+alias bvgaif="nvim ~/projects/bvcm-ai/frontend;"
+alias bvgaib="nvim ~/projects/bvcm-ai/backend;"
+alias bvgsn="nvim ~/projects/bvcm-synapse-backend;"
+alias bvgwk="nvim ~/projects/bvcm-wiki/wiki"
+alias bvgff="cd ~/projects/bvcm-findflow; lsa;"
+alias bvgdw="cd ~/projects/bvcm-daywize; lsa;"
 
 # adjay.dev
 alias werk="cd ~/Documents/werk; lsa"
