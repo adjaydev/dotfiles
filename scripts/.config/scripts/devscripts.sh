@@ -119,13 +119,6 @@ cht() {
 # BVCM
 alias bvdata="cd ~/Documents/data; lsa"
 alias bvdocs="cd ~/Documents/docs; lsa"
-function bvcm() {
-	echo "\n[LIST DIRECTORY -a]"
-	cd "~/Documents/werk/BVCM/$1"
-	ls -la $2
-	echo "\n[DIRECTORY]"
-	pwd
-}
 
 function bvd() {
 	
