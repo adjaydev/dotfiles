@@ -7,12 +7,22 @@ alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
 alias blank='PS1=""; clear;'
-alias enter='PS1=""; clear; echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"'
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
 alias ls="ls --color=auto"
 alias ll="ls -lh --color=auto"
 alias la="ls -lah --color=auto"
+
+enter() {
+	PS1="" 
+	clear 
+	echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
+}
+
+enter-noc() {
+	PS1="" 
+	echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
+}
 
 # Personal
 alias adjay="cd ~/work/adjay.dev; c;"
@@ -25,10 +35,14 @@ alias vzsh="nvim ~/.zshrc"
 alias nvzsh="nvim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
 alias nvb="nvim ~/.bashrc"
-alias sob="source ~/.bashrc"
 alias zshv="nvim ~/.zshrc"
 alias obs="cd ~/personal/DeeezNotes; nvim ."
-function obn() {
+
+sob() {
+	source ~/.bashrc "$1"
+}
+
+obn() {
 	cd ~/personal/DeeezNotes/0-inbox/
 	nvim $(echo "$1" | tr ' ' '-')".md"
 	%
@@ -58,10 +72,11 @@ alias pc="pwd | tr -d '\n' | pbcopy"
 alias screens="cd ~/Pictures/screenshots"
 alias hl="rg --passthrough $1"
 
-function print120() {
+print120() {
 	echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 }
 
+<<<<<<< HEAD
 function dtts() {
 	if [[ "$1" == "-h" ]]; then
 		echo "dtts help"
@@ -76,6 +91,10 @@ function dtts() {
 		echo ""
 
 	elif [[ "$1" == "-s" ]]; then
+=======
+dtts() {
+	if [[ "$1" == "-s" ]]; then
+>>>>>>> f6ec175 (update)
 		date -j -f "%Y-%m-%d %H:%M:%S" "$2 $3" +%s
 	elif [[ "$1" == "-m" ]]; then
 		date -j -f "%Y-%m-%d %H:%M:%S" "$2 00:00:00" +%s
@@ -84,7 +103,7 @@ function dtts() {
 	fi
 }
 
-function tsdt() {
+tsdt() {
 
 	read -r -d '' INTRO <<-EOF
 	-=[[ HELP ]]=-
@@ -120,8 +139,18 @@ cht() {
 # BVCM
 alias bvdata="cd ~/Documents/data; lsa"
 alias bvdocs="cd ~/Documents/docs; lsa"
+<<<<<<< HEAD
+=======
+bvcm() {
+	echo "\n[LIST DIRECTORY -a]"
+	cd "~/Documents/werk/BVCM/$1"
+	ls -la $2
+	echo "\n[DIRECTORY]"
+	pwd
+}
+>>>>>>> f6ec175 (update)
 
-function bvd() {
+bvd() {
 	
 	# SFTP
 	if [[ "$1" == "sftp" ]]; 
@@ -158,25 +187,25 @@ function bvd() {
 
 # git
 alias gp="git push"
-function gpu() {
+gpu() {
 	git push -u $1 $2
 }
-function gs() {
+gs() {
 	git switch $1
 }
-function gsc() {
+gsc() {
 	git switch -c $1
 }
-function gd() {
+gd() {
 	git branch -d $1
 }
-function gD() {
+gD() {
 	git branch -D $1
 }
-function gl() {
+gl() {
 	git branch -A
 }
-function gstat() {
+gstat() {
 	git status
 }
 
@@ -213,6 +242,7 @@ alias activate-venv="source venv/bin/activate"
 alias venv="source venv/bin/activate"
 
 alias srch='nvim $(fzf -m --preview="bat --color=always {}")'
+alias obsf='cd ~/personal/DeeezNotes; nvim $(fzf -m --preview="bat --color=always {}")'
 
 # macOS
 alias lsaa="ls -a;"
@@ -225,12 +255,7 @@ alias dpcker="docker"
 
 alias hackerscript="docker run --rm -it bcbcarl/hollywood"
 
-
-function devscripts() {
-	nvim ~/.config/devscripts/devscripts.zsh
-}
-
-function devhelp() {
+devhelp() {
 	echo "uuid4"
 	echo "xlsx2json"
 	echo "fancy"
@@ -245,11 +270,11 @@ function devhelp() {
 	echo "count-lines"
 }
 
-function uuid4() {
+uuid4() {
 	python -c "import uuid; print(uuid.uuid4())"
 }
 
-function xlsx2json() {
+xlsx2json() {
 if [ $# -eq 0 ]; then
     echo "Usage: xlsx2json <excel_file> [output_json_file]"
     exit 1
@@ -260,69 +285,73 @@ fi
 	python -c "import pandas as pd; pd.read_excel('$excel_file').to_json('$output_file', orient='records')"
 }
 
-function timestamp() {
+timestamp() {
 	python -c "import time; print(int(time.time()*1_000_000_000))"
 }
 
-function fancy() {
+fancy() {
 	cfonts $1 -f "huge" -a center -f shade  -g red,blue
 	# cfonts $1 -f "huge" -a center -f shade -c "#ff5500",cyan -g red,blue
 }
 
-function docker-show-id() {
+docker-show-id() {
 	docker ps -aqf "name=${1}"
 }
 
-function docker-copy-id() {
+docker-copy-id() {
 	docker ps -aqf "name=${1}" | pbcopy
 }
 
-function bvpr() {
+bvpr() {
 	az repos pr create $1 $2 $3 $4 --open
 }
 
-function bvpl() {
+bvpl() {
 	m365 planner task list --bucketName $1 --planId mhHSYwr7UkeFShfIxVgBkJcADxTj | jq '.[] | select(.createdBy.user.id == "ede39ca3-4889-44fb-af6b-48fee958e781").title'
 }
 
-function sftp-start() {
+sftp-start() {
 	source ~/.config/azurecli/.env
 	~/projects/bvcm-azure-cli/target/release/./bvcm-sftp-cli
 }
 
-function opig() {
+opig() {
 	# NOTE:
-	# cut -d             => split on ':'
-	# -f2                => grab second value
+	# cut -d ':'         => split on ':'
+	# -f 2                => grab second value
 	# awk '{$1=$1};1'    => remove leading and trailing spaces
 	# tr -d              => translate and delete '\n'
 
 	op item --vault Private get $1 --reveal | grep -E '(wachtwoord|password):' | cut -d ':' -f 2 | awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 
-function copy() {
+copy() {
 	awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 
-function fzfcopy() {
+fzfcopy() {
 	sort -r | fzf | awk '{$1=$1};1' | tr -d '\n' | pbcopy
 }
 
-function opiga() {
+opiga() {
 	op item --vault Private get $1 --reveal
 }
 
-function opil() {
+opil() {
 	op item list --vault Private
 }
 
-function count-lines() {
+count-lines() {
 	echo "find . -name *.$1 -exec wc -l {} +"
 	find . -name "*.$1" -exec wc -l {} +
 }
 
-function ad() {
+ad() {
 	python ~/projects/test/ascii.py;
+}
+
+brewi() {
+	brew search $1;
 }
 
 alias dcd="docker-compose down"

@@ -47,7 +47,7 @@ function vzv() {
 # New Obsidian note
 function on() {
 	if [ -z "$1" ]; then
-	  echo "Error: A file name must be set, e.g. on \"the wonderful thing about tiggers\"."
+	  echo "Error: A file name must be set, e.g. on \"filename here with spaces\"."
 	  exit 1
 	fi
 
@@ -58,16 +58,13 @@ function on() {
 	nvim "0-inbox/${formatted_file_name}"
 }
 
-
-# Starship
-
 # Tmuxifier
 eval "$(tmuxifier init -)"
 
-# The next line updates PATH for the Google Cloud SDK.
+# Google Cloud SDK.
 if [ -f '~/Projects/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
+# Enable shell command completion for gcloud.
 if [ -f '~/Projects/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
@@ -79,7 +76,7 @@ export NVM_DIR="/opt/homebrew/opt/nvm"
 # eval "$(op completion zsh)"; compdef _op op
 
 # Zoxide
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init bash)"
 
 # GO
 
@@ -131,4 +128,10 @@ if [ -f ~/.dircolors ]; then
     eval "$(gdircolors -b ~/.dircolors)"
 fi
 
-enter;
+# enter normal of enter without 'clear'
+if [[ "$1" == "-nc" ]]; then
+	enter-noc
+else
+	enter
+fi
+
