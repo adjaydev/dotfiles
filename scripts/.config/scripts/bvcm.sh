@@ -3,20 +3,24 @@
 # Init vars
 
 read -r -d '' MENU <<-EOF
- BVCM Bash
+BVCBash
 
- commands:
+commands:
 
     show-vms:      Show a list of the vms that are usable with easy ssh.
 EOF
 
 read -r -d '' SHOWVMS <<-EOF
- BVCM Bash
+BVCBash
 
- show-vms:
+List of the bvcm vms that are usable with easy ssh.
 
-    bvvm:             VM with google mysql proxy installed.
-    bvgrafanavm:      VM with grafana and loki installed.
+show-vms:
+
+    bvvm:            VM with google mysql proxy installed.
+    bvgrafana:       VM with grafana and loki installed.
+    bvgrafanaloki:   VM with grafana and loki installed.
+    bvgrafanavm:     VM with grafana and loki installed.
 EOF
 
 bvcm() {
