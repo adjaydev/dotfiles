@@ -8,6 +8,10 @@ BVCBash
 commands:
 
     show-vms:      Show a list of the vms that are usable with easy ssh.
+
+docs:
+
+    logtail:       az webapp log tail -n NAME -g RESOURCEGROUP -s SLOT
 EOF
 
 read -r -d '' SHOWVMS <<-EOF
