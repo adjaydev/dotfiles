@@ -10,8 +10,9 @@ alias blank='PS1=""; clear;'
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
 alias ls="ls --color=auto"
-alias ll="ls -lh --color=auto"
-alias la="ls -lah --color=auto"
+alias ll="ls -lh"
+alias la="ls -lah"
+alias lsi='cd "$(ls | fzf)"'
 
 enter() {
 	PS1="" 

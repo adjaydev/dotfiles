@@ -3,7 +3,14 @@
 # Init vars
 
 read -r -d '' MENU <<-EOF
-BVCBash
+\e[1;34;44m                    \e[0m
+\e[1;34;104m                    \e[0m
+\e[1;34;107m                    \e[0m
+\e[1;34;107m      BVCM Bash     \e[0m
+\e[1;34;107m                    \e[0m
+\e[1;34;104m                    \e[0m
+\e[1;34;44m                    \e[0m
+\e[0m
 
 commands:
 
@@ -16,7 +23,14 @@ docs:
 EOF
 
 read -r -d '' SHOWVMS <<-EOF
-BVCBash
+\e[1;34;44m                    \e[0m
+\e[1;34;104m                    \e[0m
+\e[1;34;107m                    \e[0m
+\e[1;34;107m      BVCM Bash     \e[0m
+\e[1;34;107m                    \e[0m
+\e[1;34;104m                    \e[0m
+\e[1;34;44m                    \e[0m
+\e[0m
 
 List of the bvcm vms that are usable with easy ssh.
 
@@ -31,11 +45,11 @@ EOF
 bvcm() {
 
 	if [[ "$1" == "" ]]; then
-		echo "$MENU"
+		echo -e "$MENU"
 	fi
 
 	if [[ "$1" == "show-vms" ]]; then
-		echo "$SHOWVMS"
+		echo -e "$SHOWVMS"
 	fi
 
 	if [[ "$1" == "logs" ]]; then
