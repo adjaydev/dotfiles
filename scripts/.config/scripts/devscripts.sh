@@ -76,7 +76,6 @@ print120() {
 	echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 }
 
-<<<<<<< HEAD
 function dtts() {
 	if [[ "$1" == "-h" ]]; then
 		echo "dtts help"
@@ -89,12 +88,7 @@ function dtts() {
 		echo "-s : seconds, get timestamp for given date and time. Usage: dtts 2025-02-02 01:02:03"
 		echo "-m : midnight, get timestamp for given date and time at midnight. Usage: dtts -m 2025-03-03"
 		echo ""
-
 	elif [[ "$1" == "-s" ]]; then
-=======
-dtts() {
-	if [[ "$1" == "-s" ]]; then
->>>>>>> f6ec175 (update)
 		date -j -f "%Y-%m-%d %H:%M:%S" "$2 $3" +%s
 	elif [[ "$1" == "-m" ]]; then
 		date -j -f "%Y-%m-%d %H:%M:%S" "$2 00:00:00" +%s
@@ -139,16 +133,6 @@ cht() {
 # BVCM
 alias bvdata="cd ~/Documents/data; lsa"
 alias bvdocs="cd ~/Documents/docs; lsa"
-<<<<<<< HEAD
-=======
-bvcm() {
-	echo "\n[LIST DIRECTORY -a]"
-	cd "~/Documents/werk/BVCM/$1"
-	ls -la $2
-	echo "\n[DIRECTORY]"
-	pwd
-}
->>>>>>> f6ec175 (update)
 
 bvd() {
 	
