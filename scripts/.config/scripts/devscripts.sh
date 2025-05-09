@@ -1,9 +1,11 @@
 source ~/.config/zsh_scripts/.tmux
 source ~/dotfiles/scripts/.config/scripts/ghostyy_zsh.sh
 source ~/.config/scripts/bvcm.sh
+source ~/.config/scripts/adjay.sh
 
 # Clear screen
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
+# alias c='clear;echo -e "\033[38;2;152;151;26m"; figlet adjay.dev; echo -e "\033[0m"'
 alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
 alias blank='PS1=""; clear;'
@@ -25,8 +27,6 @@ enter-noc() {
 	echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
 }
 
-# Personal
-alias adjay="cd ~/work/adjay.dev; c;"
 
 # Neovim
 alias v.="nvim ."
@@ -67,6 +67,7 @@ alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
 alias devscripts="nvim ~/.config/scripts/devscripts.sh"
 alias devs="nvim ~/.config/scripts/devscripts.sh"
+alias deva="nvim ~/.config/scripts/adjay.sh"
 alias temp="cd ~/projects/temp"
 alias p="pwd"
 alias pc="pwd | tr -d '\n' | pbcopy"
@@ -77,7 +78,9 @@ print120() {
 	echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 }
 
-function dtts() {
+
+dtts() {
+
 	if [[ "$1" == "-h" ]]; then
 		echo "dtts help"
 		echo ""
