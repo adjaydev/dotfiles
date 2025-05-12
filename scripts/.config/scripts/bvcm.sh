@@ -73,4 +73,27 @@ bvcm() {
 		az webapp log tail -n $selected -g $group
 
 	fi
+
+	if [[ "$1" == "ssh" ]]; then
+
+		selected=`cat ~/dotfiles/scripts/.config/scripts/bvcm_logtail | sort -r | fzf`
+		group="bvcm_resource_group"
+
+		if [[ "$selected" == "" ]]; then
+			echo ">> no server selected"
+			return
+		fi
+		if [[ "$selected" == "bvcm-intranet-backend" ]]; then
+			group="bvcm_apps_resource"
+		fi
+		if [[ "$selected" == "bvcm-fundflow" ]]; then
+			group="bvcm_apps_resource"
+		fi
+		if [[ "$selected" == "bvcm-synapse-backend" ]]; then
+			group="bvcm_apps_resource"
+		fi 
+		az webapp ssh -n $selected -g $group
+
+	fi
 }
+
