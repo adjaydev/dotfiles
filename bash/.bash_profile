@@ -15,3 +15,7 @@ export PATH="$PATH:/Users/adjaythakoerdien/Library/Application Support/JetBrains
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/adjaythakoerdien/.lmstudio/bin"
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+   . $(brew --prefix)/etc/bash_completion
+fi

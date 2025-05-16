@@ -42,6 +42,7 @@ brew install sketchybar
 brew install borders
 brew install onefetch
 brew install borders
+brew install lazydocker
 
 
 ## NOTE: Brew Cask
@@ -68,7 +69,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-hack-nerd-font
 brew install --cask dbeaver-community
 brew install --cask docker
-brew install lazydocker
+brew install --cask gimp
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
