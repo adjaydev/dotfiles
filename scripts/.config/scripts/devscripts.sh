@@ -17,6 +17,8 @@ alias ll="ls -lh"
 alias la="ls -lah"
 alias lsi='cd "$(ls | fzf)"'
 alias ban="batman"
+alias ece="echo $?"
+alias eche="echo $?"
 
 enter() {
 	PS1="" 

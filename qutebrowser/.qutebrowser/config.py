@@ -24,6 +24,9 @@ config.bind("cl", "set tabs.position right")
 config.bind("cn", "open -w")
 config.bind("cf", "fullscreen")
 config.bind("cs", "config-source")
+config.bind("c1", "set zoom.default 100")
+config.bind("c2", "set zoom.default 200")
+config.bind("c5", "set zoom.default 150")
 
 # config.set("window.transparent", True)
 c.tabs.width = 300
@@ -34,3 +37,5 @@ c.colors.tabs.selected.even.bg = BLACK
 c.colors.tabs.selected.odd.bg = BLACK
 c.colors.tabs.even.bg = BLACK
 c.colors.tabs.odd.bg = BLACK
+c.zoom.default = 100
+c.downloads.remove_finished = 3000
