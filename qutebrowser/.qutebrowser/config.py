@@ -14,7 +14,9 @@ GREEN = "#b8bb26"
 
 c.tabs.position = "left"
 config.bind("cy", "config-cycle window.hide_decoration true false")
+config.bind("cx", "config-cycle window.hide_decoration true false")
 config.bind("ct", "config-cycle tabs.show always never")
+config.bind("cv", "config-cycle tabs.show always never")
 config.bind("ch", "set tabs.position left")
 config.bind("cj", "set tabs.position bottom")
 config.bind("ck", "set tabs.position top")
