@@ -1,7 +1,7 @@
 #!/bin/bash
 
 options=(
-	style=rounded
+	style=square
 	hidpi=true
 	width=6.0
 	hidpi=off
