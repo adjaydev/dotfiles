@@ -19,6 +19,7 @@ alias lsi='cd "$(ls | fzf)"'
 alias ban="batman"
 alias ece="echo $?"
 alias eche="echo $?"
+alias y="yazi"
 
 enter() {
 	PS1="" 

@@ -12,12 +12,12 @@ GREEN = "#fabd2f"
 GREEN = "#b8bb26"
 
 
-c.tabs.position = "left"
 config.bind("cy", "config-cycle window.hide_decoration true false")
 config.bind("cx", "config-cycle window.hide_decoration true false")
 config.bind("ct", "config-cycle tabs.show always never")
 config.bind("cv", "config-cycle tabs.show always never")
 config.bind("ci", "config-cycle tabs.show always never")
+config.bind("ca", "config-cycle tabs.show always never")
 config.bind("ch", "set tabs.position left")
 config.bind("cj", "set tabs.position bottom")
 config.bind("ck", "set tabs.position top")
@@ -29,8 +29,7 @@ config.bind("c1", "set zoom.default 100")
 config.bind("c2", "set zoom.default 200")
 config.bind("c5", "set zoom.default 150")
 
-# config.set("window.transparent", True)
-c.tabs.width = 200
+c.tabs.width = 250
 c.colors.tabs.bar.bg = BLACK
 c.colors.tabs.selected.even.fg = GREEN
 c.colors.tabs.selected.odd.fg = GREEN
@@ -40,3 +39,6 @@ c.colors.tabs.even.bg = BLACK
 c.colors.tabs.odd.bg = BLACK
 c.zoom.default = 100
 c.downloads.remove_finished = 3000
+# c.fonts.tabs.selected = "12pt"
+# c.fonts.tabs.unselected = "12pt"
+c.tabs.padding = {"left": 0, "top": 0, "right": 0, "bottom": 0}
