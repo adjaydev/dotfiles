@@ -3,6 +3,7 @@ source ~/dotfiles/scripts/.config/scripts/ghostyy_zsh.sh
 source ~/.config/scripts/bvcm.sh
 source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
+source ~/projects/test/bash/getopts/print-my-name
 
 # Clear screen
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
@@ -17,9 +18,11 @@ alias ll="ls -lh"
 alias la="ls -lah"
 alias lsi='cd "$(ls | fzf)"'
 alias ban="batman"
-alias ece="echo $?"
-alias eche="echo $?"
 alias y="yazi"
+
+ee() {
+	echo $?;
+}
 
 enter() {
 	PS1="" 
