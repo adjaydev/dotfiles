@@ -20,5 +20,7 @@ macos-titlebar-style = hidden
 
 confirm-close-surface = true
 
-keybind = cmd+shift+g=toggle_quick_terminal
+#keybind = cmd+shift+g=toggle_quick_terminal
+quick-terminal-position = bottom
+quick-terminal-animation-duration = 0.1
 keybind = global:alt+shift+t=toggle_quick_terminal
