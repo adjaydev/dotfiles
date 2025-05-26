@@ -82,17 +82,59 @@ return {
           },
         },
       }
-      require('lspconfig').markdown_oxide.setup {
+
+      -- Ruff config
+      -- lspconfig.ruff.setup {
+      --   -- Other ruff_lsp settings if any
+      --   -- For example, to ensure ruff_lsp is the formatter for python files:
+      --   -- (though import sorting is a code action, not necessarily document formatting)
+      --   -- capabilities = capabilities, -- If you're using cmp or other plugins for capabilities
+      --   on_attach = function(client, bufnr)
+      --     -- Enable format-on-save for Ruff's formatting capabilities (if you also use ruff format)
+      --     if client.supports_method 'textDocument/formatting' then
+      --       vim.api.nvim_create_autocmd('BufWritePre', {
+      --         group = vim.api.nvim_create_augroup('RuffFormat', { clear = true }),
+      --         buffer = bufnr,
+      --         callback = function()
+      --           vim.lsp.buf.format { async = false } -- Set to false to ensure it completes before saving
+      --         end,
+      --       })
+      --     end
+      --
+      --     -- Crucially, for import sorting (which is a code action):
+      --     -- Trigger 'source.organizeImports.ruff' code action on BufWritePost
+      --     vim.api.nvim_create_autocmd('BufWritePost', {
+      --       group = vim.api.nvim_create_augroup('RuffOrganizeImports', { clear = true }),
+      --       buffer = bufnr,
+      --       callback = function()
+      --         vim.lsp.buf.code_action {
+      --           context = {
+      --             only = { 'source.organizeImports.ruff' },
+      --           },
+      --           apply = true,
+      --         }
+      --       end,
+      --     })
+      --
+      --     -- Add other keybindings if needed (e.g., for general code actions)
+      --     -- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { buffer = bufnr, desc = 'LSP Code Action' })
+      --   end,
+      -- }
+
+      lspconfig.markdown_oxide.setup {
         capabilities = capabilities,
         -- ensure that capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
         root_dir = lspconfig.util.root_pattern('.git', vim.fn.getcwd()), -- this is a temp fix for an error in the lspconfig for this LS
       }
+
       require('mason').setup()
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format lua code
       })
+
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)

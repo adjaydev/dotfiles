@@ -10,14 +10,21 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # nerdfetch
 export AIRFLOW_HOME="~/projects/airflow"
-#
-# Set default $EDITOR
 export EDITOR=nvim
 export VISUAL="$EDITOR"
+export MODULAR_HOME="$HOME/.modular"
+export PYENV_ROOT="$HOME/.pyenv"
 
-export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 export PATH="$PATH:~/.local/bin"
+export PATH=$PATH:$HOME/go/bin
+export PATH="$HOME/.config/tmuxifier/bin:$PATH"
 export PATH="/Applications/Google\ Chrome.app/Contents/MacOS:$PATH"
+export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+export PATH="$PATH:$HOME/.local/opt/go/bin"
+
+
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 source ~/.config/scripts/devscripts.sh
 
@@ -31,13 +38,6 @@ alias run-coproxy-build="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-
 
 # The fuck
 eval $(thefuck --alias)
-
-# MODULAR & MOJO
-export MODULAR_HOME="$HOME/.modular"
-export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"export PYENV_ROOT="$HOME/.pyenv"
-
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # FZF Config
 function vzv() {
@@ -64,29 +64,22 @@ eval "$(tmuxifier init -)"
 # Google Cloud SDK.
 if [ -f '~/Projects/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/path.zsh.inc'; fi
 
-# Enable shell command completion for gcloud.
+# # Enable shell command completion for gcloud.
 if [ -f '~/Projects/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/adjaythakoerdien/Projects/dev/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-export NVM_DIR="/opt/homebrew/opt/nvm"
+# export NVM_DIR="/opt/homebrew/opt/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # op 1password
-# eval "$(op completion zsh)"; compdef _op op
+# eval "$(op completion bash)"; compdef _op op
 
 # Zoxide
 eval "$(zoxide init bash)"
 
-# GO
-
-# Set default $EDITOR
-export EDITOR=nvim
-export VISUAL="$EDITOR"
-export PATH=$PATH:$HOME/go/bin
-
 # Load Angular CLI autocompletion.
-# source <(ng completion script)
+source <(ng completion script)
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
@@ -103,9 +96,6 @@ PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
 # export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk" 
 # export ANDROID_NDK_ROOT="$ANDROID_SDK_ROOT/ndk/28.0.12433566" 
 
-export PATH=$PATH:$HOME/.local/opt/go/bin
-export PATH=$PATH:$HOME/go/bin
-
 source ~/perl5/perlbrew/etc/bashrc
 
 # Added by LM Studio CLI (lms)
@@ -113,7 +103,7 @@ export PATH="$PATH:/Users/adjaythakoerdien/.lmstudio/bin"
 
 # autoload -Uz compinit; compinit
 
-# [[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # pnpm

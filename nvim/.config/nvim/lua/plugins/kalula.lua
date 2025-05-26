@@ -1,5 +1,6 @@
 -- Kalula
-return {
-  'mistweaverco/kulala.nvim',
-  opts = {},
-}
+return {}
+-- return {
+--   'mistweaverco/kulala.nvim',
+--   opts = {},
+-- }

@@ -4,6 +4,7 @@ source ~/.config/scripts/bvcm.sh
 source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
 source ~/projects/test/bash/getopts/print-my-name
+source ~/.config/scripts/spin.sh
 
 # Clear screen
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
@@ -23,6 +24,10 @@ alias y="yazi"
 ee() {
 	echo $?;
 }
+alias ece="echo $?"
+alias eche="echo $?"
+alias cal3="cal -3"
+alias clock="tock -c -W 6 -H 3 -m"
 
 enter() {
 	PS1="" 
@@ -354,4 +359,3 @@ brewi() {
 alias dcd="docker-compose down"
 alias dcu="docker-compose up -d"
 
-alias clock="tock -c -W 6 -H 3 -m"
