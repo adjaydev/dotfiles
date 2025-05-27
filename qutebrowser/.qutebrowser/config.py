@@ -49,6 +49,7 @@ c.colors.tabs.even.bg = BLACK
 c.colors.tabs.odd.bg = BLACK
 c.zoom.default = 100
 c.downloads.remove_finished = 3000
+c.editor.command = ["open", "-a", "Ghostty", "-W", "--args", "-e", "nvim {file}"]
 # c.fonts.tabs.selected = "12pt"
 # c.fonts.tabs.unselected = "12pt"
 c.tabs.padding = {"left": 0, "top": 0, "right": 0, "bottom": 0}
