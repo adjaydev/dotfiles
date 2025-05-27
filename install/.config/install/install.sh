@@ -2,7 +2,7 @@
 
 ## NOTE: Brew
 
-echo "Installing all brew intall"
+echo "Installing all 'brew install'"
 brew install bash
 brew install coreutils
 brew install azure-cli
@@ -36,6 +36,7 @@ brew install thefuck
 brew install tmux
 brew install tree-sitter
 brew install zoxide
+brew install yazi
 brew install bruno
 brew tap FelixKratz/formulae
 brew install sketchybar
@@ -43,11 +44,13 @@ brew install borders
 brew install onefetch
 brew install borders
 brew install lazydocker
+brew install presenterm
+brew install weasyprint
 
 
 ## NOTE: Brew Cask
 
-echo "Installing all brew install --cask"
+echo "Installing all 'brew install --cask'"
 brew install --cask nikitabobko/tap/aerospace
 brew install --cask raycast
 brew install --cask jetbrains-toolbox
@@ -67,7 +70,6 @@ brew install --cask google-cloud-sdk
 brew install --cask google-chrome
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-hack-nerd-font
-brew install --cask dbeaver-community
 brew install --cask docker
 brew install --cask gimp
 

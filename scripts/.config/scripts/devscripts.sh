@@ -21,6 +21,7 @@ alias lsi='cd "$(ls | fzf)"'
 alias ban="batman"
 alias y="yazi"
 alias figlet="figlet -cf slant"
+alias presenterm="presenterm --config-file ~/.config/presenterm/config.yaml"
 
 ee() {
 	echo $?;
