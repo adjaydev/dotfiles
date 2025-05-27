@@ -3,7 +3,7 @@ source ~/dotfiles/scripts/.config/scripts/ghostyy_zsh.sh
 source ~/.config/scripts/bvcm.sh
 source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
-source ~/projects/test/bash/getopts/print-my-name
+# source ~/projects/test/bash/getopts/print-my-name
 source ~/.config/scripts/spin.sh
 
 # Clear screen
@@ -20,6 +20,7 @@ alias la="ls -lah"
 alias lsi='cd "$(ls | fzf)"'
 alias ban="batman"
 alias y="yazi"
+alias figlet="figlet -cf slant"
 
 ee() {
 	echo $?;

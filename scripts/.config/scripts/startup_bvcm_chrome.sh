@@ -13,9 +13,18 @@
 # @raycast.author adjaythakoerdien
 # @raycast.authorURL https://raycast.com/adjaythakoerdien
 
-open -a "/Applications/Google Chrome.app"
-open -na "Google Chrome" --args --new-window "http://bvcm.collectonline.eu"
-open -na "Google Chrome" --args --new-window "http://bvcm.collectonline.eu"
-open -na "Google Chrome" --args --new-window "http://grafana.bvcm.com"
-open -na "Google Chrome" --args --new-window "http://synapse.bvcm.com"
-open -na "Google Chrome" --args --new-window "http://planner.cloud.microsoft"
+# BROWSER="Google Chrome"
+BROWSER="qutebrowser"
+
+# open -a "/Applications/Ghostty.app"
+# open -a "/Applications/Google Chrome.app"
+
+open -na "$BROWSER" --args --target=window "http://bvcm.collectonline.eu"
+sleep 0.1
+open -na "$BROWSER" --args --target=window "http://bvcm.collectonline.eu"
+sleep 0.1
+open -na "$BROWSER" --args --target=window "http://grafana.bvcm.com"
+sleep 0.1
+open -na "$BROWSER" --args --target=window "http://synapse.bvcm.com"
+sleep 0.1
+open -na "$BROWSER" --args --target=window "http://planner.cloud.microsoft"

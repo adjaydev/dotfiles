@@ -15,16 +15,46 @@
 
 # Startup app for BVCM
 
-open -a "/Applications/Ghostty.app"
-open -a "/Applications/Google Chrome.app"
-open -na "Google Chrome" --args --new-window "http://bvcm.collectonline.eu"
-open -na "Google Chrome" --args --new-window "http://bvcm.collectonline.eu"
-open -na "Google Chrome" --args --new-window "http://grafana.bvcm.com"
-open -na "Google Chrome" --args --new-window "http://synapse.bvcm.com"
-open -na "Google Chrome" --args --new-window "http://planner.cloud.microsoft"
-open -a "/Applications/Superhuman.app"
-open -a "/Applications/Microsoft Teams.app"
-open -a "/Applications/Microsoft Outlook.app"
-open -a "/Applications/Microsoft Azure Storage Explorer.app"
-open -a "/Applications/Obsidian.app"
-open -a "/Applications/FileZilla.app"
+apps=(
+	"/Applications/Ghostty.app"
+	"/Applications/utebrowser.app"
+	"/Applications/Superhuman.app"
+	"/Applications/Microsoft Teams.app"
+	"/Applications/Microsoft Outlook.app"
+	"/Applications/Microsoft Azure Storage Explorer.app"
+	"/Applications/Obsidian.app"
+	"/Applications/FileZilla.app"
+)
+for app in ${apps[@]}; do
+	open -a "$app"
+	sleep 0.1
+done
+
+
+BROWSER="qutebrowser"
+urls=(
+	"http://bvcm.collectonline.eu"
+	"http://bvcm.collectonline.eu"
+	"http://grafana.bvcm.com"
+	"http://synapse.bvcm.com"
+	"http://planner.cloud.microsoft"
+)
+for url in ${urls[@]}; do
+	open -na "$BROWSER" --args --target=window "$url"
+	sleep 0.1
+done
+
+# BROWSER="Google Chrome"
+# open -a "/Applications/Google Chrome.app"
+# urls=(
+# 	"http://bvcm.collectonline.eu"
+# 	"http://bvcm.collectonline.eu"
+# 	"http://grafana.bvcm.com"
+# 	"http://synapse.bvcm.com"
+# 	"http://planner.cloud.microsoft"
+# )
+# for url in ${urls[@]}; do
+# 	open -na "$BROWSER" --args --new-window "$url"
+# 	sleep 0.1
+# done
+

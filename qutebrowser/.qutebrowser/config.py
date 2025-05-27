@@ -9,7 +9,7 @@ YELLOW = "#d79921"
 
 GREEN = "#fabd2f"
 
-GREEN = "#b8bb26"
+FONTCOLOR = "#b8bb26"
 
 
 config.bind("cy", "config-cycle window.hide_decoration true false")
@@ -26,13 +26,25 @@ config.bind("cn", "open -w")
 config.bind("cf", "fullscreen")
 config.bind("cs", "config-source")
 config.bind("c1", "set zoom.default 100")
-config.bind("c2", "set zoom.default 200")
-config.bind("c5", "set zoom.default 150")
+config.bind("c2", "set zoom.default 150")
+config.bind("c3", "set zoom.default 200")
+config.bind(
+    "cr1",
+    "set zoom.default 100 ;; set fonts.tabs.selected 12pt ;; set fonts.tabs.unselected 12pt;; set tabs.width 250",
+)
+config.bind(
+    "cr2",
+    "set zoom.default 150 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400",
+)
+config.bind(
+    "cr3",
+    "set zoom.default 200 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400",
+)
 
 c.tabs.width = 250
 c.colors.tabs.bar.bg = BLACK
-c.colors.tabs.selected.even.fg = GREEN
-c.colors.tabs.selected.odd.fg = GREEN
+c.colors.tabs.selected.even.fg = FONTCOLOR
+c.colors.tabs.selected.odd.fg = FONTCOLOR
 c.colors.tabs.selected.even.bg = BLACK
 c.colors.tabs.selected.odd.bg = BLACK
 c.colors.tabs.even.bg = BLACK

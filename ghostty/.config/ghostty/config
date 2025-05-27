@@ -1,9 +1,10 @@
-font-size = 17
-# window-padding-x = 300
+font-size = 23
+window-padding-x = 350
 
 theme = GruvboxDarkHard
 
-font-family = Comic Code
+font-family = Fira Code
+#font-family = Comic Code
 #font-family = PT Mono
 #font-family = JetBrainsMono Nerd Font
 
@@ -24,3 +25,4 @@ confirm-close-surface = true
 quick-terminal-position = bottom
 quick-terminal-animation-duration = 0.1
 keybind = global:alt+shift+t=toggle_quick_terminal
+

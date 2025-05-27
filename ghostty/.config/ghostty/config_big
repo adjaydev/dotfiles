@@ -3,7 +3,8 @@ window-padding-x = 350
 
 theme = GruvboxDarkHard
 
-font-family = Comic Code
+font-family = Fira Code
+#font-family = Comic Code
 #font-family = PT Mono
 #font-family = JetBrainsMono Nerd Font
 
