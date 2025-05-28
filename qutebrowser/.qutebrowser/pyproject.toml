@@ -5,3 +5,6 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "qutebrowser-config"
 version = "0.1.0"
+
+[tool.ruff]
+line-length = 130

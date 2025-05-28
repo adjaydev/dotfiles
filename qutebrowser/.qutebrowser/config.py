@@ -1,15 +1,20 @@
-BLACK = "#000000"
-GRAY = "#1E2021"
-GREEN = "#00FF00"
+c = c
+config = config
 
+BLACK = "#000000"
 BLACK = "#282828"
 BLACK = "#1d2021"
+
+GRAY = "#1E2021"
+
 GREEN = "#98971a"
+GREEN = #b8bb26
+
 YELLOW = "#d79921"
+YELLOW = "#fabd2f"
 
-GREEN = "#fabd2f"
-
-FONTCOLOR = "#b8bb26"
+FGCOLOR = GREEN
+BGCOLOR = BLACK
 
 
 config.bind("cy", "config-cycle window.hide_decoration true false")
@@ -23,33 +28,19 @@ config.bind("cj", "set tabs.position bottom")
 config.bind("ck", "set tabs.position top")
 config.bind("cl", "set tabs.position right")
 config.bind("cn", "open -w")
-config.bind("c1", "set zoom.default 100")
-config.bind("c2", "set zoom.default 150")
-config.bind("c3", "set zoom.default 200")
-config.bind(
-    "cr1",
-    "set zoom.default 100 ;; set fonts.tabs.selected 12pt ;; set fonts.tabs.unselected 12pt;; set tabs.width 250",
-)
-config.bind(
-    "cr2",
-    "set zoom.default 150 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400",
-)
-config.bind(
-    "cr3",
-    "set zoom.default 200 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400",
-)
+config.bind("c1", "set zoom.default 100 ;; set fonts.tabs.selected 12pt ;; set fonts.tabs.unselected 12pt;; set tabs.width 250")
+config.bind("c2", "set zoom.default 150 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400")
+config.bind("c3", "set zoom.default 200 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400")
 
 c.tabs.width = 250
-c.colors.tabs.bar.bg = BLACK
-c.colors.tabs.selected.even.fg = FONTCOLOR
-c.colors.tabs.selected.odd.fg = FONTCOLOR
-c.colors.tabs.selected.even.bg = BLACK
-c.colors.tabs.selected.odd.bg = BLACK
-c.colors.tabs.even.bg = BLACK
-c.colors.tabs.odd.bg = BLACK
+c.colors.tabs.bar.bg = BGCOLOR
+c.colors.tabs.selected.even.fg = FGCOLOR
+c.colors.tabs.selected.odd.fg = FGCOLOR
+c.colors.tabs.selected.even.bg = BGCOLOR
+c.colors.tabs.selected.odd.bg = BGCOLOR
+c.colors.tabs.even.bg = BGCOLOR
+c.colors.tabs.odd.bg = BGCOLOR
 c.zoom.default = 100
 c.downloads.remove_finished = 3000
 c.editor.command = ["open", "-a", "Ghostty", "-W", "--args", "-e", "nvim {file}"]
-# c.fonts.tabs.selected = "12pt"
-# c.fonts.tabs.unselected = "12pt"
 c.tabs.padding = {"left": 0, "top": 0, "right": 0, "bottom": 0}
