@@ -8,13 +8,29 @@ BLACK = "#1d2021"
 GRAY = "#1E2021"
 
 GREEN = "#98971a"
-GREEN = #b8bb26
+GREEN = "#b8bb26"
 
 YELLOW = "#d79921"
 YELLOW = "#fabd2f"
 
 FGCOLOR = GREEN
 BGCOLOR = BLACK
+
+# HACK: asddsa
+# jh
+
+# TODO:
+# kjasdjed
+# sadkj
+
+# HACK:
+# WARN:
+# PERF:
+
+# NOTE:
+
+# TEST:
+# FIX:
 
 
 config.bind("cy", "config-cycle window.hide_decoration true false")
