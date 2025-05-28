@@ -3,5 +3,4 @@
 **/tmux/plugins/*
 logs
 .idea
-**/*.urls
 **/urls
