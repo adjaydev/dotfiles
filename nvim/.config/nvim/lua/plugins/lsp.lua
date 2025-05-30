@@ -1,5 +1,6 @@
 -- lsp
 return {
+
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -8,6 +9,7 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       { 'j-hui/fidget.nvim', opts = {} },
     },
+
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
@@ -18,13 +20,19 @@ return {
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
           map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+          map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+          map('K', vim.lsp.buf.hover, 'Hover Documentation')
           map('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
           map('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
           map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-          map('K', vim.lsp.buf.hover, 'Hover Documentation')
-          map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+
+          map('<leader>ll', vim.diagnostic.open_float, 'Open [D]iagnostic F[l]oat') -- Example keymap
+          vim.keymap.set('n', '<leader>lL', function()
+            vim.diagnostic.setloclist { open = true }
+          end, { desc = 'Show [D]iagnostics in Location [L]ist' })
+
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if client and client.server_capabilities.documentHighlightProvider then
             vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
@@ -39,6 +47,14 @@ return {
         end,
       })
       local capabilities = vim.lsp.protocol.make_client_capabilities()
+      -- In your lspconfig config function, e.g., after capabilities setup
+      vim.diagnostic.config {
+        -- ... other diagnostic settings ...
+        loclist = {
+          open = true, -- Automatically open the location list when diagnostics change
+          severity = { min = vim.diagnostic.severity.WARN }, -- Only show warnings and errors
+        },
+      }
       local lspconfig = require 'lspconfig'
       local configs = require 'lspconfig.configs'
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
@@ -84,42 +100,69 @@ return {
       }
 
       -- Ruff config
-      -- lspconfig.ruff.setup {
-      --   -- Other ruff_lsp settings if any
-      --   -- For example, to ensure ruff_lsp is the formatter for python files:
-      --   -- (though import sorting is a code action, not necessarily document formatting)
-      --   -- capabilities = capabilities, -- If you're using cmp or other plugins for capabilities
-      --   on_attach = function(client, bufnr)
-      --     -- Enable format-on-save for Ruff's formatting capabilities (if you also use ruff format)
-      --     if client.supports_method 'textDocument/formatting' then
-      --       vim.api.nvim_create_autocmd('BufWritePre', {
-      --         group = vim.api.nvim_create_augroup('RuffFormat', { clear = true }),
-      --         buffer = bufnr,
-      --         callback = function()
-      --           vim.lsp.buf.format { async = false } -- Set to false to ensure it completes before saving
-      --         end,
-      --       })
-      --     end
-      --
-      --     -- Crucially, for import sorting (which is a code action):
-      --     -- Trigger 'source.organizeImports.ruff' code action on BufWritePost
-      --     vim.api.nvim_create_autocmd('BufWritePost', {
-      --       group = vim.api.nvim_create_augroup('RuffOrganizeImports', { clear = true }),
-      --       buffer = bufnr,
-      --       callback = function()
-      --         vim.lsp.buf.code_action {
-      --           context = {
-      --             only = { 'source.organizeImports.ruff' },
-      --           },
-      --           apply = true,
-      --         }
-      --       end,
-      --     })
-      --
-      --     -- Add other keybindings if needed (e.g., for general code actions)
-      --     -- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { buffer = bufnr, desc = 'LSP Code Action' })
-      --   end,
-      -- }
+      lspconfig.ruff.setup {
+        init_options = {
+          settings = {
+            -- Server settings should go here
+          },
+        },
+        on_attach = function(client, bufnr)
+          -- Enable format-on-save for Ruff's formatting capabilities (if you also use ruff format)
+          if client.supports_method 'textDocument/formatting' then
+            vim.api.nvim_create_autocmd('BufWritePre', {
+              group = vim.api.nvim_create_augroup('RuffFormat', { clear = true }),
+              buffer = bufnr,
+              callback = function()
+                vim.lsp.buf.format { async = false } -- Set to false to ensure it completes before saving
+              end,
+            })
+          end
+
+          -- Trigger 'source.organizeImports.ruff' code action on BufWritePost
+          vim.api.nvim_create_autocmd('BufWritePost', {
+            group = vim.api.nvim_create_augroup('RuffOrganizeImports', { clear = true }),
+            buffer = bufnr,
+            callback = function()
+              vim.lsp.buf.code_action {
+                context = {
+                  only = { 'source.organizeImports.ruff' },
+                },
+                apply = true,
+              }
+            end,
+          })
+        end,
+      }
+
+      vim.api.nvim_create_autocmd('LspAttach', {
+        group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = false }),
+        callback = function(args)
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+          if client == nil then
+            return
+          end
+          if client.name == 'ruff' then
+            -- Enable hover
+            client.server_capabilities.hoverProvider = true
+          end
+        end,
+        desc = 'LSP: Disable hover capability from Ruff',
+      })
+
+      require('lspconfig').pyright.setup {
+        settings = {
+          pyright = {
+            -- Using Ruff's import organizer
+            disableOrganizeImports = true,
+          },
+          python = {
+            analysis = {
+              -- Ignore all files for analysis to exclusively use Ruff for linting
+              ignore = { '*' },
+            },
+          },
+        },
+      }
 
       lspconfig.markdown_oxide.setup {
         capabilities = capabilities,
@@ -146,6 +189,7 @@ return {
       }
     end,
   },
+
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {

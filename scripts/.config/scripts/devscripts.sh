@@ -42,7 +42,6 @@ enter-noc() {
 	echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
 }
 
-
 # Neovim
 alias v.="nvim ."
 alias v="nvim"
@@ -94,7 +93,6 @@ print120() {
 	echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 }
 
-
 dtts() {
 
 	if [[ "$1" == "-h" ]]; then
@@ -144,7 +142,6 @@ alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
 alias chrome="cd /Applications/Google\ Chrome.app/Contents/MacOS/ && ./Google\ Chrome"
 
 alias neko="mvn exec:java -Dexec.mainClass="Neko" &"
-
 
 cht() {
 	~/.config/scripts/./tmux-cht.sh
@@ -360,4 +357,32 @@ brewi() {
 
 alias dcd="docker-compose down"
 alias dcu="docker-compose up -d"
+
+
+# FZF Config
+function vzv() {
+	fzf | xargs nvim
+}
+
+# New Obsidian note
+function on() {
+	if [ -z "$1" ]; then
+	  echo "Error: A file name must be set, e.g. on \"filename here with spaces\"."
+	  exit 1
+	fi
+
+	file_name=$(echo "$1" | tr ' ' '-')
+	formatted_file_name=${file_name}_$(date "+%Y-%m-%d").md
+	cd "~/personal/DeeezNotes/DeeezNotes" || exit
+	touch "0-inbox/${formatted_file_name}"
+	nvim "0-inbox/${formatted_file_name}"
+}
+
+# Collect Online Proxy
+alias run-coproxy="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-mysql \
+--port=3308 \
+--credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
+alias run-coproxy-build="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-build \
+--port=3309 \
+--credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
 
