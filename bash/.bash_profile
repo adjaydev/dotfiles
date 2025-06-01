@@ -1,4 +1,3 @@
-echo "bash profile $HOME"
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi

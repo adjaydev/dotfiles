@@ -1,0 +1,13 @@
+[mgr]
+show_hidden = true
+
+[plugin]
+prepend_previewers = [
+	{ name = "*.md", run = "glow" },
+]
+
+[manager]
+ratio = [1, 2, 4]
+
+[preview]
+wrap = "no"

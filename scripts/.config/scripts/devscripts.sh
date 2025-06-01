@@ -5,6 +5,7 @@ source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
 # source ~/projects/test/bash/getopts/print-my-name
 source ~/.config/scripts/spin.sh
+# source ~/.config/scripts/wttr.sh
 
 # Clear screen
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
@@ -18,10 +19,15 @@ alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ls -lah"
 alias lsi='cd "$(ls | fzf)"'
+
+# Special
 alias ban="batman"
 alias y="yazi"
 alias figlet="figlet -cf slant"
 alias presenterm="presenterm --config-file ~/.config/presenterm/config.yaml"
+alias wtr="curl wttr.in/hoofddorp"
+alias screens="cd ~/Pictures/screenshots"
+alias hl="rg --passthrough $1"
 
 ee() {
 	echo $?;
@@ -77,7 +83,6 @@ alias personal="cd ~/personal;"
 alias dot="cd ~/dotfiles/"
 alias dotv="nvim ~/dotfiles/"
 alias conf="cd ~/.config/"
-alias pwdc="pwd | tr -d '\n' | pbcopy"
 alias e="exit"
 alias devscripts="nvim ~/.config/scripts/devscripts.sh"
 alias devs="nvim ~/.config/scripts/devscripts.sh"
@@ -86,8 +91,7 @@ alias devb="nvim ~/.config/scripts/bvcm.sh"
 alias temp="cd ~/projects/temp"
 alias p="pwd"
 alias pc="pwd | tr -d '\n' | pbcopy"
-alias screens="cd ~/Pictures/screenshots"
-alias hl="rg --passthrough $1"
+alias pwdc="pwd | tr -d '\n' | pbcopy"
 
 print120() {
 	echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
@@ -245,7 +249,7 @@ alias venv="source venv/bin/activate"
 alias srch='nvim $(fzf -m --preview="bat --color=always {}")'
 alias obsf='cd ~/personal/DeeezNotes; nvim $(fzf -m --preview="bat --color=always {}")'
 
-# macOS
+# macos
 alias lsaa="ls -a;"
 alias cl="clear"
 
