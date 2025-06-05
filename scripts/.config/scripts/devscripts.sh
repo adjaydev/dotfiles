@@ -263,6 +263,7 @@ alias hackerscript="docker run --rm -it bcbcarl/hollywood"
 devhelp() {
 	echo "uuid4"
 	echo "xlsx2json"
+	echo "json2xlsx"
 	echo "fancy"
 	echo "docker-show-id"
 	echo "docker-copy-id"
@@ -288,6 +289,17 @@ fi
 	output_file="${2:-${excel_file%.xlsx}.json}"
 
 	python -c "import pandas as pd; pd.read_excel('$excel_file').to_json('$output_file', orient='records')"
+}
+
+json2xlsx() {
+if [ $# -eq 0 ]; then
+    echo "Usage: json2xlsx <json_file> [output_excel_file]"
+    exit 1
+fi
+	excel_file="$1"
+	output_file="${2:-${excel_file%.xlsx}.json}"
+
+	python -c "import pandas as pd; pd.read_json('$excel_file', orient='records').to_excel('$output_file', index=False)"
 }
 
 timestamp() {
