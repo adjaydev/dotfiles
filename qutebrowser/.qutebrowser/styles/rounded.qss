@@ -1,0 +1,10 @@
+/* Main window styling */
+QMainWindow {
+    border-radius: 12px;
+    background-color: #282a36; /* Or your theme's background color */
+}
+
+/* This prevents the web view from drawing over the rounded corners */
+QStackedWidget > QWidget {
+    border-radius: 0;
+}

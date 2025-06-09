@@ -60,3 +60,10 @@ c.zoom.default = 100
 c.downloads.remove_finished = 3000
 c.editor.command = ["open", "-a", "Ghostty", "-W", "--args", "-e", "nvim {file}"]
 c.tabs.padding = {"left": 0, "top": 0, "right": 0, "bottom": 0}
+c.url.searchengines = {"DEFAULT": "https://www.google.com/search?q={}"}
+c.url.default_page = "https://www.google.com"
+c.url.start_pages = "https://www.google.com"
+
+
+# config.set("qt.args", ["-stylesheet", "~/dotfiles/qutebrowser/.qutebrowser/styles/rounded.qss"])
+# c.content.user_stylesheets = "~/dotfiles/qutebrowser/.qutebrowser/styles/rounded.qss"
