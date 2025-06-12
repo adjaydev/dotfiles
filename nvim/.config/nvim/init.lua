@@ -11,6 +11,7 @@ require 'settings.global_config'
 require('lazy').setup 'plugins'
 
 vim.cmd.colorscheme 'gruvbox'
+-- vim.cmd 'hi Normal guibg=#000000'
 
 -- TODO: sd
 
