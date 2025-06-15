@@ -55,7 +55,7 @@ return {
       vim.diagnostic.config {
         virtual_text = true, -- Show diagnostics as virtual text (to the right of the line)
         signs = true,
-        update_in_insert = false,
+        update_in_insert = true,
         underline = true,
         severity_sort = true,
         float = {
@@ -91,7 +91,7 @@ return {
             python = {
               analysis = {
                 -- This is your preference to use Ruff exclusively for linting. It's a valid choice.
-                ignore = {},
+                ignore = { '*' },
               },
             },
           },
@@ -134,7 +134,7 @@ return {
   { -- Autoformat
     'stevearc/conform.nvim',
     opts = {
-      notify_on_error = false,
+      notify_on_error = true,
       format_on_save = {
         timeout_ms = 500,
         lsp_fallback = true,
