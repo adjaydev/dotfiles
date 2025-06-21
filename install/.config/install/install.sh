@@ -37,7 +37,6 @@ brew install tmux
 brew install tree-sitter
 brew install zoxide
 brew install yazi
-brew install bruno
 brew tap FelixKratz/formulae
 brew install sketchybar
 brew install borders
@@ -46,6 +45,9 @@ brew install borders
 brew install lazydocker
 brew install presenterm
 brew install weasyprint
+
+brew tap teamookla/speedtest
+brew install speedtest
 
 
 ## NOTE: Brew Cask
@@ -57,8 +59,6 @@ brew install --cask jetbrains-toolbox
 brew install --cask obsidian
 brew install --cask obs
 brew install --cask superhuman
-brew install --cask elgato-camera-hub
-brew install --cask elgato-stream-deck
 brew install --cask elgato-control-center
 brew install --cask sublime-text
 brew install --cask tg-pro
@@ -72,6 +72,14 @@ brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-hack-nerd-font
 brew install --cask docker
 brew install --cask gimp
+brew install --cask bruno
+brew install --cask ghostty
+brew install --cask font-sf-pro
+brew install --cask 1password-cli
+brew install --cask qutebrowser
+brew install --cask whatsapp
+brew install --cask vlc
+
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
