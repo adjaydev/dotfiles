@@ -1,5 +1,10 @@
+vim = vim
+
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = false
+
+vim.opt.spell = true
+vim.opt.spelllang = { 'ln_nl', 'en_us' }
 
 vim.cmd 'language en_US'
 
