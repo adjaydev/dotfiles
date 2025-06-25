@@ -5,6 +5,7 @@ vim.g.have_nerd_font = false
 
 vim.opt.spell = true
 vim.opt.spelllang = { 'nl_nl', 'en_us' }
+-- vim.opt.spellsuggest = 'best,5'
 
 vim.cmd 'language en_US'
 
