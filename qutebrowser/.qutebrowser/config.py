@@ -45,8 +45,11 @@ config.bind("ck", "set tabs.position top")
 config.bind("cl", "set tabs.position right")
 config.bind("cn", "open -w")
 config.bind("c1", "set zoom.default 100 ;; set fonts.tabs.selected 12pt ;; set fonts.tabs.unselected 12pt;; set tabs.width 250")
-config.bind("c2", "set zoom.default 150 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400")
-config.bind("c3", "set zoom.default 200 ;; set fonts.tabs.selected 16pt ;; set fonts.tabs.unselected 16pt;; set tabs.width 400")
+config.bind("c2", "set zoom.default 110 ;; set fonts.tabs.selected 13pt ;; set fonts.tabs.unselected 13pt;; set tabs.width 300")
+config.bind("c3", "set zoom.default 125 ;; set fonts.tabs.selected 14pt ;; set fonts.tabs.unselected 14pt;; set tabs.width 350")
+config.bind("e1", "set zoom.default 100 ;; set fonts.tabs.selected 12pt ;; set fonts.tabs.unselected 12pt;; set tabs.width 250")
+config.bind("e2", "set zoom.default 110 ;; set fonts.tabs.selected 13pt ;; set fonts.tabs.unselected 13pt;; set tabs.width 300")
+config.bind("e3", "set zoom.default 125 ;; set fonts.tabs.selected 14pt ;; set fonts.tabs.unselected 14pt;; set tabs.width 350")
 
 c.tabs.width = 250
 c.colors.tabs.bar.bg = BGCOLOR
