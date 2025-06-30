@@ -134,7 +134,7 @@ tsdt() {
 	fi
 }
 
-alias of="c;onefetch"
+alias of="onefetch"
 alias ff="fastfetch"
 
 alias ae="aerospace"

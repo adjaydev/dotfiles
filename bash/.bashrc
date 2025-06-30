@@ -15,6 +15,7 @@ export PATH="$PATH:/Applications/Google\ Chrome.app/Contents/MacOS"
 export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
 
 source ~/.config/scripts/devscripts.sh
+source ~/.config/envvars
 
 [[ -d $HOME/.pyenv/bin ]] && export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
