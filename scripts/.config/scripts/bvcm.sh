@@ -70,6 +70,9 @@ bvcm() {
 		if [[ "$selected" == "bvcm-synapse-backend" ]]; then
 			group="bvcm_apps_resource"
 		fi 
+		if [[ "$selected" == "bvcm-qdesk" ]]; then
+			group="bvcm_apps_resource"
+		fi 
 		az webapp log tail -n $selected -g $group
 
 	fi
@@ -90,6 +93,9 @@ bvcm() {
 			group="bvcm_apps_resource"
 		fi
 		if [[ "$selected" == "bvcm-synapse-backend" ]]; then
+			group="bvcm_apps_resource"
+		fi 
+		if [[ "$selected" == "bvcm-qdesk" ]]; then
 			group="bvcm_apps_resource"
 		fi 
 		az webapp ssh -n $selected -g $group

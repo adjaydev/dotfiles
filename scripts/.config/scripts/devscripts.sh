@@ -19,6 +19,7 @@ alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ls -lah"
 alias lsi='cd "$(ls | fzf)"'
+alias ..="cd .."
 
 # Special
 alias ban="batman"
