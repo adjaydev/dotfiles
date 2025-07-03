@@ -205,28 +205,16 @@ bvd() {
 
 # git
 alias gp="git push"
-gpu() {
-	git push -u $1 $2
-}
-gs() {
-	git switch $1
-}
-gsc() {
-	git switch -c $1
-}
-gd() {
-	git branch -d $1
-}
-gD() {
-	git branch -D $1
-}
-gl() {
-	git branch -A
-}
-gstat() {
-	git status
-}
-
+alias gpu="git push -u $1 $2"
+alias gs="git switch $1"
+alias gsc="git switch -c $1"
+alias gd="git branch -d $1"
+alias gD="git branch -D $1"
+alias gl="git branch -A"
+alias gstat="git status"
+alias gr1="git reset --soft HEAD~1"
+alias gr2="git reset --soft HEAD~2"
+alias gr3="git reset --soft HEAD~3"
 
 # BVCM Git
 alias bvg="cd ~/projects; lsa"
