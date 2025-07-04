@@ -94,6 +94,10 @@ alias p="pwd"
 alias pc="pwd | tr -d '\n' | pbcopy"
 alias pwdc="pwd | tr -d '\n' | pbcopy"
 
+
+alias grow="cbonsai -l -L 44 -t 0.1"
+alias bonsai="cbonsai -l -L 44 -t 0.1"
+
 print120() {
 	echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-"
 }
@@ -142,6 +146,14 @@ alias mtx="gomatrix -k --fps=60"
 
 alias lzg="lazygit"
 alias lzd="lazydocker"
+cdf() {
+    local selected_file
+    selected_file=$(fd -t f | fzf) # -t f for files only
+
+    if [ -n "$selected_file" ]; then
+        cd "$(dirname "$selected_file")"
+    fi
+}
 
 alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
 alias chrome="cd /Applications/Google\ Chrome.app/Contents/MacOS/ && ./Google\ Chrome"
