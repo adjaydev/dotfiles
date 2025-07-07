@@ -5,6 +5,7 @@ source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
 # source ~/projects/test/bash/getopts/print-my-name
 source ~/.config/scripts/spin.sh
+source ~/.config/scripts/web2app.sh
 # source ~/.config/scripts/wttr.sh
 
 # Clear screen
@@ -15,9 +16,11 @@ alias cc="clear; clear;"
 alias blank='PS1=""; clear;'
 alias out='source ~/.zshrc'
 alias esc="source ~/.zshrc"
-alias ls="ls --color=auto"
+alias ls="ls -l --color=auto"
+alias lz="eza -l --group-directories-first --icons=auto"
 alias ll="ls -lh"
 alias la="ls -lah"
+alias lza="lz -lah"
 alias lsi='cd "$(ls | fzf)"'
 alias ..="cd .."
 
