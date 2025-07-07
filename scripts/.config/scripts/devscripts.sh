@@ -5,7 +5,6 @@ source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
 # source ~/projects/test/bash/getopts/print-my-name
 source ~/.config/scripts/spin.sh
-source ~/.config/scripts/web2app.sh
 # source ~/.config/scripts/wttr.sh
 
 # Clear screen
