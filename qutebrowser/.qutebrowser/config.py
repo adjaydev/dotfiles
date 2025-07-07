@@ -33,6 +33,7 @@ BGCOLOR = BLACK
 # FIX:
 
 
+config.bind("df", "fullscreen")
 config.bind("cy", "config-cycle window.hide_decoration true false")
 config.bind("cx", "config-cycle window.hide_decoration true false")
 config.bind("ct", "config-cycle tabs.show always never")
@@ -51,7 +52,7 @@ config.bind("e1", "set zoom.default 100 ;; set fonts.tabs.selected 12pt ;; set f
 config.bind("e2", "set zoom.default 110 ;; set fonts.tabs.selected 13pt ;; set fonts.tabs.unselected 13pt;; set tabs.width 300")
 config.bind("e3", "set zoom.default 125 ;; set fonts.tabs.selected 14pt ;; set fonts.tabs.unselected 14pt;; set tabs.width 350")
 
-c.tabs.position = "lef sa"
+c.tabs.position = "left"
 c.tabs.width = 250
 c.colors.tabs.bar.bg = BGCOLOR
 c.colors.tabs.selected.even.fg = FGCOLOR
