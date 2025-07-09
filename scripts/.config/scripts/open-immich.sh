@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title open truenas
+# @raycast.title open immich
 # @raycast.mode silent
 
 # Optional parameters:
@@ -12,5 +12,5 @@
 # @raycast.author adjaythakoerdien
 # @raycast.authorURL https://raycast.com/adjaythakoerdien
 
-open -na "/opt/homebrew/bin/qutebrowser" --args --target=window "https://192.168.1.37/ui/dashboard"
+open -na "/opt/homebrew/bin/qutebrowser" --args --target=window "https://photos.adjay.app"
 
