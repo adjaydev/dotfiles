@@ -31,6 +31,7 @@ alias presenterm="presenterm --config-file ~/.config/presenterm/config.yaml"
 alias wtr="curl wttr.in/hoofddorp"
 alias screens="cd ~/Pictures/screenshots"
 alias hl="rg --passthrough $1"
+alias nzbget="/opt/homebrew/opt/nzbget/bin/nzbget -c /opt/homebrew/etc/nzbget.conf -s -o OutputMode\=Log -o ConfigTemplate\=/opt/homebrew/share/nzbget/nzbget.conf -o WebDir\=/opt/homebrew/share/nzbget/webui"
 
 ee() {
 	echo $?;

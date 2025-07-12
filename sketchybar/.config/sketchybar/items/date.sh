@@ -16,17 +16,21 @@ sketchybar --add item time right \
 
 sketchybar --add item date right \
   --set date \
-  label="$(LC_TIME=nl_NL.UTF-8 date '+%A %-d %b')" \
+  icon="󰃮 " \
+  icon.padding_right=10 \
+  icon.color=$BLUE \
+  icon.size=22 \
+  label="$(date '+%-d')" \
   padding_right=30 \
   label.color=$BLUE 
 
 
-sketchybar --add item wkdateicon right \
-  --set wkdateicon \
-  icon="󰃮 " \
-  icon.padding_right=10 \
-  icon.color=$BLUE \
-  icon.size=18 \
-  label="wk $(date "+%W")" \
-  padding_right=5 \
-  label.color=$BLUE \
+# sketchybar --add item wkdateicon right \
+#   --set wkdateicon \
+#   icon="󰃮 " \
+#   icon.padding_right=10 \
+#   icon.color=$BLUE \
+#   icon.size=18 \
+#   label="wk $(date "+%W")" \
+#   padding_right=5 \
+#   label.color=$BLUE \

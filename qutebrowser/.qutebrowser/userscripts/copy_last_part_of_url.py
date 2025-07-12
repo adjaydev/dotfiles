@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 from urllib.parse import urlparse
-import pyperclip  # You might need to install this: pip install pyperclip
+import pyperclip
 
 # Get the URL from the first command-line argument
 if len(sys.argv) > 1:
