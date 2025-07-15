@@ -9,6 +9,9 @@ vim.opt.spelllang = { 'nl_nl', 'en_us' }
 
 vim.cmd 'language en_US'
 
+vim.o.termguicolors = true
+vim.cmd 'highlight Normal guibg=none'
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 -- vim.opt.colorcolumn = { 120 }

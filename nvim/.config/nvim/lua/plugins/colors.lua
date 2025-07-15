@@ -18,6 +18,7 @@ return {
     priority = 1000,
     config = function()
       require('gruvbox').setup {
+        transparent = true,
         palette_overrides = {
           dark0 = '#1E2021',
         },

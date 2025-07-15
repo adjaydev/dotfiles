@@ -1,5 +1,9 @@
 font-size = 23
+
 window-padding-x = 350
+
+background-opacity = 0.7
+background-blur = 100
 
 theme = GruvboxDarkHard
 
