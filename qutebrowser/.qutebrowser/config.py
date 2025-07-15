@@ -16,6 +16,8 @@ YELLOW = "#fabd2f"
 FGCOLOR = GREEN
 BGCOLOR = BLACK
 
+TRANSPARENT = "#00000000"
+
 # HACK: asddsa
 # jh
 
@@ -40,6 +42,7 @@ config.bind("ct", "config-cycle tabs.show always never")
 config.bind("cv", "config-cycle tabs.show always never")
 config.bind("ci", "config-cycle tabs.show always never")
 config.bind("ca", "config-cycle tabs.show always never")
+config.bind("cs", "config-cycle statusbar.show always never")
 config.bind("ch", "set tabs.position left")
 config.bind("cj", "set tabs.position bottom")
 config.bind("ck", "set tabs.position top")
@@ -56,13 +59,13 @@ config.bind("yl", "spawn --userscript copy_last_part_of_url.py {url}")
 
 c.tabs.position = "left"
 c.tabs.width = 250
-c.colors.tabs.bar.bg = BGCOLOR
+c.colors.tabs.bar.bg = BLACK
 c.colors.tabs.selected.even.fg = FGCOLOR
 c.colors.tabs.selected.odd.fg = FGCOLOR
-c.colors.tabs.selected.even.bg = BGCOLOR
-c.colors.tabs.selected.odd.bg = BGCOLOR
-c.colors.tabs.even.bg = BGCOLOR
-c.colors.tabs.odd.bg = BGCOLOR
+c.colors.tabs.selected.even.bg = BLACK
+c.colors.tabs.selected.odd.bg = BLACK
+c.colors.tabs.even.bg = BLACK
+c.colors.tabs.odd.bg = BLACK
 c.zoom.default = 100
 c.downloads.remove_finished = 3000
 c.editor.command = ["open", "-a", "Ghostty", "-W", "--args", "-e", "nvim {file}"]
