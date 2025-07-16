@@ -4,6 +4,9 @@ STATUS_LABEL=$(lsappinfo info -only StatusLabel "Microsoft Teams")
 ICON="󱥁 "
 PADD=30
 
+GREEN=0xffb8bb26
+RED=0xfffb4934
+YELLOW=0xfffabd2f
 
 # Extract the label, handling kCFNULL
 if [[ $STATUS_LABEL =~ \"label\"=\"([^\"]*)\" ]]; then
@@ -17,11 +20,11 @@ fi
 if [[ $LABEL == "" ]]; then
     ICON="󰍡 "
     PADD=20
-    ICON_COLOR="0xffa6da95"
+    ICON_COLOR=$GREEN
 elif [[ $LABEL == "•" ]]; then
-    ICON_COLOR="0xffeed49f"
+    ICON_COLOR=$YELLOW
 elif [[ $LABEL =~ ^[0-9]+$ ]]; then
-    ICON_COLOR="0xffed8796"
+    ICON_COLOR=$RED
 else
     exit 0
 fi

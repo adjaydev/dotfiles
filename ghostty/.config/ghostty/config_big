@@ -1,9 +1,5 @@
 font-size = 23
-
 window-padding-x = 350
-
-background-opacity = 0.7
-background-blur = 100
 
 theme = GruvboxDarkHard
 
@@ -18,15 +14,19 @@ shell-integration-features = cursor
 
 mouse-hide-while-typing
 
+background-opacity = 0.7
+background-blur = 80
+
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = none
 
 macos-window-shadow = false
 macos-non-native-fullscreen = false
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden
 
 confirm-close-surface = true
 
-#keybind = cmd+shift+g=toggle_quick_terminal
 quick-terminal-position = bottom
 quick-terminal-animation-duration = 0.1
 keybind = global:alt+t=toggle_quick_terminal
-
