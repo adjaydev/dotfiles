@@ -24,6 +24,7 @@ return {
     'nvim-lua/plenary.nvim',
   },
   opts = {
+    ui = { enable = false },
     disable_frontmatter = true,
     templates = {
       folder = 'templates',
