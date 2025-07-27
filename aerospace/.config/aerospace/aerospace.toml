@@ -69,10 +69,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 inner.horizontal = 10
 inner.vertical =   10
 
-outer.bottom =     [{monitor.built-in = 10}, 70]
-outer.top =        [{monitor.built-in = 10}, 70]
-outer.left =       [{monitor.built-in = 25}, 50]
-outer.right =      [{monitor.built-in = 25}, 50]
+outer.bottom =     [{monitor.built-in = 10}, 100]
+outer.top =        [{monitor.built-in = 10}, 100]
+outer.left =       [{monitor.built-in = 25}, 150]
+outer.right =      [{monitor.built-in = 25}, 150]
 
 # outer.bottom =     [{monitor.built-in = 10}, 70]
 # outer.top =        [{monitor.built-in = 10}, 70]
@@ -222,7 +222,8 @@ alt-shift-l = ['join-with right', 'mode main']
 # Move apps to spaces on app startup
 [[on-window-detected]]
 if.app-id = 'org.qutebrowser.qutebrowser'
-run = ['layout tiling', 'move-node-to-workspace 2']
+run = ['layout tiling']
+# run = ['layout tiling', 'move-node-to-workspace 2']
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Excel'
