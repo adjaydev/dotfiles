@@ -333,7 +333,7 @@ bvpl() {
 
 sftp-start() {
 	source ~/.config/azurecli/.env
-	~/projects/bvcm-azure-cli/target/release/./bvcm-sftp-cli
+	~/projects/bvcm-azure-cli/target/release/./bvcm-sftp-cli $1
 }
 
 opig() {
