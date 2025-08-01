@@ -23,7 +23,6 @@ eval "$(thefuck --alias)"
 eval "$(tmuxifier init -)"
 eval "$(op completion bash)"
 eval "$(zoxide init bash)"
-source <(ng completion script)
 
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 # gvm

@@ -10,7 +10,6 @@ source ~/.config/scripts/spin.sh
 # Clear screen
 alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
 # alias c='clear;echo -e "\033[38;2;152;151;26m"; figlet adjay.dev; echo -e "\033[0m"'
-alias cv="clear; python ~/projects/test/ascii.py;"
 alias cc="clear; clear;"
 alias blank='PS1=""; clear;'
 alias out='source ~/.zshrc'
@@ -167,45 +166,6 @@ cht() {
 	~/.config/scripts/./tmux-cht.sh
 }
 
-# BVCM
-alias bvdata="cd ~/Documents/data; lsa"
-alias bvdocs="cd ~/Documents/docs; lsa"
-
-bvd() {
-	
-	# SFTP
-	if [[ "$1" == "sftp" ]]; 
-	then
-		cd "~/Documents/werk/BVCM/docs/scripts_sftp_useit"
-		"ls -ltr"
-		echo "Now @ ~/Documents/werk/BVCM/docs/scripts_sftp_useit"
-	fi
-
-	# billing
-	if [[ "$1" == "billing" ]]; 
-	then
-		cd "~/Documents/werk/BVCM/docs/$1"
-		"ls -ltr"
-		echo "Now @ ~/Documents/werk/BVCM/docs/$1"
-	fi
-
-	# aanlaveringen
-	if [[ "$1" == "aanleveringen" ]]; 
-	then
-		cd "~/Documents/werk/BVCM/docs/aanleveringen"
-		"ls -ltr"
-		echo "Now @ ~/Documents/werk/BVCM/docs/$1"
-	fi
-	
-	# empty
-	if [[ "$1" == "" ]]; 
-	then
-		cd "~/Documents/werk/BVCM/docs"
-		"lsa"
-		echo "Now @ ~/Documents/werk/BVCM/docs"
-	fi
-}
-
 # git
 alias gp="git push"
 alias gpu="git push -u $1 $2"
@@ -220,24 +180,19 @@ alias gr2="git reset --soft HEAD~2"
 alias gr3="git reset --soft HEAD~3"
 
 # BVCM Git
-alias bvg="cd ~/projects; lsa"
-alias bvgai="cd ~/projects/bvcm-ai; lsa"
-alias bvgbo="cd ~/projects/bvcm-backoffice-app; lsa"
+alias bvg="cd ~/projects; la"
+alias bvgai="cd ~/projects/bvcm-ai; la"
+alias bvgbo="cd ~/projects/bvcm-backoffice-app; la"
 alias bvghs="nvim ~/projects/bvcm-hubspot-webhook;"
 alias bvgaif="nvim ~/projects/bvcm-ai/frontend;"
 alias bvgaib="nvim ~/projects/bvcm-ai/backend;"
 alias bvgsn="nvim ~/projects/bvcm-synapse-backend;"
 alias bvgwk="nvim ~/projects/bvcm-wiki/wiki"
-alias bvgff="cd ~/projects/bvcm-findflow; lsa;"
-alias bvgdw="cd ~/projects/bvcm-daywize; lsa;"
+alias bvgff="cd ~/projects/bvcm-findflow; la;"
+alias bvgdw="cd ~/projects/bvcm-daywize; la;"
 
 # adjay.dev
 alias werk="cd ~/Documents/werk; lsa"
-alias werkgit="cd ~/Documents/werk/git; lsa"
-alias werkg="cd ~/Documents/werk/git; lsa"
-alias werkheiloo="cd ~/Documents/werk/git/heiloo-vitaal; lsa"
-alias werkavx="cd ~/Documents/werk/advintex\ inspectie/git/advintex-inspectie;"
-alias homebase="cd ~/Projects/homebase/homebase-svelte;tmux new -s base;"
 alias avx="cd ~/projects/avx/avx-inspection;"
 alias avxher="cd ~/projects/avx/avx-herinspectie;"
 alias proj="cd ~/projects"
@@ -247,15 +202,10 @@ alias pir="pip install -r requirements.txt"
 alias pfr="pip freeze > requirements.txt"
 alias pl="pip list"
 alias pi="pip install"
-alias activate-venv="source venv/bin/activate"
 alias venv="source venv/bin/activate"
 
 alias srch='nvim $(fzf -m --preview="bat --color=always {}")'
 alias obsf='cd ~/personal/DeeezNotes; nvim $(fzf -m --preview="bat --color=always {}")'
-
-# macos
-alias lsaa="ls -a;"
-alias cl="clear"
 
 # Typos
 alias dicker="docker"
@@ -387,24 +337,25 @@ function vzv() {
 # New Obsidian note
 function on() {
 	if [ -z "$1" ]; then
-	  echo "Error: A file name must be set, e.g. on \"filename here with spaces\"."
+	  echo "Error: A file name must be set, e.g. on \"filename with spaces allowed\"."
 	  exit 1
 	fi
 
 	file_name=$(echo "$1" | tr ' ' '-')
 	formatted_file_name=${file_name}_$(date "+%Y-%m-%d").md
-	cd "~/personal/DeeezNotes/DeeezNotes" || exit
+	cd "~/personal/DeeezNotes" || exit
 	touch "0-inbox/${formatted_file_name}"
 	nvim "0-inbox/${formatted_file_name}"
 }
 
+# Custom prompt
 COLOR_NONE="\033[0m"
 COLOR_RED="\033[31;2;152;151;26m"
 COLOR_GREEN="\033[38;2;152;151;26m"
 custom_prompt() {
     local exit_status=$?
     if [ "$exit_status" -ne "0" ]; then
-        PS1="${COLOR_RED}> ${COLOR_NONE}"
+        PS1="${COLOR_RED}${exit_status}> ${COLOR_NONE}"
     else
         PS1="${COLOR_GREEN}> ${COLOR_NONE}"
     fi
