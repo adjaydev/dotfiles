@@ -61,6 +61,9 @@ bvcm() {
 			echo ">> no server selected"
 			return
 		fi
+		if [[ "$selected" == "bvcm-go-mail-v1" ]]; then
+			group="bvcm_apps_resource"
+		fi
 		if [[ "$selected" == "bvcm-intranet-backend" ]]; then
 			group="bvcm_apps_resource"
 		fi
@@ -85,6 +88,9 @@ bvcm() {
 		if [[ "$selected" == "" ]]; then
 			echo ">> no server selected"
 			return
+		fi
+		if [[ "$selected" == "bvcm-go-mail-v1" ]]; then
+			group="bvcm_apps_resource"
 		fi
 		if [[ "$selected" == "bvcm-intranet-backend" ]]; then
 			group="bvcm_apps_resource"

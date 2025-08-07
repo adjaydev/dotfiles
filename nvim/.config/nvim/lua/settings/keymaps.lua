@@ -87,10 +87,14 @@ vim.keymap.set(
   ':Telescope live_grep search_dirs={"/Users/adjaythakoerdien/personal/DeeezNotes/DeeezNotes"}<cr>'
 )
 
-vim.keymap.set('n', '<leader>md', ':PresentStart<CR>')
+vim.keymap.set('n', '<leader>mp', ':PresentStart<CR>')
 
 vim.keymap.set('n', '<leader>cp', function()
   vim.fn.setreg('+', vim.fn.expand '%:p')
 end, { desc = 'Copy full file path' })
 
 vim.keymap.set('n', '<leader>ts', ':Telescope lsp_document_symbols<CR>')
+
+-- markdown
+vim.keymap.set('n', '<leader>md', ':RenderMarkdown disable<CR>', { desc = 'Render[m]arkdwon [d]isable' })
+vim.keymap.set('n', '<leader>ms', ':RenderMarkdown set<CR>', { desc = 'Render[m]arkdwon [s]et' })

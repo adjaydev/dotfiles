@@ -7,7 +7,7 @@ return {
       sign_priority = 8, -- sign priority
       -- keywords recognized as todo comments
       keywords = {
-        FIX = { icon = ' ', color = 'error', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE' } },
+        FIX = { icon = ' ', color = 'error', alt = { 'FIXME', 'BUG', 'FIXIT', 'ISSUE', 'ERROR' } },
         TODO = { icon = ' ', color = 'info' },
         HACK = { icon = ' ', color = 'warning' },
         WARN = { icon = ' ', color = 'warning', alt = { 'WARNING', 'XXX' } },
