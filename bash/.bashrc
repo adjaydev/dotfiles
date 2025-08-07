@@ -29,6 +29,11 @@ eval "$(zoxide init bash)"
 [[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # enter normal of enter without 'clear'
 if [[ "$1" == "-nc" ]]; then
 	enter-noc

@@ -21,6 +21,8 @@ alias la="ls -lah"
 alias lza="lz -lah"
 alias lsi='cd "$(ls | fzf)"'
 alias ..="cd .."
+alias sls="~/.config/zsh_scripts/tls.sh"
+alias ssls="~/.config/zsh_scripts/tsls.sh"
 
 # Special
 alias ban="batman"

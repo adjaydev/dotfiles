@@ -1,6 +1,8 @@
 font-size = 15
 
 theme = GruvboxDarkHard
+# theme = Fahrenheit
+# theme = Nord
 
 # font-family = Fira Code
 # font-family = Comic Code

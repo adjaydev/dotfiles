@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#!/usr/bin/env bash
 
 selected=`tmuxifier ls | sort -r | fzf`
 if [[ -n $selected ]]; then

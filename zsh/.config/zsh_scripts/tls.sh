@@ -1,4 +1,4 @@
-#! /usr/bin/env sh
+#!/usr/bin/env bash
 
 tmux ls > /dev/null 2>&1
 
