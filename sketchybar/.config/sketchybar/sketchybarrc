@@ -59,12 +59,12 @@ source "$ITEM_DIR/spaces.sh"
 
 # Right
 source "$ITEM_DIR/battery.sh"
-source "$ITEM_DIR/date.sh"
+# source "$ITEM_DIR/date.sh"
 
-source "$ITEM_DIR/weather.sh"
-source "$ITEM_DIR/teams.sh"
-source "$ITEM_DIR/superhuman.sh"
-source "$ITEM_DIR/calendar.sh"
+# source "$ITEM_DIR/weather.sh"
+# source "$ITEM_DIR/teams.sh"
+# source "$ITEM_DIR/superhuman.sh"
+# source "$ITEM_DIR/calendar.sh"
 
 ############## FINALIZING THE SETUP ##############
 sketchybar --update
