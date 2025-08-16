@@ -12,5 +12,5 @@
 # @raycast.author adjaythakoerdien
 # @raycast.authorURL https://raycast.com/adjaythakoerdien
 
-open -na "/opt/homebrew/bin/qutebrowser" --args --target=window "https://192.168.1.254:8971/"
+open -na "/opt/homebrew/bin/qutebrowser" --args --target=window "http://192.168.1.254:5000/"
 

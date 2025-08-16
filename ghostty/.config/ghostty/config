@@ -1,7 +1,7 @@
 font-size = 15
 
-theme = GruvboxDarkHard
-# theme = Fahrenheit
+# theme = GruvboxDarkHard
+theme = catppuccin-mocha
 # theme = Nord
 
 # font-family = Fira Code
@@ -9,8 +9,13 @@ theme = GruvboxDarkHard
 # font-family = PT Mono
 font-family = JetBrainsMono Nerd Font
 
+
 cursor-style = underline
-cursor-color = B5BD67
+# gruvbox
+# cursor-color = B5BD67
+#
+# catppuccin
+cursor-color = A6E3A1
 shell-integration-features = cursor
 
 mouse-hide-while-typing

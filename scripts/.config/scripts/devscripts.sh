@@ -3,12 +3,15 @@ source ~/dotfiles/scripts/.config/scripts/ghostyy_zsh.sh
 source ~/.config/scripts/bvcm.sh
 source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
-# source ~/projects/test/bash/getopts/print-my-name
 source ~/.config/scripts/spin.sh
+source ~/.config/scripts/colors.sh
+
+# source ~/projects/test/bash/getopts/print-my-name
 # source ~/.config/scripts/wttr.sh
 
 # Clear screen
-alias c='clear;echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m";'
+alias c='clear;echo -e "${COLOR_GREEN}Wake up, Neo...${COLOR_NONE}";'
+
 # alias c='clear;echo -e "\033[38;2;152;151;26m"; figlet adjay.dev; echo -e "\033[0m"'
 alias cc="clear; clear;"
 alias blank='PS1=""; clear;'
@@ -43,14 +46,12 @@ alias cal3="cal -3"
 alias clock="tock -c -W 6 -H 3 -m"
 
 enter() {
-	PS1="\033[38;2;152;151;26m> \033[0m" 
 	clear 
-	echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
+	echo -e "${COLOR_GREEN}Wake up, Neo...${COLOR_NONE}"
 }
 
 enter-noc() {
-	PS1="\033[38;2;152;151;26m> \033[0m" 
-	echo -e "\033[38;2;152;151;26mWake up, Neo...\033[0m"
+	echo -e "${COLOR_GREEN}Wake up, Neo...${COLOR_NONE}"
 }
 
 # Neovim
@@ -350,10 +351,6 @@ function on() {
 	nvim "0-inbox/${formatted_file_name}"
 }
 
-# Custom prompt
-COLOR_NONE="\033[0m"
-COLOR_RED="\033[31;2;152;151;26m"
-COLOR_GREEN="\033[38;2;152;151;26m"
 custom_prompt() {
     local exit_status=$?
     if [ "$exit_status" -ne "0" ]; then
