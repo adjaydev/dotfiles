@@ -12,47 +12,19 @@
 # GREY=0xff939ab7
 # TRANSPARENT=0x00000000
 
-# gruvbox
-BLACK=0xff282828
-WHITE=0xffEBDBB2
-RED=0xfffb4934
-GREEN=0xffb8bb26
-GREEN_SOFT=0x66b8bb26
-YELLOW=0xfffabd2f
-BLUE=0xff458588
-MAGENTA=0xffd3869b
-AQUA=0xff8ec07c
-ORANGE=0xfffe8019
-GREY=0xff928374
-TRANSPARENT=0x00000000
-
-
-## hard
-bg=#454759
-red=#F38BA8
-green=#A6E3A1
-yellow=#F9E2AF
-blue=#89B4FA
-purple=#F5C2E7
-aqua=#93E2D5
-gray=#A6ADC8
-
-# Colors
-set -ogq @thm_rosewater "#f5e0dc"
-set -ogq @thm_flamingo "#f2cdcd"
-set -ogq @thm_rosewater "#f5e0dc"
-set -ogq @thm_pink "#f5c2e7"
-set -ogq @thm_mauve "#cba6f7"
-set -ogq @thm_red "#f38ba8"
-set -ogq @thm_maroon "#eba0ac"
-set -ogq @thm_peach "#fab387"
-set -ogq @thm_yellow "#f9e2af"
-set -ogq @thm_green "#a6e3a1"
-set -ogq @thm_teal "#94e2d5"
-set -ogq @thm_sky "#89dceb"
-set -ogq @thm_sapphire "#74c7ec"
-set -ogq @thm_blue "#89b4fa"
-set -ogq @thm_lavender "#b4befe"
+# # gruvbox
+# BLACK=0xff282828
+# WHITE=0xffEBDBB2
+# RED=0xfffb4934
+# GREEN=0xffb8bb26
+# GREEN_SOFT=0x66b8bb26
+# YELLOW=0xfffabd2f
+# BLUE=0xff458588
+# MAGENTA=0xffd3869b
+# AQUA=0xff8ec07c
+# ORANGE=0xfffe8019
+# GREY=0xff928374
+# TRANSPARENT=0x00000000
 
 # catppuccin
 BLACK=0xff282828
