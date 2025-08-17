@@ -3,7 +3,6 @@
 sketchybar --add item time right \
   --set time \
   update_freq=20 \
-  icon=" " \
   icon.padding_right=10 \
   icon.color=$GREEN \
   icon.size=18 \
@@ -14,15 +13,15 @@ sketchybar --add item time right \
   --subscribe time system_woke
 
 
-sketchybar --add item date right \
-  --set date \
-  icon="󰃮 " \
-  icon.padding_right=10 \
-  icon.color=$BLUE \
-  icon.size=22 \
-  label="$(date '+%-d')" \
-  padding_right=30 \
-  label.color=$BLUE 
+# sketchybar --add item date right \
+#   --set date \
+#   icon="󰃮 " \
+#   icon.padding_right=10 \
+#   icon.color=$BLUE \
+#   icon.size=22 \
+#   label="$(date '+%-d')" \
+#   padding_right=30 \
+#   label.color=$BLUE 
 
 
 # sketchybar --add item wkdateicon right \
