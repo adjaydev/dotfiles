@@ -45,3 +45,22 @@ vim.lsp.config('ruff', {
 })
 
 vim.lsp.enable 'ruff'
+
+vim.api.nvim_set_hl(0, 'LspReferenceWrite', { fg = '#1d2021', bg = '#cba6f7', bold = false })
+vim.api.nvim_set_hl(0, 'LspReferenceRead', { fg = '#1d2021', bg = '#f9e2af', bold = false })
+
+-- "#f5e0dc"
+-- "#f2cdcd"
+-- "#f5e0dc"
+-- "#f5c2e7"
+-- "#cba6f7"
+-- "#f38ba8"
+-- "#eba0ac"
+-- "#fab387"
+-- "#f9e2af"
+-- "#a6e3a1"
+-- "#94e2d5"
+-- "#89dceb"
+-- "#74c7ec"
+-- "#89b4fa"
+-- "#b4befe"
