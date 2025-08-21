@@ -16,6 +16,8 @@ commands:
 
     show-vms:      Show a list of the vms that are usable with easy ssh.
     logs:          Pick backend service from a list and start the server logstream.
+    sftp:          Start the BVCM SFTP CLI to manage SFTP users. 
+                   - Usage: 'bvcm sftp bvcm' or 'bvcm sftp faircasso'
 
 docs:
 
@@ -107,5 +109,18 @@ bvcm() {
 		az webapp ssh -n $selected -g $group
 
 	fi
+	
+	if [[ "$1" == "sftp" ]]; then
+		if [[ "$2" == "bvcm" ]]; then
+		sftp-start bvcmsftp
+		fi
+		if [[ "$2" == "" ]]; then
+		sftp-start bvcmsftp
+		fi
+		if [[ "$2" == "faircasso" ]]; then
+		sftp-start faircassosftp
+		fi
+	fi
+
 }
 

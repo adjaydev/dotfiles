@@ -13,9 +13,10 @@ export PATH="$PATH:$HOME/.local/opt/go/bin"
 export PATH="$PATH:$HOME/.lmstudio/bin"
 export PATH="$PATH:/Applications/Google\ Chrome.app/Contents/MacOS"
 export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
+export PATH="$PATH:~/projects/gcloud/google-cloud-sdk/bin"
 
 source ~/.config/scripts/devscripts.sh
-source ~/.config/envvars
+# source ~/.config/envvars
 
 [[ -d $HOME/.pyenv/bin ]] && export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"

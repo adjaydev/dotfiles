@@ -1,5 +1,5 @@
 session_root "~/projects/bvcm-backoffice-app"
-if initialize_session "bvbo"; then
+if initialize_session "bvcm-backoffice-app"; then
   new_window "editor"
   new_window "server"
   new_window "lazygit"
@@ -15,3 +15,4 @@ if initialize_session "bvbo"; then
   run_cmd "v."
 fi
 finalize_and_go_to_session
+
