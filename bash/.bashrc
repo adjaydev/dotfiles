@@ -14,6 +14,7 @@ export PATH="$PATH:$HOME/.lmstudio/bin"
 export PATH="$PATH:/Applications/Google\ Chrome.app/Contents/MacOS"
 export PATH="$PATH:/opt/homebrew/opt/libpq/bin"
 export PATH="$PATH:~/projects/gcloud/google-cloud-sdk/bin"
+export PATH="${PATH}: ~/.local/lib/python3.13/site-packages" # for pywal
 
 source ~/.config/scripts/devscripts.sh
 # source ~/.config/envvars
