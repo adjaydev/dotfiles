@@ -13,10 +13,10 @@ font-family = JetBrainsMono Nerd Font
 
 cursor-style = underline
 # gruvbox
-# cursor-color = B5BD67
+cursor-color = B5BD67
 #
 # catppuccin
-cursor-color = A6E3A1
+# cursor-color = A6E3A1
 shell-integration-features = cursor
 
 mouse-hide-while-typing

@@ -3,6 +3,10 @@
 setwal() {
 	wal -i $1 -n
 	source /Users/adjaythakoerdien/.cache/wal/colors.sh
+	wallpaper set $1
 	sketchybar --reload
 	brew services restart borders
+	echo "All set!"
+	echo "SHIFT+CMD+, to reload Ghostty."
+	echo "Manually reload tmux.conf."
 }
