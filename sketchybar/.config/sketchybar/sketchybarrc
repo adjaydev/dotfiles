@@ -19,6 +19,8 @@ POPUP_CORNER_RADIUS=11
 
 SHADOW=off
 
+BAR_COLOR="0xaa${background:1}"
+
 
 # Setting up the general bar appearance and default values
 sketchybar --bar     height=38                                         \
@@ -31,7 +33,7 @@ sketchybar --bar     height=38                                         \
                      corner_radius=0                                   \
                      y_offset=0                                        \
                      margin=0                                          \
-                     blur_radius=20                                    \
+                     blur_radius=5                                    \
                                                                        \
            --default updates=when_shown                                \
                      icon.font="$FONT:Bold:$FONT_SIZE.0"               \
