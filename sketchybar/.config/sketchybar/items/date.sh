@@ -9,7 +9,7 @@ sketchybar --add item time right \
   label="$(date '+%-H:%M')u." \
   script="$PLUGIN_DIR/date.sh" \
   padding_right=20 \
-  label.color="0xff${color3:1}" \
+  label.color="0xff${color1:1}" \
   --subscribe time system_woke
 
 

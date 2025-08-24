@@ -2,7 +2,7 @@
 
 source ~/.cache/wal/colors.sh
 
-active="0xff${color3:1}"
+active="0xff${color1:1}"
 echo "active $active"
 
 options=(

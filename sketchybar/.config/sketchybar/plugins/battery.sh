@@ -37,7 +37,7 @@ esac
 
 if [[ $CHARGING != "" ]]; then
     ICON="󰘧 "
-    ICON_COLOR="0xff${color3:1}"
+    ICON_COLOR="0xff${color1:1}"
     ICON_SIZE=22
 fi
 
