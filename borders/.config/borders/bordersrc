@@ -1,11 +1,16 @@
 #!/bin/bash
 
+source ~/.cache/wal/colors.sh
+
+active="0xff${color3:1}"
+echo "active $active"
+
 options=(
 	style=square
 	hidpi=true
 	width=2.0
 	hidpi=off
-	active_color=0xffcba6f7
+	active_color=$active
 	inactive_color=0xff282828
 )
 

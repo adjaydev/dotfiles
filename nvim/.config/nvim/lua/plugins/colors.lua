@@ -90,6 +90,27 @@ return {
     end,
   },
 
+  -- -- Set colorscheme for pywal config
+  -- {
+  --   'oncomouse/lushwal.nvim',
+  --   cmd = { 'LushwalCompile' },
+  --   dependencies = {
+  --     { 'rktjmp/lush.nvim' },
+  --     { 'rktjmp/shipwright.nvim' },
+  --   },
+  --   lazy = false,
+  -- },
+
+  -- pywal16
+  {
+    'uZer/pywal16.nvim',
+    -- for local dev replace with:
+    -- dir = '~/your/path/pywal16.nvim',
+    config = function()
+      vim.cmd.colorscheme 'pywal16'
+    end,
+  },
+
   -- You can add more plugin specifications here following the same pattern
   -- {
   --   'other/plugin',

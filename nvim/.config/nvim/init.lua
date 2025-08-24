@@ -10,8 +10,14 @@ require 'settings.global_config'
 
 require('lazy').setup 'plugins'
 
-vim.cmd.colorscheme 'catppuccin'
+vim.cmd.colorscheme 'pywal16'
 vim.cmd 'highlight Normal guibg=none'
+
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
 
 -- TODO: sd
 
@@ -46,8 +52,8 @@ vim.lsp.config('ruff', {
 
 vim.lsp.enable 'ruff'
 
-vim.api.nvim_set_hl(0, 'LspReferenceWrite', { fg = '#1d2021', bg = '#cba6f7', bold = false })
-vim.api.nvim_set_hl(0, 'LspReferenceRead', { fg = '#1d2021', bg = '#f9e2af', bold = false })
+-- vim.api.nvim_set_hl(0, 'LspReferenceWrite', { fg = '#1d2021', bg = '#cba6f7', bold = false })
+-- vim.api.nvim_set_hl(0, 'LspReferenceRead', { fg = '#1d2021', bg = '#f9e2af', bold = false })
 
 -- "#f5e0dc"
 -- "#f2cdcd"

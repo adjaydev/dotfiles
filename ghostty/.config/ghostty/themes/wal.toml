@@ -1,0 +1,25 @@
+# Auto genereted theme by Jay from pywal for Ghostty
+
+palette = 0=#090a0a
+palette = 1=#D9715D
+palette = 2=#E18F71
+palette = 3=#656E8C
+palette = 4=#94778B
+palette = 5=#7689A6
+palette = 6=#9D99A9
+palette = 7=#dcd2d1
+palette = 8=#9a9392
+palette = 9=#D9715D
+palette = 10=#E18F71
+palette = 11=#656E8C
+palette = 12=#94778B
+palette = 13=#7689A6
+palette = 14=#9D99A9
+palette = 15=#dcd2d1
+
+background = #090a0a
+foreground = #dcd2d1
+cursor-color = #dcd2d1
+
+selection-background = #9a9392
+selection-foreground = #dcd2d1

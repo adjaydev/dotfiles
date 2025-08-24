@@ -1,5 +1,5 @@
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
-  options = { theme = 'nord' },
+  options = { theme = 'pywal16-nvim' },
 }

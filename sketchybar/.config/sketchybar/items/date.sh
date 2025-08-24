@@ -4,12 +4,12 @@ sketchybar --add item time right \
   --set time \
   update_freq=20 \
   icon.padding_right=10 \
-  icon.color=$GREEN \
+  icon.color="0xff${color3:1}" \
   icon.size=18 \
   label="$(date '+%-H:%M')u." \
   script="$PLUGIN_DIR/date.sh" \
   padding_right=20 \
-  label.color=$GREEN \
+  label.color="0xff${color3:1}" \
   --subscribe time system_woke
 
 

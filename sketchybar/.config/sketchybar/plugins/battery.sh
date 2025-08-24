@@ -1,6 +1,7 @@
 #!/usr/bin/env sh
 
 source "$HOME/.config/sketchybar/colors.sh"
+source "$HOME/.cache/wal/colors.sh"
 
 
 PERCENTAGE=$(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
@@ -36,7 +37,7 @@ esac
 
 if [[ $CHARGING != "" ]]; then
     ICON="󰘧 "
-    ICON_COLOR=$GREEN
+    ICON_COLOR="0xff${color3:1}"
     ICON_SIZE=22
 fi
 

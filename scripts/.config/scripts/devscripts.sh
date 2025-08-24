@@ -5,6 +5,8 @@ source ~/.config/scripts/adjay.sh
 source ~/.config/scripts/dfpro.sh
 source ~/.config/scripts/spin.sh
 source ~/.config/scripts/colors.sh
+source ~/.config/scripts/setwal.sh
+source ~/.cache/wal/colors.sh
 
 # source ~/projects/test/bash/getopts/print-my-name
 # source ~/.config/scripts/wttr.sh
@@ -76,7 +78,7 @@ obn() {
 }
 
 # Change direcory
-alias cv="cd ~/.config/nvim; nvim ."
+alias cv="nvim ~/.config/nvim"
 alias cw="nvim ~/.config/wezterm/wezterm.lua"
 alias ca="nvim ~/.config/aerospace/aerospace.toml"
 alias ck="nvim ~/.config/kitty/kitty.conf"
