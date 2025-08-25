@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 setwal() {
-	wal --saturate 1.0 -i $1 -n
+	wal -i $1 -n $2 $3
 	source /Users/adjaythakoerdien/.cache/wal/colors.sh
 	/Users/adjaythakoerdien/dotfiles/ghostty/.config/ghostty/themes/./wal_convert.sh
 	wallpaper set $1
