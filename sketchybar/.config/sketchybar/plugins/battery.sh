@@ -15,23 +15,23 @@ fi
 case ${PERCENTAGE} in
 [8-9][0-9] | 100)
     ICON=""
-    ICON_COLOR=$GREEN
+    ICON_COLOR="0xff${color1:1}"
     ;;
 7[0-9])
     ICON=""
-    ICON_COLOR=$AQUA
+    ICON_COLOR"0xff${color2:1}"=
     ;;
 [4-6][0-9])
     ICON=""
-    ICON_COLOR=$YELLOW
+    ICON_COLOR="0xff${color3:1}"
     ;;
 [1-3][0-9])
     ICON=""
-    ICON_COLOR=$ORANGE
+    ICON_COLOR"0xff${color4:1}"=
     ;;
 [0-9])
     ICON=""
-    ICON_COLOR=$RED
+    ICON_COLOR="0xff${color5:1}"
     ;;
 esac
 
