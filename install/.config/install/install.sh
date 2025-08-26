@@ -22,7 +22,7 @@ brew install lazygit
 brew install lua
 brew install luajit
 brew install neovim
-brew install nerdfetch
+brew install fastfetch
 brew install nvm
 brew install pandoc
 brew install poetry
@@ -41,10 +41,12 @@ brew tap FelixKratz/formulae
 brew install sketchybar
 brew install borders
 brew install onefetch
-brew install borders
 brew install lazydocker
 brew install presenterm
 brew install weasyprint
+brew install pywal	
+brew install imagemagick
+brew install
 
 brew tap teamookla/speedtest
 brew install speedtest
@@ -67,7 +69,7 @@ brew install --cask logi-options-plus
 brew install --cask tigervnc-viewer
 brew install --cask affinity-designer
 brew install --cask google-cloud-sdk
-brew install --cask google-chrome
+krew install --cask google-chrome
 brew install --cask font-jetbrains-mono-nerd-font
 brew install --cask font-hack-nerd-font
 brew install --cask docker
@@ -80,6 +82,23 @@ brew install --cask qutebrowser
 brew install --cask whatsapp
 brew install --cask vlc
 
+# Voor Joey
+brew install fastfetch
+brew tap FelixKratz/formulae
+brew install sketchybar # custom top bar
+brew install borders # wihndow borders
+brew install stow # dotfile management
+brew install btop # system resources
+brew install --cask raycast # better spotlight
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask devtoys # devtoys
+brew install --cask ghostty # terminal
+brew install --cask nikitabobko/tap/aerospace # window manager
+brew install --cask 1password-cli
+brew install --cask bruno # api client
+brew tap teamookla/speedtest
+brew install speedtest
+brew install fzf
 
 echo "Installing rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

@@ -1,5 +1,5 @@
-session_root "~/projects/bvcm-go-sftp-documents"
-if initialize_session "bvgsd"; then
+session_root "~/projects/bvcm-go-sftp"
+if initialize_session "bvgsftp"; then
   new_window "nvim"
   new_window "server"
   new_window "lzg"
