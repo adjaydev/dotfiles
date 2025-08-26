@@ -78,7 +78,7 @@ obn() {
 }
 
 # Change direcory
-alias cv="nvim ~/.config/nvim"
+alias cv="cd ~/.config/nvim && nvim ."
 alias cw="nvim ~/.config/wezterm/wezterm.lua"
 alias ca="nvim ~/.config/aerospace/aerospace.toml"
 alias ck="nvim ~/.config/kitty/kitty.conf"

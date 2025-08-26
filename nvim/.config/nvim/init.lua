@@ -12,14 +12,19 @@ require('lazy').setup 'plugins'
 
 -- vim.cmd.colorscheme 'catppuccin'
 vim.cmd.colorscheme 'pywal16'
-vim.cmd 'highlight Normal guibg=none'
-vim.cmd 'highlight Whitespace guibg=NONE ctermbg=NONE'
+
+local core = require 'pywal16.core'
+local colors = core.get_colors()
+
+vim.api.nvim_set_hl(0, 'Cursor', { fg = colors.color1, bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'TermCursor', { fg = colors.color1, bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'Whitespace', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
 
 -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'none' })
--- vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
 
 -- TODO: sd
 -- {
