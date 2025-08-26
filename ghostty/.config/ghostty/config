@@ -2,7 +2,7 @@ font-size = 15
 
 # theme = GruvboxDarkHard
 # theme = catppuccin-mocha
-theme = "/Users/adjaythakoerdien/.config/ghostty/themes/wal.toml"
+theme = "/Users/Adjay/.config/ghostty/themes/wal.toml"
 # theme = Nord
 
 # font-family = Fira Code
@@ -21,7 +21,7 @@ shell-integration-features = cursor
 
 mouse-hide-while-typing
 
-background-opacity = 0.5
+background-opacity = 0.1
 background-blur = 75
 
 window-padding-x = 10
