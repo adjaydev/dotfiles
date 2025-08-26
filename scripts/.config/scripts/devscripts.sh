@@ -8,6 +8,10 @@ source ~/.config/scripts/colors.sh
 source ~/.config/scripts/setwal.sh
 source ~/.cache/wal/colors.sh
 
+function rf() {
+	recent=$(./recent.applescript)
+}
+
 # source ~/projects/test/bash/getopts/print-my-name
 # source ~/.config/scripts/wttr.sh
 

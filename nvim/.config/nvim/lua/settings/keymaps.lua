@@ -98,3 +98,6 @@ vim.keymap.set('n', '<leader>ts', ':Telescope lsp_document_symbols<CR>')
 -- markdown
 vim.keymap.set('n', '<leader>md', ':RenderMarkdown disable<CR>', { desc = 'Render[m]arkdwon [d]isable' })
 vim.keymap.set('n', '<leader>ms', ':RenderMarkdown set<CR>', { desc = 'Render[m]arkdwon [s]et' })
+
+vim.keymap.set('n', '<leader>sc', ':set colorcolumn=80<CR>', { desc = '[S]et [C]olorcolumn 80' })
+vim.keymap.set('n', '<leader>suc', ':set colorcolumn=""<CR>', { desc = '[S]et [C]olorcolumn 80' })

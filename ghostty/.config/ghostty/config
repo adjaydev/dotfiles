@@ -21,7 +21,7 @@ shell-integration-features = cursor
 
 mouse-hide-while-typing
 
-background-opacity = 0.3
+background-opacity = 0.6
 background-blur = 75
 
 window-padding-x = 10
