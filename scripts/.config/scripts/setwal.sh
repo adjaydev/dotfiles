@@ -14,7 +14,7 @@ setwal() {
 }
 
 setwal-rf() {
-	recent=$(./recent.applescript)
+	recent=$($HOME/.config/scripts/./finder_highlighted_file.applescript)
 	echo $recent
 
 	wal -i "$recent" -n $1 $2

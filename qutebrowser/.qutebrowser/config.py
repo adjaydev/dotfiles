@@ -54,6 +54,7 @@ config.bind("c3", "set zoom.default 125 ;; set fonts.tabs.selected 14pt ;; set f
 config.bind("e1", "set zoom.default 100 ;; set fonts.tabs.selected 12pt ;; set fonts.tabs.unselected 12pt;; set tabs.width 250")
 config.bind("e2", "set zoom.default 110 ;; set fonts.tabs.selected 13pt ;; set fonts.tabs.unselected 13pt;; set tabs.width 300")
 config.bind("e3", "set zoom.default 125 ;; set fonts.tabs.selected 14pt ;; set fonts.tabs.unselected 14pt;; set tabs.width 350")
+config.bind("e4", "set zoom.default 150 ;; set fonts.tabs.selected 15pt ;; set fonts.tabs.unselected 15pt;; set tabs.width 400")
 
 config.bind("yl", "spawn --userscript copy_last_part_of_url.py {url}")
 config.bind(",1p", "spawn --userscript qute-1pass.sh")

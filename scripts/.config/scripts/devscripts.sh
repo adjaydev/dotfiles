@@ -8,10 +8,6 @@ source ~/.config/scripts/colors.sh
 source ~/.config/scripts/setwal.sh
 source ~/.cache/wal/colors.sh
 
-function rf() {
-	recent=$(./recent.applescript)
-}
-
 # source ~/projects/test/bash/getopts/print-my-name
 # source ~/.config/scripts/wttr.sh
 
@@ -42,6 +38,10 @@ alias wtr="curl wttr.in/hoofddorp"
 alias screens="cd ~/Pictures/screenshots"
 alias hl="rg --passthrough $1"
 alias nzbget="/opt/homebrew/opt/nzbget/bin/nzbget -c /opt/homebrew/etc/nzbget.conf -s -o OutputMode\=Log -o ConfigTemplate\=/opt/homebrew/share/nzbget/nzbget.conf -o WebDir\=/opt/homebrew/share/nzbget/webui"
+
+alias rf="$HOME/.config/scripts/./finder_highlighted_file.applescript"
+alias rfc="$HOME/.config/scripts/./finder_highlighted_file.applescript | tr -d '\n' | pbcopy"
+
 
 ee() {
 	echo $?;
