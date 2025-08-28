@@ -20,6 +20,7 @@ vim.api.nvim_set_hl(0, 'Cursor', { fg = colors.color1, bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'TermCursor', { fg = colors.color1, bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'Whitespace', { bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'NONE' })
+vim.api.nvim_set_hl(0, 'PmenuSel', { bg = colors.color1 })
 
 -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
 -- vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
