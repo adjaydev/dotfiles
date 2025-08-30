@@ -19,7 +19,7 @@ case ${PERCENTAGE} in
     ;;
 7[0-9])
     ICON=""
-    ICON_COLOR"0xff${color2:1}"=
+    ICON_COLOR="0xff${color2:1}"
     ;;
 [4-6][0-9])
     ICON=""
@@ -27,7 +27,7 @@ case ${PERCENTAGE} in
     ;;
 [1-3][0-9])
     ICON=""
-    ICON_COLOR"0xff${color4:1}"
+    ICON_COLOR="0xff${color4:1}"
     ;;
 [0-9])
     ICON=""
