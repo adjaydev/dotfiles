@@ -358,12 +358,15 @@ function on() {
 }
 
 custom_prompt() {
-    local exit_status=$?
-    if [ "$exit_status" -ne "0" ]; then
-        PS1="${PROMPT_RED}${exit_status}> ${COLOR_NONE}"
-    else
-        PS1="${PROMPT_GREEN}> ${COLOR_NONE}"
-    fi
+	local exit_status=$?
+	# if [ "$exit_status" -ne "0" ]; then
+	if (($exit_status > 0)); then
+		PRMPT="${COLOR_RED}${exit_status}> ${COLOR_NONE}"
+		PS1=$PRMPT
+	else
+		PRMPT="${COLOR_GREEN}> ${COLOR_NONE}"
+		PS1=$PRMPT
+	fi
 }
 PROMPT_COMMAND="custom_prompt"
 
