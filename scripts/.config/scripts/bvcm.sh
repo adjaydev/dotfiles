@@ -16,6 +16,7 @@ commands:
 
     show-vms:      Show a list of the vms that are usable with easy ssh.
     logs:          Pick backend service from a list and start the server logstream.
+    ssh:           Pick backend service from a list and connect over SSH.
     sftp:          Start the BVCM SFTP CLI to manage SFTP users. 
                    - Usage: 'bvcm sftp bvcm' or 'bvcm sftp faircasso'
 
@@ -66,6 +67,9 @@ bvcm() {
 		if [[ "$selected" == "bvcm-go-mail-v1" ]]; then
 			group="bvcm_apps_resource"
 		fi
+		if [[ "$selected" == "bvcm-go-sftp-v1" ]]; then
+			group="bvcm_apps_resource"
+		fi
 		if [[ "$selected" == "bvcm-intranet-backend" ]]; then
 			group="bvcm_apps_resource"
 		fi
@@ -79,6 +83,7 @@ bvcm() {
 			group="bvcm_apps_resource"
 		fi 
 		az webapp log tail -n $selected -g $group
+	
 
 	fi
 
@@ -92,6 +97,9 @@ bvcm() {
 			return
 		fi
 		if [[ "$selected" == "bvcm-go-mail-v1" ]]; then
+			group="bvcm_apps_resource"
+		fi
+		if [[ "$selected" == "bvcm-go-sftp-v1" ]]; then
 			group="bvcm_apps_resource"
 		fi
 		if [[ "$selected" == "bvcm-intranet-backend" ]]; then
