@@ -13,6 +13,7 @@ setwal() {
 	sob -nc
 }
 
+
 setwal-rf() {
 	recent=$($HOME/.config/scripts/./finder_highlighted_file.applescript)
 	echo $recent

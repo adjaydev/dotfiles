@@ -90,7 +90,7 @@ alias cg="nvim ~/.config/ghostty/config"
 alias home="cd ~"
 alias work="cd ~/Work"
 alias downl="cd ~/Downloads; ls -ltr"
-alias docs="cd ~/Documents;"
+alias doc="cd ~/Documents;"
 alias personal="cd ~/personal;"
 alias dot="cd ~/dotfiles/"
 alias dotv="nvim ~/dotfiles/"
@@ -158,12 +158,12 @@ alias mtx="gomatrix -k --fps=60"
 alias lzg="lazygit"
 alias lzd="lazydocker"
 cdf() {
-    local selected_file
-    selected_file=$(fd -t f | fzf) # -t f for files only
+	local selected_file
+	selected_file=$(fd -t f | fzf) # -t f for files only
 
-    if [ -n "$selected_file" ]; then
-        cd "$(dirname "$selected_file")"
-    fi
+	if [ -n "$selected_file" ]; then
+		cd "$(dirname "$selected_file")"
+	fi
 }
 
 alias play-doom="cd ~/projects/terminal-doom && zig-out/bin/terminal-doom"
@@ -244,10 +244,10 @@ uuid4() {
 }
 
 xlsx2json() {
-if [ $# -eq 0 ]; then
-    echo "Usage: xlsx2json <excel_file> [output_json_file]"
-    exit 1
-fi
+	if [ $# -eq 0 ]; then
+		echo "Usage: xlsx2json <excel_file> [output_json_file]"
+		exit 1
+	fi
 	excel_file="$1"
 	output_file="${2:-${excel_file%.xlsx}.json}"
 
@@ -255,10 +255,10 @@ fi
 }
 
 json2xlsx() {
-if [ $# -eq 0 ]; then
-    echo "Usage: json2xlsx <json_file> [output_excel_file]"
-    exit 1
-fi
+	if [ $# -eq 0 ]; then
+		echo "Usage: json2xlsx <json_file> [output_excel_file]"
+		exit 1
+	fi
 	excel_file="$1"
 	output_file="${2:-${excel_file%.xlsx}.json}"
 
@@ -346,8 +346,8 @@ function vzv() {
 # New Obsidian note
 function on() {
 	if [ -z "$1" ]; then
-	  echo "Error: A file name must be set, e.g. on \"filename with spaces allowed\"."
-	  exit 1
+		echo "Error: A file name must be set, e.g. on \"filename with spaces allowed\"."
+		exit 1
 	fi
 
 	file_name=$(echo "$1" | tr ' ' '-')
@@ -357,24 +357,26 @@ function on() {
 	nvim "0-inbox/${formatted_file_name}"
 }
 
-custom_prompt() {
-	local exit_status=$?
-	# if [ "$exit_status" -ne "0" ]; then
-	if (($exit_status > 0)); then
-		PRMPT="${COLOR_RED}${exit_status}> ${COLOR_NONE}"
-		PS1=$PRMPT
-	else
-		PRMPT="${COLOR_GREEN}> ${COLOR_NONE}"
-		PS1=$PRMPT
-	fi
-}
-PROMPT_COMMAND="custom_prompt"
-
 # Collect Online Proxy
 alias run-coproxy="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-mysql \
---port=3308 \
---credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
+	--port=3308 \
+	--credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
 alias run-coproxy-build="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-symfony-4:europe-west1:collectonline-build \
---port=3309 \
---credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
+	--port=3309 \
+	--credentials-file=/Users/Adjay/Documents/docs/proxy/collectonline-symfony-4-8a0b846088b3.json"
+
+# Set prompt color on basis of last exit status
+minimal_prompt() {
+	local exit_status=$?
+	local prompt_char="|"
+
+	if (($exit_status > 0)); then
+		echo -e -n $COLOR_RED
+	else
+		echo -e -n $COLOR_PYWAL
+	fi
+	prmpt="$prompt_char${COLOR_NONE}"
+	PS1=$prmpt
+}
+PROMPT_COMMAND="minimal_prompt"
 

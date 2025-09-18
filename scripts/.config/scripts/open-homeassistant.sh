@@ -12,4 +12,4 @@
 # @raycast.author adjaythakoerdien
 # @raycast.authorURL https://raycast.com/adjaythakoerdien
 
-open -na "/opt/homebrew/bin/qutebrowser" --args --target=window "https://frjhwie8x70e8xdyl6mxsld3fwooc0p1.ui.nabu.casa/lovelace-landscape/default_view"
+open -na "/opt/homebrew/bin/qutebrowser" --args --target=window "https://frjhwie8x70e8xdyl6mxsld3fwooc0p1.ui.nabu.casa/lovelace/default_view"
