@@ -369,16 +369,16 @@ alias run-coproxy-build="~/Documents/docs/proxy/./cloud-sql-proxy collectonline-
 # Set prompt color on basis of last exit status
 minimal_prompt() {
 	local exit_status=$?
-	local prompt_char="▸"
+	prompt_char="-"
 
-	# if (($exit_status > 0)); then
-	# 	echo -e -n $COLOR_RED
-	# else
-	# 	echo -e -n $COLOR_PYWAL
-	# fi
+	if (($exit_status > 0)); then
+		prompt_char="*"
+		echo -e -n $COLOR_RED
+	else
+		echo -e -n $COLOR_PYWAL
+	fi
 
-	prmpt="${COLOR_PYWAL}$prompt_char${COLOR_NONE}"
-	PS1=$prmpt
+	PS1="${prompt_char}${COLOR_NONE}\n"
 }
 PROMPT_COMMAND="minimal_prompt"
 
