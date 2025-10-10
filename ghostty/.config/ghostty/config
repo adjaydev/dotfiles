@@ -2,7 +2,7 @@ font-size = 15
 
 # theme = GruvboxDarkHard
 # theme = catppuccin-mocha
-theme = "/Users/Adjay/.config/ghostty/themes/wal.toml"
+theme = "/Users/adjaythakoerdien/.config/ghostty/themes/wal.toml"
 # theme = Nord
 
 # font-family = Fira Code
@@ -11,7 +11,9 @@ theme = "/Users/Adjay/.config/ghostty/themes/wal.toml"
 font-family = JetBrainsMono Nerd Font
 
 
-cursor-style = underline
+# cursor-style = underline
+cursor-style = block
+cursor-style-blink = false
 # gruvbox
 cursor-color = B5BD67
 #
