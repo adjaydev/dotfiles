@@ -150,6 +150,7 @@ tsdt() {
 }
 
 alias of="onefetch"
+alias onlyfans="onefetch"
 alias ff="fastfetch"
 
 alias ae="aerospace"
