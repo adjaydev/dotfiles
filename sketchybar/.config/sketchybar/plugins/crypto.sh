@@ -1,17 +1,19 @@
-CLANKER_PRICE=$(curl --request GET \
-  --url 'https://api.coinbase.com/api/v3/brokerage/market/products?product_type=SPOT&contract_expiry_type=UNKNOWN_CONTRACT_EXPIRY_TYPE&expiring_contract_status=UNKNOWN_EXPIRING_CONTRACT_STATUS&products_sort_order=PRODUCTS_SORT_ORDER_UNDEFINED&product_ids=CLANKER-USD' | \
-	jq -r '.products[0].price' | \
-  perl -pe 's/(\d)(?=(\d{3})+(\.|$))/$1_/g')
+#!/bin/bash
 
-BTC_PRICE=$(curl --request GET \
-  --url 'https://api.coinbase.com/api/v3/brokerage/market/products?product_type=SPOT&contract_expiry_type=UNKNOWN_CONTRACT_EXPIRY_TYPE&expiring_contract_status=UNKNOWN_EXPIRING_CONTRACT_STATUS&products_sort_order=PRODUCTS_SORT_ORDER_UNDEFINED&product_ids=BTC-USD' | \
-  jq -r '.products[0].price' | \
-  perl -pe 's/(\d)(?=(\d{3})+(\.|$))/$1_/g')
+CRYPTO_JSON_DATA=$(curl --request GET \
+    --url "https://api.coinbase.com/api/v3/brokerage/market/products?product_type=SPOT&product_ids=CLANKER-USD&product_ids=BTC-USD&product_ids=BTC-EUR&product_ids=ETH-USD")
 
-ETH_PRICE=$(curl --request GET \
-  --url 'https://api.coinbase.com/api/v3/brokerage/market/products?product_type=SPOT&contract_expiry_type=UNKNOWN_CONTRACT_EXPIRY_TYPE&expiring_contract_status=UNKNOWN_EXPIRING_CONTRACT_STATUS&products_sort_order=PRODUCTS_SORT_ORDER_UNDEFINED&product_ids=ETH-USD' | \
-  jq -r '.products[0].price' | \
-  perl -pe 's/(\d)(?=(\d{3})+(\.|$))/$1_/g')
+format_price() {
+    local product_id=$1
+    echo "$CRYPTO_JSON_DATA" | \
+        jq -r ".products[] | select(.product_id==\"$product_id\") | .price" | \
+        perl -pe 's/(\d)(?=(\d{3})+(\.|$))/$1_/g'
+}
 
-sketchybar --set "$NAME" label="CLNKR $CLANKER_PRICE ◦ BTC◦$BTC_PRICE ◦ ETH $ETH_PRICE | "
+CLANKER_PRICE=$(format_price "CLANKER-USD")
+BTC_PRICE_USD=$(format_price "BTC-USD")
+BTC_PRICE_EUR=$(format_price "BTC-EUR")
+ETH_PRICE=$(format_price "ETH-USD")
 
+
+sketchybar --set "$NAME" label="CLNKR ${CLANKER_PRICE} ◦ BTC ${BTC_PRICE_USD} ◦ ETH ${ETH_PRICE} | "
