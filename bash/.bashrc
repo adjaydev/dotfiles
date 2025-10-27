@@ -19,6 +19,9 @@ export PATH="${PATH}: ~/.local/lib/python3.13/site-packages" # for pywal
 source ~/.config/scripts/devscripts.sh
 # source ~/.config/envvars
 
+shopt -s autocd
+shopt -s cdspell
+
 [[ -d $HOME/.pyenv/bin ]] && export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(thefuck --alias)"
